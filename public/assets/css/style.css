@@ -37,10 +37,10 @@ h1, h2, h3, h4, h5, h6{
     color: #4B4B4C;
 }
 a{
-    color: #5fcf80;
+    color: #7e7e7e;
 }
 a:hover, a:focus{
-    color: #5fcf80;
+    color: #00b3fb;
 }
 header:after{
     clear:both;
@@ -73,8 +73,8 @@ Navigation bar
 }
 
 .navbar-nav .active a{
-    background: none !important;
-    color: #fcf821 !important;
+    background: #00B3FB;
+    color: #fcf821;
     outline: none;
 }
 
@@ -111,6 +111,7 @@ Navigation bar
 .mart20{
 	margin-top: 20px;
 }
+
 /* Style the search field */
 form.example input[type=text] {
   padding: 5px;
@@ -123,6 +124,9 @@ form.example input[type=text] {
   border-bottom-left-radius: 5px;
   margin-top: 10px;
   margin-left: 40px;
+}
+form.example ::placeholder{
+    color: #c5c7c9;
 }
 
 /* Style the submit button */
@@ -274,6 +278,19 @@ Banner
      -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+}
+/***********************************
+Body
+************************************/
+.avatar-resize{
+    width: 50%;
+    height: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.info-row{
+    margin-bottom: 10px;
 }
 /***********************************
 Features
@@ -697,8 +714,9 @@ footer .block-a {
 }
 
 footer .subfooter {
-    padding-top:40px;
+    padding-top:30px;
     background:#222;
+    border-top: 5px solid #00b3fb;
 }
 
 footer ul.regular li a, footer .nav-list li.nav-header {
