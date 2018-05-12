@@ -741,17 +741,18 @@ Contact Us
 }
 .btn {
     padding: 10px 20px;
+    float: right;
 }
 .light-form-button{
-    background: #5fcf80;
+    background: #00b3fb;
     border: 1px solid rgba(119, 81, 81, 0.34);
     width: 24%;
     padding: 10px 10px;
     margin-bottom: 15px;
+    margin-right: -12px;
     color: #fff;: #fafafa;
     border: 1px solid rgba(119, 81, 81, 0.34);
-    width: 24%;
-    margin-bottom: 15px;
+    width: 24%;    
      -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
