@@ -37,10 +37,11 @@ h1, h2, h3, h4, h5, h6{
     color: #4B4B4C;
 }
 a{
-    color: #7e7e7e;
+    color: #7e7e7e;    
 }
 a:hover, a:focus{
     color: #00b3fb;
+    text-decoration-line: none;
 }
 header:after{
     clear:both;
@@ -152,7 +153,12 @@ form.example button:hover {
   background: #d9dde0;
 }
 
-
+/***********************************
+Search
+************************************/
+.frame a:hover h5{
+    color: #00b3fb;
+}
 
 /***********************************
 Banner
