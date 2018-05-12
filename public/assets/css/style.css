@@ -69,12 +69,15 @@ Navigation bar
 }
 .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover
 {
-	color: #fcf821;
+	color: #fcf821 !important;
 }
-
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    color: white;
+    background-color: #00B3FB;
+}
 .navbar-nav .active a{
-    background: #00B3FB;
-    color: #fcf821;
+    background: none;
+    color: #000;
     outline: none;
 }
 
@@ -282,12 +285,91 @@ Banner
 /***********************************
 Body
 ************************************/
+.wrapper {
+
+    display: inline-block;
+
+    margin-top: 10px;
+
+    padding: 15px;
+
+    width: 100%;
+}
+/***page header***/
+.page-header {
+
+    margin: 12px 0 20px;
+
+    border-bottom: none;
+
+    opacity: 0.7;
+
+    text-transform: uppercase;
+}
+.page-header i {
+
+    color: #acb1b8;
+
+    margin-right: 10px;
+
+    float: left;
+
+    font-size: 30px;
+
+    line-height: 22px;
+
+    opacity: 0.8;
+}
+.breadcrumb {
+
+    -webkit-border-radius: 0px;
+
+    -moz-border-radius: 0px;
+
+    border-radius: 0px;
+
+    height: 34px;
+
+    position: relative;
+
+    margin: 0 0 19px 0;
+
+    overflow: hidden;
+}
+
+.breadcrumb li {
+
+    position: relative;
+
+    margin-right: 0;
+}
+
+.breadcrumb li i {
+
+    Font-size: 15px;
+
+    margin-right: 5px;
+}
+
+.breadcrumb>.active {
+
+    color: #d4d4d4;
+}
+
+/*--------*/
+.frame{
+    border:1px solid #00B3FB;
+    border-radius: 10px;
+    padding-top: 10px;
+    margin-bottom: 5px;
+}
 .avatar-resize{
     width: 50%;
     height: 50%;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    /*margin-left: auto;
+    margin-right: auto;*/
+    margin: 0 auto;
 }
 .info-row{
     margin-bottom: 10px;
