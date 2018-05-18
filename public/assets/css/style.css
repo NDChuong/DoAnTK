@@ -386,8 +386,31 @@ Profiles
 .resize-form{
     width: 200px;
 }
-
-
+/***********************************
+BookInfo
+************************************/
+.available-status{    
+    color: #fff;
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    height: 20px;
+    background-color: #5cb85c;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+}
+.none-available-status{    
+    color: #fff;
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    height: 20px;
+    background-color: #d9534f;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+}
 
 /***********************************
 Features
