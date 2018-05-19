@@ -4,8 +4,16 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+// ================ ROUTER DECLARATION ================
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var accountSettingsRouter = require('./routes/account-settings');
+var bookDetailRouter = require('./routes/book-detail');
+var bookshelfDetailRouter = require('./routes/bookshelf-detail');
+var historyRouter = require('./routes/history');
+var loginRouter = require('./routes/login');
+var registerRouter = require('./routes/register');
+var searchRouter = require('./routes/search');
+// ================ ROUTER DECLARATION ================
 
 var app = express();
 
@@ -19,8 +27,16 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// =============== ROUTING ===================
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/account-settings.html', accountSettingsRouter);
+app.use('/book-detail.html', bookDetailRouter);
+app.use('/bookshelf-detail.html', bookshelfDetailRouter);
+app.use('/history.html', historyRouter);
+app.use('/login.html', loginRouter);
+app.use('/register.html', registerRouter);
+app.use('/search.html', searchRouter);
+// =============== ROUTING ===================
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
