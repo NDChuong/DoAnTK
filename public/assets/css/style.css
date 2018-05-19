@@ -463,16 +463,17 @@ label {
 
 .tab-label-content {
   width: 100%;
+
 }
 .tab-label-content .tab-content {
   position: absolute;
   top: 100px;
-  left: 16px;
-  line-height: 130%;
+  left: 0px;
   display: none;
+  
 }
 .blank{
-    margin-top: 300px;
+    margin-top: 400px;
 }
 
 
