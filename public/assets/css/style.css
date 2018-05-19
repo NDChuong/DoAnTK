@@ -497,14 +497,32 @@ label {
   top: 100px;
   left: 0px;
   display: none;
+  width: 100%;
+  height: 300px;
+  overflow: scroll;
+  
   
 }
 .blank{
     margin-top: 400px;
 }
+/*button for table*/
+.btn-agree{
+    width: 100px;
+    height: 40px !important;
+    background-color: #00b3fb;
+    
+}
+button.btn-agree:hover{
+    background-color: #00b3fb;
+}
+.btn-disagree{
+    width: 100px;
+    height: 40px !important;
+    padding: 0 auto;
+}
 
 
->>>>>>> b66f81ab3ade5f0f47e09bad05fad03f3681e8c6
 
 /***********************************
 Features
