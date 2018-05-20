@@ -117,9 +117,45 @@
                 <br>
             </div>
             <div class="">
-                <button type="button" class="btn light-form-button">Mượn sách</button>
+                <button type="button" class="btn light-form-button" data-toggle="modal" data-target="#lendbook">Mượn sách</button>
+            </div>
+            <!---->
+            <div class="modal fade" id="lendbook" role="dialog">
+                <div class="modal-dialog modal-md">
+                    <!-- Modal content no 1-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title text-center form-title">Gửi lời mời mượn sách</h4>
+                        </div>
+                        <div class="modal-body padtrbl">
+                            <div class="login-box-body">
+                                <div class="form-group">
+                                    <form name="" id="lendForm">
+                                        <div class="row">
+                                            <div class="col-xs-6">Chọn ngày mượn: </div>
+                                            <div class="col-xs-6">
+                                                <input type="date" class="form-control resize-form" id="LendDate">
+                                            </div>
+                                        </div><br>
+                                        <div class="row">
+                                            <div class="col-xs-6">Chọn ngày trả: </div>
+                                            <div class="col-xs-6">
+                                                <input type="date" class="form-control resize-form" id="ReturnDate">
+                                            </div>
+                                        </div><br>
+                                        <div class="col-xs-12">
+                                            <button type="button" class="btn btn-green btn-block btn-lend" onclick="Lend()">Mượn</button>
+                                        </div>
+                                </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+    </div>
     </div>
     <footer class="footer">
         <div class="container">

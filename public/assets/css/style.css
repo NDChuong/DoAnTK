@@ -532,7 +532,11 @@ BookInfo
     font-size: 14px;
     margin-top: 20px;
 }
-
+.btn-lend{
+    width: 100px;
+    float: none !important;
+    margin: 0 auto;
+}
 
 
 /***********************************
