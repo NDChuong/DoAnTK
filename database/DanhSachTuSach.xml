@@ -1,25 +1,20 @@
 <danh_sach_tu_sach xmlns="urn:v">
     <tu_sach id_chu="15120xx" diem_danh_gia="22">
-    <!-- ------------------------------------ -->
         <danh_sach_sach>
             <sach id_sach="NMLT" ten_sach="Nhập môn lập trình" tac_gia="Nguyễn Văn A" ma_ISBN="4654646" NXB="ĐH KHTH" tinh_trang="true" so_luong="2"/>
             <sach id_sach="LTHDT" ten_sach="Lập trình hướng đối 	tượng" tac_gia="Nguyễn Văn B" ma_ISBN="554646" NXB="ĐH KHTH" tinh_trang="true" so_luong="1"/>
         </danh_sach_sach>
-    <!-- ------------------------------------ -->
         <yeu_cau_cho_muon_sach>
             <yeu_cau id_user_muon="151211x" id_sach="NMLT" ngay_muon="15/05/2017" ngay_tra="01/01/2018"/>
         </yeu_cau_cho_muon_sach>
-    <!-- ------------------------------------ -->
         <yeu_cau_muon_sach>
              <yeu_cau id_user_cho_muon="151211x" id_sach="NMLT" ngay_muon="15/05/2017" ngay_tra="01/01/2018"/>
         </yeu_cau_muon_sach>
-     <!-- ------------------------------------ -->
         <lich_su_cho_muon_sach>
             <sach id_sach="NMLT">
                 <user id_user_muon="15123xx" ngay_muon="20/10/2017" ngay_tra="01/01/2018"/>
             </sach>
         </lich_su_cho_muon_sach>
-     <!-- ------------------------------------ -->
         <lich_su_muon_sach>
             <sach id_sach="KTLT">
                 <user id_user_cho_muon="15121xx" ngay_muon="20/01/2018" ngay_tra="01/01/2018"/>

@@ -1,5 +1,6 @@
 "user strict";
 
+var convert = require('xml-js');
 var File = require("fs");
 var duongDanThuMucDatabase = "../DoAnTK/database";
 var DOMParser = require("xmldom").DOMParser;
@@ -11,7 +12,9 @@ var duongDan;
 var duLieu;
 
 class TuSach {
-  constructor() {}
+  constructor() {
+    this.DocDuLieu("DanhSachTuSach.xml");
+  }
 
   DocDuLieu(tenFile) {
     duongDan = duongDanThuMucDatabase + "/" + tenFile;
@@ -243,14 +246,23 @@ class TuSach {
   LayRaMotTuSach(idChu){
     for(var i=0;i<duLieu.getElementsByTagName("tu_sach").length;i++){
       if(idChu==duLieu.getElementsByTagName("tu_sach")[i].getAttribute("id_chu")){
-        return duLieu.getElementsByTagName("tu_sach")[i];
+        return this.ConvertToJson(duLieu.getElementsByTagName("tu_sach")[i]);
       }
     }
     return "null";
   }
 
   LayHetDuLieuRa() {
-    return duLieu;
+    return this.ConvertToJson(duLieu);
+  }
+
+  ConvertToJson(data){
+    var xml =new XMLSerializer().serializeToString(data);//chuyen xml dang object sang text
+    var temp = convert.xml2json(xml, {compact: false, spaces: 4});//xu ly xml text sang json text
+    console.log(temp);
+    var result=JSON.parse(temp);
+    // console.log(result.elements[0].type);
+    return result;
   }
 }
 
