@@ -1,0 +1,15 @@
+{{#section 'title'}}
+	Được xem nhiều nhất
+{{/section}}
+
+{{#each book}}
+<div class="col-md-3">
+    <img src="assets/img/img-3.jpg" class="img-responsive" alt="">
+    <h5 class="header-section text-center">Tên sách</h5>
+    <b>Tác giả: </b><span>{{tac_gia}}</span>
+    <br>
+    <b>Tủ sách: </b><span>{{user_name}}</span>
+    <br>
+    <b>Rating: </b><span>*********</span>
+</div>
+{{/each}}
