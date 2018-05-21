@@ -29,11 +29,11 @@ function RegisterAccount(username, pass, email, phone, name, birthday, sex) {
 
 // User logins to website
 // return 1 for success, 0 for failure
-function Login(username, pass, resObject) {
+function Login(username, pass) {
     var x = GetAccountInfo(username);
     if (x != null) {
         if (x.password == pass) {
-            return lib.SetCookie(resObject, 'id', username, 900000);
+            return true;
         } else {
             return false;
         }
@@ -44,9 +44,9 @@ function Login(username, pass, resObject) {
 
 // User log out
 // return 1 for success, 0 for failure
-function Logout(resObject) {
-    return lib.RemoveCookie(resObject, 'id');
-}
+// function Logout(resObject) {
+//     return lib.RemoveCookie(resObject, 'id');
+// }
 
 // User change birthday
 // return 1 for success, 0 for failure

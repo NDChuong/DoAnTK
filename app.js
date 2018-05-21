@@ -2,6 +2,7 @@ var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser');
 var logger = require('morgan');
 
 // ================ ROUTER DECLARATION ================
@@ -11,11 +12,13 @@ var bookDetailRouter = require('./routes/book-detail');
 var bookshelfDetailRouter = require('./routes/bookshelf-detail');
 var historyRouter = require('./routes/history');
 var loginRouter = require('./routes/login');
-var registerRouter = require('./routes/register');
+var logoutRouter = require('./routes/logout');
 var searchRouter = require('./routes/search');
 // ================ ROUTER DECLARATION ================
 
 var app = express();
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -34,7 +37,7 @@ app.use('/book-detail.html', bookDetailRouter);
 app.use('/bookshelf-detail.html', bookshelfDetailRouter);
 app.use('/history.html', historyRouter);
 app.use('/login.html', loginRouter);
-app.use('/register.html', registerRouter);
+app.use('/logout.html', logoutRouter);
 app.use('/search.html', searchRouter);
 // =============== ROUTING ===================
 
