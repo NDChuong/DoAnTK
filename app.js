@@ -38,6 +38,11 @@ app.use('/register.html', registerRouter);
 app.use('/search.html', searchRouter);
 // =============== ROUTING ===================
 
+// ================== DEBUGGING business.js ===================
+const businessRouter = require('./controller/business');
+app.use('/business', businessRouter);
+// ================== DEBUGGING business.js ===================
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
