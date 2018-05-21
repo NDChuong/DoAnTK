@@ -9,9 +9,7 @@ const bookshelf = require('../model/TuSach');
 
 /* GET users listing. */
 router.get('/', function (req, res, next) {
-    console.log(GetAllBookshelves());
-    console.log('==========');
-    console.log(GetTopBookshelves(1,1));
+    SearchForBookshelf('1512095');
     res.send();
 });
 
@@ -161,6 +159,12 @@ function GetBookInfo(bookID) {
 
 }
 
+// Get all books
+// return array of Book object
+function GetAllBook() {
+
+}
+
 // Borrow a book
 // return bool
 function BorrowBook(username1, username2, bookID, bookshelfID) {
@@ -170,12 +174,33 @@ function BorrowBook(username1, username2, bookID, bookshelfID) {
 // Search for an item
 // return JSON
 function SearchForBook(keyword) {
+    var bookList = GetAllBook();
+    var result = [];
 
+    for (x of bookList) {
+        var str = x.id.toLowerCase();
+        if (str.indexOf(keyword.toLowerCase()) != -1) {
+            result.push(x);
+        }
+    }
+    
+    return result;
 }
 
 // Search for bookshelf
+// return array of bookshelves found
 function SearchForBookshelf(keyword) {
+    var bookshelfList = GetAllBookshelves();
+    var result = [];
 
+    for (x of bookshelfList) {
+        var str = x.id.toLowerCase();
+        if (str.indexOf(keyword.toLowerCase()) != -1) {
+            result.push(x);
+        }
+    }
+
+    return result;
 }
 
 // ============ DEBUG ===============
