@@ -59,6 +59,11 @@ var obj = {
         }
     },
 
+    // Convert Bookshelf JSON to Bookshelf Object
+    BookJSON2Obj: function (jsonText) {
+        return jsonText == 'null' ? null : JSON.parse(jsonText).elements[0].attributes;
+    },
+
     // Get a specific cookie from cookie string
     GetCookie: function (reqObject, name) {
         var cookieString = reqObject.headers.cookie;

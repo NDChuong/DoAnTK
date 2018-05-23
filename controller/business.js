@@ -9,7 +9,7 @@ const bookshelf = require('../model/TuSach');
 
 /* GET users listing. */
 router.get('/', function (req, res, next) {
-    SearchForBookshelf('1512095');
+    GetAllBook()
     res.send();
 });
 
@@ -122,10 +122,22 @@ function GetTopBookshelves(n, criterion) {
                 });
                 break;
         }
-        return arr.slice(0,n);
+        return arr.slice(0, n);
     } catch (ee) {
         return null;
     }
+}
+
+// Get information of a book
+// return JSON
+function GetBookInfo(bookID) {
+    return lib.BookJSON2Obj(bookshelf.LayRaMotCuonSach(bookID));
+}
+
+// Get all books
+// return array of Book object
+function GetAllBook() {
+    
 }
 
 // Get list of top n books
@@ -133,7 +145,7 @@ function GetTopBookshelves(n, criterion) {
 //  1: ratings
 // return JSON
 function GetTopBooks(n, criterion) {
-    
+
 }
 
 // Get information of all books 
@@ -153,30 +165,14 @@ function SortBookBy(bookList, by) {
 
 }
 
-// Get information of a book
-// return JSON
-function GetBookInfo(bookID) {
 
-}
-
-// Get all books
-// return array of Book object
-function GetAllBook() {
-
-}
-
-// Borrow a book
-// return bool
-function BorrowBook(username1, username2, bookID, bookshelfID) {
-
-}
 
 // Search for an item
 // return JSON
 function SearchForBook(keyword) {
     var bookList = GetAllBook();
     var result = [];
-
+    
     for (x of bookList) {
         var str = x.id.toLowerCase();
         if (str.indexOf(keyword.toLowerCase()) != -1) {
@@ -192,16 +188,23 @@ function SearchForBook(keyword) {
 function SearchForBookshelf(keyword) {
     var bookshelfList = GetAllBookshelves();
     var result = [];
-
+    
     for (x of bookshelfList) {
         var str = x.id.toLowerCase();
         if (str.indexOf(keyword.toLowerCase()) != -1) {
             result.push(x);
         }
     }
-
+    
     return result;
 }
 
+// Borrow a book
+// return bool
+function BorrowBook(username1, username2, bookID, bookshelfID) {
+
+}
+
+// Create a borrowing request
 // ============ DEBUG ===============
 module.exports = router;

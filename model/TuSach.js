@@ -56,7 +56,7 @@ class TuSach {
     }
   }
 
-  ThemSachVaoTu() {} //chưa đụng đến
+  ThemSachVaoTu() { } //chưa đụng đến
 
   XoaSach(idChu, idSach) {
     var danhSachTuSach = duLieu.getElementsByTagName("tu_sach");
@@ -87,17 +87,17 @@ class TuSach {
         var diemBanDau = parseInt(
           duLieu
             .getElementsByTagName("tu_sach")
-            [i].getAttribute("diem_danh_gia"),
+          [i].getAttribute("diem_danh_gia"),
           10
         );
         duLieu
           .getElementsByTagName("tu_sach")
-          [i].setAttribute("diem_danh_gia", diemBanDau + soLuongDiemCongThem);
+        [i].setAttribute("diem_danh_gia", diemBanDau + soLuongDiemCongThem);
       }
     }
   }
 
-  ThemYeuCau(idChu, idNguoiMuon, idSach,ngayMuon, ngayTra, loaiYeuCau) {
+  ThemYeuCau(idChu, idNguoiMuon, idSach, ngayMuon, ngayTra, loaiYeuCau) {
     //hoán đổi 2 id để dùng cho các yêu cầu tương ứng
     var loaiIdUser;
     if (loaiYeuCau == "yeu_cau_cho_muon_sach") {
@@ -184,16 +184,16 @@ class TuSach {
             break;
           }
         }
-        if(j==danhSachSachTrongLichSu.length){//nếu sách chưa có trong lịch sử
+        if (j == danhSachSachTrongLichSu.length) {//nếu sách chưa có trong lịch sử
           var sach = Node_goc.createElementNS(xmlns_v, "sach");
           sach.setAttributeNS(xmlns_v, "id_sach", idSach);
           var user = Node_goc.createElementNS(xmlns_v, "user");
-            user.setAttributeNS(xmlns_v, loaiIdUser, idNguoiMuon);
-            user.setAttributeNS(xmlns_v, "ngay_muon", ngayMuon);
-            user.setAttributeNS(xmlns_v, "ngay_tra", ngayTra);
-            sach.appendChild(user);
+          user.setAttributeNS(xmlns_v, loaiIdUser, idNguoiMuon);
+          user.setAttributeNS(xmlns_v, "ngay_muon", ngayMuon);
+          user.setAttributeNS(xmlns_v, "ngay_tra", ngayTra);
+          sach.appendChild(user);
 
-            danhSachTuSach[i]
+          danhSachTuSach[i]
             .getElementsByTagName(loaiLichSu)[0].appendChild(sach);
           break;
         }
@@ -225,17 +225,17 @@ class TuSach {
                 idNguoiMuon ==
                 danhSachNguoiMuonSachNay[k].getAttribute(loaiIdUser)
               ) {
-                var y=danhSachNguoiMuonSachNay[k];
-                if(danhSachNguoiMuonSachNay.length==1){//Nếu chỉ có 1 người đang mượn khi xóa sẽ xóa luôn cuốn sách ra khỏi danh sách
-                 duLieu.removeChild(danhSachSachTrongLichSu[j]);
+                var y = danhSachNguoiMuonSachNay[k];
+                if (danhSachNguoiMuonSachNay.length == 1) {//Nếu chỉ có 1 người đang mượn khi xóa sẽ xóa luôn cuốn sách ra khỏi danh sách
+                  duLieu.removeChild(danhSachSachTrongLichSu[j]);
                 }
-                else{
+                else {
                   danhSachSachTrongLichSu[j].removeChild(y);
                 }
                 break;
               }
             }
-          break;
+            break;
           }
         }
         break;
@@ -243,10 +243,20 @@ class TuSach {
     }
   }
 
-  LayRaMotTuSach(idChu){
-    for(var i=0;i<duLieu.getElementsByTagName("tu_sach").length;i++){
-      if(idChu==duLieu.getElementsByTagName("tu_sach")[i].getAttribute("id_chu")){
+  LayRaMotTuSach(idChu) {
+    for (var i = 0; i < duLieu.getElementsByTagName("tu_sach").length; i++) {
+      if (idChu == duLieu.getElementsByTagName("tu_sach")[i].getAttribute("id_chu")) {
         return this.ConvertToJson(duLieu.getElementsByTagName("tu_sach")[i]);
+      }
+    }
+    return "null";
+  }
+
+  LayRaMotCuonSach(idSach) {
+    var x = duLieu.getElementsByTagName("sach");
+    for (var i = 0; i < x.length; i++) {
+      if (idSach == x[i].getAttribute("id_sach")) {
+        return this.ConvertToJson(x[i]);
       }
     }
     return "null";
@@ -256,9 +266,9 @@ class TuSach {
     return this.ConvertToJson(duLieu);
   }
 
-  ConvertToJson(data){
-    var xml =new XMLSerializer().serializeToString(data);//chuyen xml dang object sang text
-    var temp = convert.xml2json(xml, {compact: false, spaces: 4});//xu ly xml text sang json text
+  ConvertToJson(data) {
+    var xml = new XMLSerializer().serializeToString(data);//chuyen xml dang object sang text
+    var temp = convert.xml2json(xml, { compact: false, spaces: 4 });//xu ly xml text sang json text
     // console.log(temp);
     // var result=JSON.parse(temp);
     // console.log(result.elements[0].type);
