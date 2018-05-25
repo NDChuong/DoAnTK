@@ -1,15 +1,14 @@
 <danh_sach_bao_cao xmlns="urn:v">
     <bao_cao id_user_bao_cao="15120xx">
-        <user id_user_bi_bao_cao="1111111">sách không sở hữu</user>
-        <user id_user_bi_bao_cao="15121xx">gian lận sách</user>
+        <user id_bao_cao="abc" id_user_bi_bao_cao="1111111">sách không sở hữu</user>
+        <user id_bao_cao="abc1" id_user_bi_bao_cao="15121xx">gian lận sách</user>
     </bao_cao>
     <bao_cao id_user_bao_cao="15130xx">
-        <user id_user_bi_bao_cao="15128xx">vi phạm về nội dung</user>
+        <user id_bao_cao="acx" id_user_bi_bao_cao="15128xx">vi phạm về nội dung</user>
     </bao_cao>
     <bao_cao id_user_bao_cao="15120xx">
-        <user id_user_bi_bao_cao="1111111">ăn cắp bản quyền</user>
+        <user id_bao_cao="acv" id_user_bi_bao_cao="1111111">ăn cắp bản quyền</user>
     </bao_cao>
-    <bao_cao id_user_bao_cao="0000000">
-        
+    <bao_cao id_user_bao_cao="1512095">
     </bao_cao>
 </danh_sach_bao_cao>

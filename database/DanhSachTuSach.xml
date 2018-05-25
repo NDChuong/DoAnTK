@@ -11,14 +11,14 @@
              <yeu_cau id_user_cho_muon="151211x" id_sach="NMLT" ngay_muon="15/05/2017" ngay_tra="01/01/2018"/>
         </yeu_cau_muon_sach>
         <lich_su_cho_muon_sach>
-            <sach id_sach="NMLT">
-                <user id_user_muon="15123xx" ngay_muon="20/10/2017" ngay_tra="01/01/2018"/>
-            </sach>
+            <sach_cho_muon id_sach="NMLT">
+                <user_muon id_user_muon="15123xx" ngay_muon="20/10/2017" ngay_tra="01/01/2018"/>
+            </sach_cho_muon>
         </lich_su_cho_muon_sach>
         <lich_su_muon_sach>
-            <sach id_sach="KTLT">
-                <user id_user_cho_muon="15121xx" ngay_muon="20/01/2018" ngay_tra="01/01/2018"/>
-            </sach>
+            <sach_muon id_sach="KTLT">
+                <user_cho_muon id_user_cho_muon="15121xx" ngay_muon="20/01/2018" ngay_tra="01/01/2018"/>
+            </sach_muon>
         </lich_su_muon_sach>
     </tu_sach>
 

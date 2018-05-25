@@ -1,6 +1,6 @@
 <danh_sach_user xmlns="urn:v"> 
+    <user id_user="admin_1512095" ten_user="Võ Phương Sa 2" ngay_sinh="20/10/2030" gioi_tinh="Nam" so_dien_thoai="0123" email="abc" password="123"/>
     <user id_user="1512043" ten_user="Võ Phương Sa" ngay_sinh="20/10/2030" gioi_tinh="Nam" so_dien_thoai="0123" email="abc" password="123"/>
     <user id_user="1512044" ten_user="Võ Phương Sa 1" ngay_sinh="20/10/2030" gioi_tinh="Nam" so_dien_thoai="0123" email="abc" password="123"/>
     <user id_user="1512045" ten_user="Võ Phương Sa 2" ngay_sinh="20/10/2030" gioi_tinh="Nam" so_dien_thoai="0123" email="abc" password="123"/>
-    <user id_user="1512046" ten_user="Võ Phương Sa 3" ngay_sinh="20/10/2030" gioi_tinh="Nam" so_dien_thoai="0123" email="abc" password="123"/>
 </danh_sach_user>

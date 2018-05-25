@@ -9,8 +9,13 @@ const bookshelf = require('../model/TuSach');
 
 /* GET users listing. */
 router.get('/', function (req, res, next) {
-    GetAllBook()
-    res.send();
+    // bookshelf.LayRaToanBoSach();
+    for (var i = 0; i < 5; i++) {
+        report.ThemBaoCao('1512095', '1512043', 'Thích');
+        report.XoaBaoCao((i+1).toString());
+    }
+    report.GhiDuLieu();
+    res.send('OK');
 });
 
 // Check the existing of User <username>
@@ -172,14 +177,14 @@ function SortBookBy(bookList, by) {
 function SearchForBook(keyword) {
     var bookList = GetAllBook();
     var result = [];
-    
+
     for (x of bookList) {
         var str = x.id.toLowerCase();
         if (str.indexOf(keyword.toLowerCase()) != -1) {
             result.push(x);
         }
     }
-    
+
     return result;
 }
 
@@ -188,14 +193,14 @@ function SearchForBook(keyword) {
 function SearchForBookshelf(keyword) {
     var bookshelfList = GetAllBookshelves();
     var result = [];
-    
+
     for (x of bookshelfList) {
         var str = x.id.toLowerCase();
         if (str.indexOf(keyword.toLowerCase()) != -1) {
             result.push(x);
         }
     }
-    
+
     return result;
 }
 

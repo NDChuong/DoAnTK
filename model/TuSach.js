@@ -201,29 +201,25 @@ class TuSach {
     }
   }
 
-  XoaSachKhoiLichSu(idChu, idNguoiMuon, idSach, loaiLichSu) {
+  XoaSachKhoiLichSuChoMuonSach(idChu, idNguoiMuon, idSach) {
     var loaiIdUser;
-    if (loaiLichSu == "lich_su_cho_muon_sach") {
-      loaiIdUser = "id_user_muon";
-    } else {
-      loaiIdUser = "id_user_cho_muon";
-    }
 
     var danhSachTuSach = duLieu.getElementsByTagName("tu_sach");
     for (var i = 0; i < danhSachTuSach.length; i++) {
       if (danhSachTuSach[i].getAttribute("id_chu") == idChu) {
         var danhSachSachTrongLichSu = danhSachTuSach[i]
-          .getElementsByTagName(loaiLichSu)[0]
-          .getElementsByTagName("sach");
+          .getElementsByTagName("lich_su_cho_muon_sach")[0]
+          .getElementsByTagName("sach_cho_muon");
         for (var j = 0; j < danhSachSachTrongLichSu.length; j++) {
           if (danhSachSachTrongLichSu[j].getAttribute("id_sach") == idSach) {
             var danhSachNguoiMuonSachNay = danhSachSachTrongLichSu[
               j
             ].getElementsByTagName("user");
             for (var k = 0; k < danhSachNguoiMuonSachNay.length; k++) {
+              console.log("------------------------"+idNguoiMuon+danhSachNguoiMuonSachNay[k].getAttribute("id_user_muon"));
               if (
                 idNguoiMuon ==
-                danhSachNguoiMuonSachNay[k].getAttribute(loaiIdUser)
+                danhSachNguoiMuonSachNay[k].getAttribute("id_user_muon")
               ) {
                 var y = danhSachNguoiMuonSachNay[k];
                 if (danhSachNguoiMuonSachNay.length == 1) {//Nếu chỉ có 1 người đang mượn khi xóa sẽ xóa luôn cuốn sách ra khỏi danh sách
@@ -250,6 +246,25 @@ class TuSach {
       }
     }
     return "null";
+  }
+
+  LayRaToanBoSach() {
+
+    var x = duLieu.getElementsByTagName("sach");
+    for (var i = 0; i < x.length; i++) {
+      var sach = Node_goc.createElementNS(xmlns_v,"sach");
+      sach.setAttributeNS(xmlns_v, "id_sach", x[i].getAttribute("id_sach"));
+      sach.setAttributeNS(xmlns_v, "ten_sach", x[i].getAttribute("ten_sach"));
+      sach.setAttributeNS(xmlns_v, "tac_gia", x[i].getAttribute("tac_gia"));
+      sach.setAttributeNS(xmlns_v, "ma_ISBN", x[i].getAttribute("ma_ISBN"));
+      sach.setAttributeNS(xmlns_v, "NXB", x[i].getAttribute("NXB"));
+      sach.setAttributeNS(xmlns_v, "tinh_trang", x[i].getAttribute("tinh_trang"));
+      sach.setAttributeNS(xmlns_v, "so_luong", x[i].getAttribute("so_luong"));
+
+        Node_goc.appendChild(sach);
+    }
+    var temp = new XMLSerializer().serializeToString(Node_goc);
+    console.log(temp);
   }
 
   LayRaMotCuonSach(idSach) {
