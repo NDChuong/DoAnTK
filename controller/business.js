@@ -8,13 +8,7 @@ const bookshelf = require('../model/TuSach');
 
 
 /* GET users listing. */
-router.get('/', function (req, res, next) {
-    // bookshelf.LayRaToanBoSach();
-    for (var i = 0; i < 5; i++) {
-        report.ThemBaoCao('1512095', '1512043', 'Thích');
-        report.XoaBaoCao((i+1).toString());
-    }
-    report.GhiDuLieu();
+router.get('/', function (req, res, next) {//sua port 300
     res.send('OK');
 });
 
