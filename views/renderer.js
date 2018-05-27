@@ -1,5 +1,14 @@
+var bussiness = require('../controller/business');
+
 function RenderIndexPage(resObject) {
-    resObject.render('index', { title: 'Express' });
+    var rows = bussiness.GetTopBookshelves(5,1);
+    var vm = {
+        book:rows
+    }
+    resObject.render('home/index', vm);
+    
+    
+    //resObject.send('OK');
 }
 
 function RenderBookinfoPage(resObject) {
