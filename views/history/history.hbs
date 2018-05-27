@@ -1,0 +1,119 @@
+<div class="container">
+    <div class="tab-wrap">
+        <input type="radio" name="tabs" id="tab1" checked>
+        <div class="tab-label-content" id="tab1-content">
+            <label for="tab1">Yêu cầu mượn</label>
+            <div class="tab-content">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Tên sách</th>
+                            <th>Chủ sách</th>
+                            <th>Ngày mượn</th>
+                            <th>Ngày trả</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each borrow-request}}
+                            <tr>
+                                <td><a href="{{bookinfo}}">{{ten_sach}}</a></td>
+                                <td><a href="{{bookshelf}}">{{ten_user}}</a></td>
+                                <td>{{ngay_muon}}</td>
+                                <td>{{ngay_tra}}</td>
+                            </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <input type="radio" name="tabs" id="tab2">
+        <div class="tab-label-content" id="tab2-content">
+            <label for="tab2">Danh sách mượn</label>
+            <div class="tab-content">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Tên sách</th>
+                            <th>Chủ sách</th>
+                            <th>Ngày mượn</th>
+                            <th>Ngày trả</th>
+                            <th>&nbsp;</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each list-borrow-request}}
+                            <tr>
+                                <td><a href="{{bookinfo}}">{{ten_sach}}</a></td>
+                                <td><a href="{{bookshelf}}">{{ten_user}}</a></td>
+                                <td>{{ngay_muon}}</td>
+                                <td>{{ngay_tra}}</td>
+                                <td>
+                                    <a class="btn btn-success" href="#">Trả sách</a>
+                                </td>
+                            </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <input type="radio" name="tabs" id="tab3">
+        <div class="tab-label-content" id="tab3-content">
+            <label for="tab3">Yêu cầu cho mượn</label>
+            <div class="tab-content">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Tên sách</th>
+                            <th>Người mượn</th>
+                            <th>Ngày yêu cầu</th>
+                            <th>Ngày trả</th>
+                            <th>&nbsp;</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each lend-request}}
+                            <tr>
+                                <td><a href="{{bookinfo}}">{{ten_sach}}</a></td>
+                                <td><a href="{{bookshelf}}">{{ten_user}}</a></td>
+                                <td>{{ngay_muon}}</td>
+                                <td>{{ngay_tra}}</td>
+                                <td>
+                                    <div class="btn-group">
+                                        <a class="btn btn-success" href="#"><i class="icon_check_alt2"></i></a>
+                                        <a class="btn btn-danger" href="#"><i class="icon_close_alt2"></i></a>
+                                    </div>
+                                </td>
+                            </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <input type="radio" name="tabs" id="tab4">
+        <div class="tab-label-content" id="tab4-content">
+            <label for="tab4">Danh sách cho mượn</label>
+            <div class="tab-content">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Tên sách</th>
+                            <th>Chủ sách</th>
+                            <th>Ngày mượn</th>
+                            <th>Ngày trả</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each list-lend-request}}
+                            <tr>
+                                <td><a href="{{bookinfo}}">{{ten_sach}}</a></td>
+                                <td><a href="{{bookshelf}}">{{ten_user}}</a></td>
+                                <td>{{ngay_muon}}</td>
+                                <td>{{ngay_tra}}</td>
+                            </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
