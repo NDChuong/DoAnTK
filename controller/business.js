@@ -9,10 +9,6 @@ const bookshelf = require('../model/TuSach');
 
 /* GET users listing. */
 
-router.get('/', function (req, res, next) {//sua port 300
-    res.send('OK');
-});
-
 // router.get('/', function (req, res, next) {
 //     // bookshelf.LayRaToanBoSach();
 //     for (var i = 0; i < 5; i++) {
