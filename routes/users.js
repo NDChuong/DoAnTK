@@ -4,6 +4,7 @@ var router = express.Router();
 /* GET users listing. */
 var renderer = require('../views/renderer.js');
 router.get('/', function(req, res, next) {
-  renderer.RenderProfilePage(res);
+  renderer.RenderProfilePage(req, res);
 });
+
 module.exports = router;

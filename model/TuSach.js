@@ -11,7 +11,7 @@ var Node_goc = new DOMParser().parseFromString("<Du_lieu />", "text/xml");
 var duongDan;
 var duLieu;
 
-var _idYeuCau=0;
+var _idYeuCau = 0;
 
 class TuSach {
   constructor() {
@@ -83,7 +83,7 @@ class TuSach {
   LayRaToanBoSach() {
     var danhSachSach = duLieu.getElementsByTagName("sach");
     var soLuong = danhSachSach.length;
-    var sach = Node_goc.createElementNS(xmlns_v,"sach");
+    var sach = Node_goc.createElementNS(xmlns_v, "sach");
     for (var i = 0; i < soLuong; i++) {
       sach.appendChild(danhSachSach[i]);
     }
@@ -100,7 +100,7 @@ class TuSach {
     return "null";
   }
 
-//-----------------------------------END--------------------------------------------
+  //-----------------------------------END--------------------------------------------
 
   CapNhatDiemDanhGia(idChu, soLuongDiemCongThem) {
     //số lượng điểm cộng thêm có thể âm hoặc vote up or vote down
@@ -125,41 +125,41 @@ class TuSach {
 
   //----------------------------------YEU CAU-------------------------------------------
 
-  LayRaMotYeuCauChoMuonSach( idYeuCau ){
+  LayRaMotYeuCauChoMuonSach(idYeuCau) {
     var yeuCau = duLieu.getElementsByTagName("yeu_cau_cho_muon");
-    for( var i = 0; i<yeuCau.length; i++){
-      if( yeuCau[i]==idYeuCau ){
+    for (var i = 0; i < yeuCau.length; i++) {
+      if (yeuCau[i].getAttribute('id_yeu_cau') == idYeuCau) {
         return this.ConvertToJson(yeuCau[i]);
       }
     }
     return 'null';
   }
 
-  LayRaToanBoYeuCauChoMuonSach(){
+  LayRaToanBoYeuCauChoMuonSach() {
     var danhSachYeuCauChoMuonSach = duLieu.getElementsByTagName('yeu_cau_cho_muon');
-    var soLuong = danhSachYeuCauChoMuonSach.length; 
-    var result = Node_goc.createElementNS(xmlns_v,'danh_sach');
-    for( var i = 0 ; i < soLuong ; i++ ){
+    var soLuong = danhSachYeuCauChoMuonSach.length;
+    var result = Node_goc.createElementNS(xmlns_v, 'danh_sach');
+    for (var i = 0; i < soLuong; i++) {
       result.appendChild(danhSachYeuCauChoMuonSach[i]);
     }
     return this.ConvertToJson(result);
   }
 
-  LayRaMotYeuCauMuonSach( idYeuCau ){
+  LayRaMotYeuCauMuonSach(idYeuCau) {
     var yeuCau = duLieu.getElementsByTagName("yeu_cau_muon");
-    for( var i = 0; i<yeuCau.length; i++){
-      if( yeuCau[i]==idYeuCau ){
+    for (var i = 0; i < yeuCau.length; i++) {
+      if (yeuCau[i].getAttribute('id_yeu_cau') == idYeuCau) {
         return this.ConvertToJson(yeuCau[i]);
       }
     }
     return 'null';
   }
 
-  LayRaToanBoYeuCauMuonSach(){
+  LayRaToanBoYeuCauMuonSach() {
     var danhSachYeuCauMuonSach = duLieu.getElementsByTagName('yeu_cau_muon');
-    var soLuong = danhSachYeuCauMuonSach.length; 
-    var result = Node_goc.createElementNS(xmlns_v,'danh_sach');
-    for( var i = 0 ; i < soLuong ; i++ ){
+    var soLuong = danhSachYeuCauMuonSach.length;
+    var result = Node_goc.createElementNS(xmlns_v, 'danh_sach');
+    for (var i = 0; i < soLuong; i++) {
       result.appendChild(danhSachYeuCauMuonSach[i]);
     }
     return this.ConvertToJson(result);
@@ -171,7 +171,7 @@ class TuSach {
     for (var i = 0; i < danhSachTuSach.length; i++) {
       if (idChu == danhSachTuSach[i].getAttribute("id_chu")) {
         var Node_moi = Node_goc.createElementNS(xmlns_v, "yeu_cau_cho_muon");
-        Node_moi.setAttributeNS(xmlns_v,"id_yeu_cau",_idYeuCau);
+        Node_moi.setAttributeNS(xmlns_v, "id_yeu_cau", _idYeuCau);
         Node_moi.setAttributeNS(xmlns_v, "id_user_muon", idNguoiMuon);
         Node_moi.setAttributeNS(xmlns_v, "id_sach", idSach);
         Node_moi.setAttributeNS(xmlns_v, "ngay_muon", ngayMuon);
@@ -195,7 +195,7 @@ class TuSach {
     for (var i = 0; i < danhSachTuSach.length; i++) {
       if (idChu == danhSachTuSach[i].getAttribute("id_chu")) {
         var Node_moi = Node_goc.createElementNS(xmlns_v, "yeu_cau_muon");
-        Node_moi.setAttributeNS(xmlns_v,"id_yeu_cau",_idYeuCau);
+        Node_moi.setAttributeNS(xmlns_v, "id_yeu_cau", _idYeuCau);
         Node_moi.setAttributeNS(xmlns_v, "id_user_cho_muon", idNguoiChoMuon);
         Node_moi.setAttributeNS(xmlns_v, "id_sach", idSach);
         Node_moi.setAttributeNS(xmlns_v, "ngay_muon", ngayMuon);
@@ -213,24 +213,24 @@ class TuSach {
     }
   }
 
-  XoaYeuCau(idYeuCau){//id yeu cau cho muon sach va yeu cau muon sach la 1
-    var danhSachYeuCau=duLieu.getElementsByTagName("yeu_cau_cho_muon");
-    for(var i=0;i<danhSachYeuCau.length;i++){
-      if(danhSachYeuCau[i].getAttribute("id_yeu_cau")==idYeuCau){
+  XoaYeuCau(idYeuCau) {//id yeu cau cho muon sach va yeu cau muon sach la 1
+    var danhSachYeuCau = duLieu.getElementsByTagName("yeu_cau_cho_muon");
+    for (var i = 0; i < danhSachYeuCau.length; i++) {
+      if (danhSachYeuCau[i].getAttribute("id_yeu_cau") == idYeuCau) {
         duLieu.removeChild(danhSachYeuCau[i]);
       }
     }
-    
-    var danhSachYeuCau=duLieu.getElementsByTagName("yeu_cau_muon");
-    for(var i=0;i<danhSachYeuCau.length;i++){
-      if(danhSachYeuCau[i].getAttribute("id_yeu_cau")==idYeuCau){
+
+    var danhSachYeuCau = duLieu.getElementsByTagName("yeu_cau_muon");
+    for (var i = 0; i < danhSachYeuCau.length; i++) {
+      if (danhSachYeuCau[i].getAttribute("id_yeu_cau") == idYeuCau) {
         duLieu.removeChild(danhSachYeuCau[i]);
       }
     }
   }
-//-------------------------------------END------------------------------------------
+  //-------------------------------------END------------------------------------------
 
-//-------------------------------------LICH SU--------------------------------------
+  //-------------------------------------LICH SU--------------------------------------
 
   ThemSachVaoLichSuChoMuon(idChu, idNguoiMuon, idSach, ngayMuon, ngayTra) {
     var danhSachTuSach = duLieu.getElementsByTagName("tu_sach");
@@ -239,7 +239,7 @@ class TuSach {
         var danhSachSachTrongLichSu = danhSachTuSach[i]
           .getElementsByTagName("lich_su_cho_muon_sach")[0]
           .getElementsByTagName("sach_cho_muon");
-        var flag=0;
+        var flag = 0;
         for (var j = 0; j < danhSachSachTrongLichSu.length; j++) {
           if (danhSachSachTrongLichSu[j].getAttribute("id_sach") == idSach) {//Nếu sách đã có trong lịch sử
             var Node_moi = Node_goc.createElementNS(xmlns_v, "user_muon");
@@ -251,11 +251,11 @@ class TuSach {
               Node_moi,
               danhSachSachTrongLichSu[j].getElementsByTagName("user")[0]
             ); //chèn vào đầu
-            flag=1;
+            flag = 1;
             break;
           }
         }
-        if (flag==0) {//nếu sách chưa có trong lịch sử
+        if (flag == 0) {//nếu sách chưa có trong lịch sử
           var sach = Node_goc.createElementNS(xmlns_v, "sach_cho_muon");
           sach.setAttributeNS(xmlns_v, "id_sach", idSach);
           var user = Node_goc.createElementNS(xmlns_v, "user_muon");
@@ -279,7 +279,7 @@ class TuSach {
         var danhSachSachTrongLichSu = danhSachTuSach[i]
           .getElementsByTagName("lich_su_muon_sach")[0]
           .getElementsByTagName("sach_muon");
-        var flag=0;
+        var flag = 0;
         for (var j = 0; j < danhSachSachTrongLichSu.length; j++) {
           if (danhSachSachTrongLichSu[j].getAttribute("id_sach") == idSach) {//Nếu sách đã có trong lịch sử
             var Node_moi = Node_goc.createElementNS(xmlns_v, "user_cho_muon");
@@ -291,11 +291,11 @@ class TuSach {
               Node_moi,
               danhSachSachTrongLichSu[j].getElementsByTagName("user_cho_muon")[0]
             ); //chèn vào đầu
-            flag=1;
+            flag = 1;
             break;
           }
         }
-        if (flag==0) {//nếu sách chưa có trong lịch sử
+        if (flag == 0) {//nếu sách chưa có trong lịch sử
           var sach = Node_goc.createElementNS(xmlns_v, "sach_muon");
           sach.setAttributeNS(xmlns_v, "id_sach", idSach);
           var user = Node_goc.createElementNS(xmlns_v, "user_cho_muon");
@@ -380,7 +380,7 @@ class TuSach {
     }
   }
 
-//------------------------------------END--------------------------------------
+  //------------------------------------END--------------------------------------
 
   LayRaMotTuSach(idChu) {
     for (var i = 0; i < duLieu.getElementsByTagName("tu_sach").length; i++) {

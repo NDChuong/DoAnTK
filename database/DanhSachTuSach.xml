@@ -5,11 +5,11 @@
             <sach id_sach="LGKK" ten_sach="Làm giàu không khó" tac_gia="Nguyễn Văn B" ma_ISBN="554646" NXB="ĐH KHTH" tinh_trang="true" so_luong="1"/>
         </danh_sach_sach>
         <yeu_cau_cho_muon_sach>
-            <yeu_cau_cho_muon id_yeu_cau="111" id_user_muon="151211x" id_sach="NMLT" ngay_muon="15/05/2017" ngay_tra="01/01/2018"/>
+            <yeu_cau_cho_muon id_yeu_cau="111" id_user_muon="1512095" id_sach="NMLT" ngay_muon="15/05/2017" ngay_tra="01/01/2018"/>
              <yeu_cau_cho_muon id_yeu_cau="222" id_user_muon="151212x" id_sach="NMLT" ngay_muon="15/05/2017" ngay_tra="01/01/2018"/>
         </yeu_cau_cho_muon_sach>
         <yeu_cau_muon_sach>
-            <yeu_cau_muon id_yeu_cau="111" id_user_cho_muon="151211x" id_sach="NMLT" ngay_muon="15/05/2017" ngay_tra="01/01/2018"/>
+            <yeu_cau_muon id_yeu_cau="111" id_user_cho_muon="1512043" id_sach="NMLT" ngay_muon="15/05/2017" ngay_tra="01/01/2018"/>
         </yeu_cau_muon_sach>    
         <lich_su_cho_muon_sach>
             <sach_cho_muon id_sach="NMLT">
