@@ -8,6 +8,7 @@ const bookshelf = require('../model/TuSach');
 
 
 /* GET users listing. */
+<<<<<<< HEAD
 // ================== DEBUGGING business.js ===================
 router.get('/', function (req, res, next) {
     console.log(AcceptRequest('111'));
@@ -15,6 +16,16 @@ router.get('/', function (req, res, next) {
     res.send('OK');
 });
 // ================== DEBUGGING business.js ===================
+=======
+
+router.get('/', function (req, res, next) {
+    // bookshelf.LayRaToanBoSach();
+    bookshelf.ThemSachVaoLichSuMuon('1512043','1111111','22','1/1/1','2/2/2');
+    bookshelf.GhiDuLieu();
+    res.send('OK');
+});
+
+>>>>>>> origin/stage2-model
 
 // Check the existing of User <username>
 function userIsExisting(username) {
@@ -310,8 +321,15 @@ var exportObj = {
     BorrowBook: BorrowBook
 }
 
+<<<<<<< HEAD
 
 // ================== DEBUGGING business.js ===================
 // module.exports = router;
 // ================== DEBUGGING business.js ===================
 module.exports = exportObj;
+=======
+// Create a borrowing request
+// ============ DEBUG ===============
+module.exports = router;
+//module.exports = exportObj;
+>>>>>>> origin/stage2-model
