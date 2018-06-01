@@ -1,20 +1,20 @@
-function RenderIndexPage(resObject) {
+function RenderIndexPage(reqObject, resObject) {
     resObject.render('index', { title: 'Express' });
 }
 
-function RenderBookinfoPage(resObject) {
+function RenderBookinfoPage(reqObject, resObject) {
     resObject.send('OK');
 }
-function RenderBookshelfPage(resObject) {
+function RenderBookshelfPage(reqObject, resObject) {
     resObject.send('OK');
 }
-function RenderHistoryPage(resObject) {
+function RenderHistoryPage(reqObject, resObject) {
     resObject.send('OK');
 }
-function RenderProfilePage(resObject) {
+function RenderProfilePage(reqObject, resObject) {
     resObject.send('OK');
 }
-function RenderSearchResultPage(resObject) {
+function RenderSearchResultPage(reqObject, resObject) {
     resObject.send('OK');
 }
 
