@@ -1,8 +1,8 @@
 <danh_sach_tu_sach xmlns="urn:v">
     <tu_sach id_chu="1512043" diem_danh_gia="3">
         <danh_sach_sach>
-            <sach id_sach="MMT" ten_sach="Mạng máy tính" tac_gia="Nguyễn Văn A" ma_ISBN="4654646" NXB="ĐH KHTH" tinh_trang="true" so_luong="2"/>
-            <sach id_sach="LGKK" ten_sach="Làm giàu không khó" tac_gia="Nguyễn Văn B" ma_ISBN="554646" NXB="ĐH KHTH" tinh_trang="true" so_luong="1"/>
+            <sach id_chu="1512043" id_sach="MMT" ten_sach="Mạng máy tính" tac_gia="Nguyễn Văn A" ma_ISBN="4654646" NXB="ĐH KHTH" tinh_trang="true" so_luong="2" link="fb.com"/>
+            <sach id_chu="1512043" id_sach="LGKK" ten_sach="Làm giàu không khó" tac_gia="Nguyễn Văn B" ma_ISBN="554646" NXB="ĐH KHTH" tinh_trang="true" so_luong="1" link="fb.com"/>
         </danh_sach_sach>
         <yeu_cau_cho_muon_sach>
             <yeu_cau_cho_muon id_yeu_cau="111" id_user_muon="1512095" id_sach="NMLT" ngay_muon="15/05/2017" ngay_tra="01/01/2018"/>
