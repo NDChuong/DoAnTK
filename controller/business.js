@@ -9,15 +9,12 @@ const bookshelf = require('../model/TuSach');
 
 /* GET users listing. */
 
-// router.get('/', function (req, res, next) {
-//     // bookshelf.LayRaToanBoSach();
-//     for (var i = 0; i < 5; i++) {
-//         report.ThemBaoCao('1512095', '1512043', 'Thích');
-//         report.XoaBaoCao((i+1).toString());
-//     }
-//     report.GhiDuLieu();
-//     res.send('OK');
-// });
+router.get('/', function (req, res, next) {
+    // bookshelf.LayRaToanBoSach();
+    bookshelf.ThemSachVaoLichSuMuon('1512043','1111111','22','1/1/1','2/2/2');
+    bookshelf.GhiDuLieu();
+    res.send('OK');
+});
 
 
 // Check the existing of User <username>
@@ -234,5 +231,5 @@ var exportObj = {
 
 // Create a borrowing request
 // ============ DEBUG ===============
-// module.exports = router;
-module.exports = exportObj;
+module.exports = router;
+//module.exports = exportObj;

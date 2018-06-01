@@ -34,7 +34,7 @@ class User {
     });
   }
 
-  ThemUser(idUser, tenUser, ngaySinh, gioiTinh, soDienThoai, email, password) {
+  ThemUser(idUser, tenUser, ngaySinh, gioiTinh, soDienThoai, email, password, avatar) {
     // Them node user moi
     var Node_moi = Node_goc.createElementNS(xmlns_v, "user");
     Node_moi.setAttributeNS(xmlns_v, "id_user", idUser);
@@ -44,6 +44,7 @@ class User {
     Node_moi.setAttributeNS(xmlns_v, "so_dien_thoai", soDienThoai);
     Node_moi.setAttributeNS(xmlns_v, "email", email);
     Node_moi.setAttributeNS(xmlns_v, "password", password);
+    Node_moi.setAttributeNS(xmlns_v, "avatar", avatar);
 
     duLieu.appendChild(Node_moi);
   }
@@ -57,7 +58,7 @@ class User {
     }
   }
 
-  CapNhatThongTinUser(idUser, tenUser, ngaySinh, gioiTinh, soDienThoai, email, password) {
+  CapNhatThongTinUser(idUser, tenUser, ngaySinh, gioiTinh, soDienThoai, email, password, avatar) {
     for(var i=0;i<duLieu.getElementsByTagName("user").length;i++){
       if(duLieu.getElementsByTagName("user")[i].getAttribute("id_user")==idUser){
         {
@@ -68,6 +69,7 @@ class User {
           nodeReplace.setAttribute("so_dien_thoai", soDienThoai);
           nodeReplace.setAttribute("email", email);
           nodeReplace.setAttribute("password", password);
+          nodeReplace.setAttribute("avatar", avatar);
         }
       }
     }

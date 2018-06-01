@@ -60,7 +60,24 @@ class TuSach {
     }
   }
 
-  ThemSachVaoTu() { } //chưa đụng đến
+  ThemSachVaoTu(idChu, idSach, tenSach, tacGia, maISBN, NXB, tinhTrang, soLuong,link) { 
+    var danhSachTuSach = duLieu.getElementsByTagName("tu_sach");
+    for(var i =0;i<danhSachTuSach.length; i++){
+      if(danhSachTuSach[i].getAttribute("id_chu")==idChu){
+        var sach = Node_goc.createElementNS(xmlns_v,"sach");
+        sach.setAttributeNS(xmlns_v,"id_chu",idChu);
+        sach.setAttributeNS(xmlns_v,"id_sach",idSach);
+        sach.setAttributeNS(xmlns_v,"ten_sach",tenSach);
+        sach.setAttributeNS(xmlns_v,"tac_gia",tacGia);
+        sach.setAttributeNS(xmlns_v,"ma_ISBN",maISBN);
+        sach.setAttributeNS(xmlns_v,"NXB",NXB);
+        sach.setAttributeNS(xmlns_v,"tinh_trang",tinhTrang);
+        sach.setAttributeNS(xmlns_v,"so_luong",soLuong);
+        sach.setAttributeNS(xmlns_v,"link",link);
+        danhSachTuSach[i].getElementsByTagName('danh_sach_sach')[0].appendChild(sach);
+      }
+    }
+  }
 
   XoaSach(idChu, idSach) {
     var danhSachTuSach = duLieu.getElementsByTagName("tu_sach");
@@ -128,7 +145,7 @@ class TuSach {
   LayRaMotYeuCauChoMuonSach( idYeuCau ){
     var yeuCau = duLieu.getElementsByTagName("yeu_cau_cho_muon");
     for( var i = 0; i<yeuCau.length; i++){
-      if( yeuCau[i]==idYeuCau ){
+      if( yeuCau[i].getAttribute('id_yeu_cau')==idYeuCau ){
         return this.ConvertToJson(yeuCau[i]);
       }
     }
@@ -148,7 +165,7 @@ class TuSach {
   LayRaMotYeuCauMuonSach( idYeuCau ){
     var yeuCau = duLieu.getElementsByTagName("yeu_cau_muon");
     for( var i = 0; i<yeuCau.length; i++){
-      if( yeuCau[i]==idYeuCau ){
+      if( yeuCau[i].getAttribute('id_yeu_cau')==idYeuCau ){
         return this.ConvertToJson(yeuCau[i]);
       }
     }
