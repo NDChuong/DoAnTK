@@ -144,13 +144,8 @@ class TuSach {
 
   LayRaMotYeuCauChoMuonSach(idYeuCau) {
     var yeuCau = duLieu.getElementsByTagName("yeu_cau_cho_muon");
-<<<<<<< HEAD
     for (var i = 0; i < yeuCau.length; i++) {
       if (yeuCau[i].getAttribute('id_yeu_cau') == idYeuCau) {
-=======
-    for( var i = 0; i<yeuCau.length; i++){
-      if( yeuCau[i].getAttribute('id_yeu_cau')==idYeuCau ){
->>>>>>> origin/stage2-model
         return this.ConvertToJson(yeuCau[i]);
       }
     }
@@ -169,13 +164,8 @@ class TuSach {
 
   LayRaMotYeuCauMuonSach(idYeuCau) {
     var yeuCau = duLieu.getElementsByTagName("yeu_cau_muon");
-<<<<<<< HEAD
     for (var i = 0; i < yeuCau.length; i++) {
       if (yeuCau[i].getAttribute('id_yeu_cau') == idYeuCau) {
-=======
-    for( var i = 0; i<yeuCau.length; i++){
-      if( yeuCau[i].getAttribute('id_yeu_cau')==idYeuCau ){
->>>>>>> origin/stage2-model
         return this.ConvertToJson(yeuCau[i]);
       }
     }

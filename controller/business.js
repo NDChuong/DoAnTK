@@ -8,7 +8,7 @@ const bookshelf = require('../model/TuSach');
 
 
 /* GET users listing. */
-<<<<<<< HEAD
+
 // ================== DEBUGGING business.js ===================
 router.get('/', function (req, res, next) {
     console.log(AcceptRequest('111'));
@@ -16,7 +16,7 @@ router.get('/', function (req, res, next) {
     res.send('OK');
 });
 // ================== DEBUGGING business.js ===================
-=======
+
 
 router.get('/', function (req, res, next) {
     // bookshelf.LayRaToanBoSach();
@@ -25,7 +25,6 @@ router.get('/', function (req, res, next) {
     res.send('OK');
 });
 
->>>>>>> origin/stage2-model
 
 // Check the existing of User <username>
 function userIsExisting(username) {
@@ -321,15 +320,8 @@ var exportObj = {
     BorrowBook: BorrowBook
 }
 
-<<<<<<< HEAD
 
 // ================== DEBUGGING business.js ===================
-// module.exports = router;
-// ================== DEBUGGING business.js ===================
-module.exports = exportObj;
-=======
-// Create a borrowing request
-// ============ DEBUG ===============
 module.exports = router;
-//module.exports = exportObj;
->>>>>>> origin/stage2-model
+// ================== DEBUGGING business.js ===================
+// module.exports = exportObj;
