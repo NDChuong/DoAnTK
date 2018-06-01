@@ -8,6 +8,7 @@ const bookshelf = require('../model/TuSach');
 
 
 /* GET users listing. */
+
 // router.get('/', function (req, res, next) {
 //     // bookshelf.LayRaToanBoSach();
 //     for (var i = 0; i < 5; i++) {
@@ -17,6 +18,7 @@ const bookshelf = require('../model/TuSach');
 //     report.GhiDuLieu();
 //     res.send('OK');
 // });
+
 
 // Check the existing of User <username>
 function userIsExisting(username) {

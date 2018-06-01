@@ -11,6 +11,8 @@ var Node_goc = new DOMParser().parseFromString("<Du_lieu />", "text/xml");
 var duongDan;
 var duLieu;
 
+var _idYeuCau=0;
+
 class TuSach {
   constructor() {
     this.DocDuLieu("DanhSachTuSach.xml");
@@ -33,6 +35,8 @@ class TuSach {
       }
     });
   }
+
+  //--------------------------------SACH------------------------------------------
 
   CapNhatThongTinSach(idChu, idSach, tenSach, tacGia, maISBN, NXB, tinhTrang, soLuong) {
     var danhSachTuSach = duLieu.getElementsByTagName("tu_sach");
@@ -76,6 +80,28 @@ class TuSach {
     }
   }
 
+  LayRaToanBoSach() {
+    var danhSachSach = duLieu.getElementsByTagName("sach");
+    var soLuong = danhSachSach.length;
+    var sach = Node_goc.createElementNS(xmlns_v,"sach");
+    for (var i = 0; i < soLuong; i++) {
+      sach.appendChild(danhSachSach[i]);
+    }
+    return this.ConvertToJson(sach);
+  }
+
+  LayRaMotCuonSach(idSach) {
+    var x = duLieu.getElementsByTagName("sach");
+    for (var i = 0; i < x.length; i++) {
+      if (idSach == x[i].getAttribute("id_sach")) {
+        return this.ConvertToJson(x[i]);
+      }
+    }
+    return "null";
+  }
+
+//-----------------------------------END--------------------------------------------
+
   CapNhatDiemDanhGia(idChu, soLuongDiemCongThem) {
     //số lượng điểm cộng thêm có thể âm hoặc vote up or vote down
     for (var i = 0; i < duLieu.getElementsByTagName("tu_sach").length; i++) {
@@ -97,83 +123,127 @@ class TuSach {
     }
   }
 
-  ThemYeuCau(idChu, idNguoiMuon, idSach, ngayMuon, ngayTra, loaiYeuCau) {
-    //hoán đổi 2 id để dùng cho các yêu cầu tương ứng
-    var loaiIdUser;
-    if (loaiYeuCau == "yeu_cau_cho_muon_sach") {
-      loaiIdUser = "id_user_muon";
-    } else {
-      loaiIdUser = "id_user_cho_muon";
+  //----------------------------------YEU CAU-------------------------------------------
+
+  LayRaMotYeuCauChoMuonSach( idYeuCau ){
+    var yeuCau = duLieu.getElementsByTagName("yeu_cau_cho_muon");
+    for( var i = 0; i<yeuCau.length; i++){
+      if( yeuCau[i]==idYeuCau ){
+        return this.ConvertToJson(yeuCau[i]);
+      }
     }
+    return 'null';
+  }
+
+  LayRaToanBoYeuCauChoMuonSach(){
+    var danhSachYeuCauChoMuonSach = duLieu.getElementsByTagName('yeu_cau_cho_muon');
+    var soLuong = danhSachYeuCauChoMuonSach.length; 
+    var result = Node_goc.createElementNS(xmlns_v,'danh_sach');
+    for( var i = 0 ; i < soLuong ; i++ ){
+      result.appendChild(danhSachYeuCauChoMuonSach[i]);
+    }
+    return this.ConvertToJson(result);
+  }
+
+  LayRaMotYeuCauMuonSach( idYeuCau ){
+    var yeuCau = duLieu.getElementsByTagName("yeu_cau_muon");
+    for( var i = 0; i<yeuCau.length; i++){
+      if( yeuCau[i]==idYeuCau ){
+        return this.ConvertToJson(yeuCau[i]);
+      }
+    }
+    return 'null';
+  }
+
+  LayRaToanBoYeuCauMuonSach(){
+    var danhSachYeuCauMuonSach = duLieu.getElementsByTagName('yeu_cau_muon');
+    var soLuong = danhSachYeuCauMuonSach.length; 
+    var result = Node_goc.createElementNS(xmlns_v,'danh_sach');
+    for( var i = 0 ; i < soLuong ; i++ ){
+      result.appendChild(danhSachYeuCauMuonSach[i]);
+    }
+    return this.ConvertToJson(result);
+  }
+
+  ThemYeuCauChoMuonSach(idChu, idNguoiMuon, idSach, ngayMuon, ngayTra) {
+
     var danhSachTuSach = duLieu.getElementsByTagName("tu_sach");
     for (var i = 0; i < danhSachTuSach.length; i++) {
       if (idChu == danhSachTuSach[i].getAttribute("id_chu")) {
-        var Node_moi = Node_goc.createElementNS(xmlns_v, "yeu_cau");
-        Node_moi.setAttributeNS(xmlns_v, loaiIdUser, idNguoiMuon);
+        var Node_moi = Node_goc.createElementNS(xmlns_v, "yeu_cau_cho_muon");
+        Node_moi.setAttributeNS(xmlns_v,"id_yeu_cau",_idYeuCau);
+        Node_moi.setAttributeNS(xmlns_v, "id_user_muon", idNguoiMuon);
         Node_moi.setAttributeNS(xmlns_v, "id_sach", idSach);
         Node_moi.setAttributeNS(xmlns_v, "ngay_muon", ngayMuon);
         Node_moi.setAttributeNS(xmlns_v, "ngay_tra", ngayTra);
 
         danhSachTuSach[i]
-          .getElementsByTagName(loaiYeuCau)[0]
+          .getElementsByTagName("yeu_cau_cho_muon_sach")[0]
           .insertBefore(
             Node_moi,
             danhSachTuSach[i]
-              .getElementsByTagName(loaiYeuCau)[0]
-              .getElementsByTagName("yeu_cau")[0]
+              .getElementsByTagName("yeu_cau_cho_muon_sach")[0]
+              .getElementsByTagName("yeu_cau_cho_muon")[0]
           ); //chèn vào đầu
       }
     }
   }
 
-  XoaYeuCau(idChu, idNguoiMuon, idSach, loaiYeuCau) {
-    var loaiIdUser;
-    if (loaiYeuCau == "yeu_cau_cho_muon_sach") {
-      loaiIdUser = "id_user_muon";
-    } else {
-      loaiIdUser = "id_user_cho_muon";
-    }
+  ThemYeuCauMuonSach(idChu, idNguoiChoMuon, idSach, ngayMuon, ngayTra) {
 
     var danhSachTuSach = duLieu.getElementsByTagName("tu_sach");
     for (var i = 0; i < danhSachTuSach.length; i++) {
       if (idChu == danhSachTuSach[i].getAttribute("id_chu")) {
-        var danhSachYeuCau = danhSachTuSach[i]
-          .getElementsByTagName(loaiYeuCau)[0]
-          .getElementsByTagName("yeu_cau");
-        for (var j = 0; j < danhSachYeuCau.length; j++) {
-          if (
-            danhSachYeuCau[j].getAttribute(loaiIdUser) == idNguoiMuon &&
-            idSach == danhSachYeuCau[j].getAttribute("id_sach")
-          ) {
-            var y = danhSachYeuCau[j];
-            duLieu.removeChild(y);
-            break;
-          }
-        }
-        break;
+        var Node_moi = Node_goc.createElementNS(xmlns_v, "yeu_cau_muon");
+        Node_moi.setAttributeNS(xmlns_v,"id_yeu_cau",_idYeuCau);
+        Node_moi.setAttributeNS(xmlns_v, "id_user_cho_muon", idNguoiChoMuon);
+        Node_moi.setAttributeNS(xmlns_v, "id_sach", idSach);
+        Node_moi.setAttributeNS(xmlns_v, "ngay_muon", ngayMuon);
+        Node_moi.setAttributeNS(xmlns_v, "ngay_tra", ngayTra);
+
+        danhSachTuSach[i]
+          .getElementsByTagName("yeu_cau_muon_sach")[0]
+          .insertBefore(
+            Node_moi,
+            danhSachTuSach[i]
+              .getElementsByTagName("yeu_cau_muon_sach")[0]
+              .getElementsByTagName("yeu_cau_muon")[0]
+          ); //chèn vào đầu
       }
     }
   }
 
-  ThemSachVaoLichSu(idChu, idNguoiMuon, idSach, ngayMuon, ngayTra, loaiLichSu) {
-    var loaiIdUser;
-    if (loaiLichSu == "lich_su_cho_muon_sach") {
-      loaiIdUser = "id_user_muon";
-    } else {
-      loaiIdUser = "id_user_cho_muon";
+  XoaYeuCau(idYeuCau){//id yeu cau cho muon sach va yeu cau muon sach la 1
+    var danhSachYeuCau=duLieu.getElementsByTagName("yeu_cau_cho_muon");
+    for(var i=0;i<danhSachYeuCau.length;i++){
+      if(danhSachYeuCau[i].getAttribute("id_yeu_cau")==idYeuCau){
+        duLieu.removeChild(danhSachYeuCau[i]);
+      }
     }
+    
+    var danhSachYeuCau=duLieu.getElementsByTagName("yeu_cau_muon");
+    for(var i=0;i<danhSachYeuCau.length;i++){
+      if(danhSachYeuCau[i].getAttribute("id_yeu_cau")==idYeuCau){
+        duLieu.removeChild(danhSachYeuCau[i]);
+      }
+    }
+  }
+//-------------------------------------END------------------------------------------
 
+//-------------------------------------LICH SU--------------------------------------
+
+  ThemSachVaoLichSuChoMuon(idChu, idNguoiMuon, idSach, ngayMuon, ngayTra) {
     var danhSachTuSach = duLieu.getElementsByTagName("tu_sach");
     for (var i = 0; i < danhSachTuSach.length; i++) {
       if (danhSachTuSach[i].getAttribute("id_chu") == idChu) {
         var danhSachSachTrongLichSu = danhSachTuSach[i]
-          .getElementsByTagName(loaiLichSu)[0]
-          .getElementsByTagName("sach");
-        var j;
-        for (j = 0; j < danhSachSachTrongLichSu.length; j++) {
+          .getElementsByTagName("lich_su_cho_muon_sach")[0]
+          .getElementsByTagName("sach_cho_muon");
+        var flag=0;
+        for (var j = 0; j < danhSachSachTrongLichSu.length; j++) {
           if (danhSachSachTrongLichSu[j].getAttribute("id_sach") == idSach) {//Nếu sách đã có trong lịch sử
-            var Node_moi = Node_goc.createElementNS(xmlns_v, "user");
-            Node_moi.setAttributeNS(xmlns_v, loaiIdUser, idNguoiMuon);
+            var Node_moi = Node_goc.createElementNS(xmlns_v, "user_muon");
+            Node_moi.setAttributeNS(xmlns_v, "id_user_muon", idNguoiMuon);
             Node_moi.setAttributeNS(xmlns_v, "ngay_muon", ngayMuon);
             Node_moi.setAttributeNS(xmlns_v, "ngay_tra", ngayTra);
 
@@ -181,20 +251,61 @@ class TuSach {
               Node_moi,
               danhSachSachTrongLichSu[j].getElementsByTagName("user")[0]
             ); //chèn vào đầu
+            flag=1;
             break;
           }
         }
-        if (j == danhSachSachTrongLichSu.length) {//nếu sách chưa có trong lịch sử
-          var sach = Node_goc.createElementNS(xmlns_v, "sach");
+        if (flag==0) {//nếu sách chưa có trong lịch sử
+          var sach = Node_goc.createElementNS(xmlns_v, "sach_cho_muon");
           sach.setAttributeNS(xmlns_v, "id_sach", idSach);
-          var user = Node_goc.createElementNS(xmlns_v, "user");
-          user.setAttributeNS(xmlns_v, loaiIdUser, idNguoiMuon);
+          var user = Node_goc.createElementNS(xmlns_v, "user_muon");
+          user.setAttributeNS(xmlns_v, "id_user_muon", idNguoiMuon);
           user.setAttributeNS(xmlns_v, "ngay_muon", ngayMuon);
           user.setAttributeNS(xmlns_v, "ngay_tra", ngayTra);
           sach.appendChild(user);
 
           danhSachTuSach[i]
-            .getElementsByTagName(loaiLichSu)[0].appendChild(sach);
+            .getElementsByTagName("lich_su_cho_muon_sach")[0].appendChild(sach);
+          break;
+        }
+      }
+    }
+  }
+
+  ThemSachVaoLichSuMuon(idChu, idNguoiChoMuon, idSach, ngayMuon, ngayTra) {
+    var danhSachTuSach = duLieu.getElementsByTagName("tu_sach");
+    for (var i = 0; i < danhSachTuSach.length; i++) {
+      if (danhSachTuSach[i].getAttribute("id_chu") == idChu) {
+        var danhSachSachTrongLichSu = danhSachTuSach[i]
+          .getElementsByTagName("lich_su_muon_sach")[0]
+          .getElementsByTagName("sach_muon");
+        var flag=0;
+        for (var j = 0; j < danhSachSachTrongLichSu.length; j++) {
+          if (danhSachSachTrongLichSu[j].getAttribute("id_sach") == idSach) {//Nếu sách đã có trong lịch sử
+            var Node_moi = Node_goc.createElementNS(xmlns_v, "user_cho_muon");
+            Node_moi.setAttributeNS(xmlns_v, "id_user_cho_muon", idNguoiChoMuon);
+            Node_moi.setAttributeNS(xmlns_v, "ngay_muon", ngayMuon);
+            Node_moi.setAttributeNS(xmlns_v, "ngay_tra", ngayTra);
+
+            danhSachSachTrongLichSu[j].insertBefore(
+              Node_moi,
+              danhSachSachTrongLichSu[j].getElementsByTagName("user_cho_muon")[0]
+            ); //chèn vào đầu
+            flag=1;
+            break;
+          }
+        }
+        if (flag==0) {//nếu sách chưa có trong lịch sử
+          var sach = Node_goc.createElementNS(xmlns_v, "sach_muon");
+          sach.setAttributeNS(xmlns_v, "id_sach", idSach);
+          var user = Node_goc.createElementNS(xmlns_v, "user_cho_muon");
+          user.setAttributeNS(xmlns_v, "id_user_cho_muon", idNguoiChoMuon);
+          user.setAttributeNS(xmlns_v, "ngay_muon", ngayMuon);
+          user.setAttributeNS(xmlns_v, "ngay_tra", ngayTra);
+          sach.appendChild(user);
+
+          danhSachTuSach[i]
+            .getElementsByTagName("lich_su_muon_sach")[0].appendChild(sach);
           break;
         }
       }
@@ -203,7 +314,6 @@ class TuSach {
 
   XoaSachKhoiLichSuChoMuonSach(idChu, idNguoiMuon, idSach) {
     var loaiIdUser;
-
     var danhSachTuSach = duLieu.getElementsByTagName("tu_sach");
     for (var i = 0; i < danhSachTuSach.length; i++) {
       if (danhSachTuSach[i].getAttribute("id_chu") == idChu) {
@@ -214,9 +324,8 @@ class TuSach {
           if (danhSachSachTrongLichSu[j].getAttribute("id_sach") == idSach) {
             var danhSachNguoiMuonSachNay = danhSachSachTrongLichSu[
               j
-            ].getElementsByTagName("user");
+            ].getElementsByTagName("user_muon");
             for (var k = 0; k < danhSachNguoiMuonSachNay.length; k++) {
-              console.log("------------------------"+idNguoiMuon+danhSachNguoiMuonSachNay[k].getAttribute("id_user_muon"));
               if (
                 idNguoiMuon ==
                 danhSachNguoiMuonSachNay[k].getAttribute("id_user_muon")
@@ -228,50 +337,55 @@ class TuSach {
                 else {
                   danhSachSachTrongLichSu[j].removeChild(y);
                 }
-                break;
+                return;
               }
             }
-            break;
           }
         }
-        break;
       }
     }
   }
+
+  XoaSachKhoiLichSuMuonSach(idChu, idNguoiChoMuon, idSach) {
+    var loaiIdUser;
+    var danhSachTuSach = duLieu.getElementsByTagName("tu_sach");
+    for (var i = 0; i < danhSachTuSach.length; i++) {
+      if (danhSachTuSach[i].getAttribute("id_chu") == idChu) {
+        var danhSachSachTrongLichSu = danhSachTuSach[i]
+          .getElementsByTagName("lich_su_muon_sach")[0]
+          .getElementsByTagName("sach_muon");
+        for (var j = 0; j < danhSachSachTrongLichSu.length; j++) {
+          if (danhSachSachTrongLichSu[j].getAttribute("id_sach") == idSach) {
+            var danhSachNguoiMuonSachNay = danhSachSachTrongLichSu[
+              j
+            ].getElementsByTagName("user_cho_muon");
+            for (var k = 0; k < danhSachNguoiMuonSachNay.length; k++) {
+              if (
+                idNguoiChoMuon ==
+                danhSachNguoiMuonSachNay[k].getAttribute("id_user_cho_muon")
+              ) {
+                var y = danhSachNguoiMuonSachNay[k];
+                if (danhSachNguoiMuonSachNay.length == 1) {//Nếu chỉ có 1 người đang mượn khi xóa sẽ xóa luôn cuốn sách ra khỏi danh sách
+                  duLieu.removeChild(danhSachSachTrongLichSu[j]);
+                }
+                else {
+                  danhSachSachTrongLichSu[j].removeChild(y);
+                }
+                return;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+//------------------------------------END--------------------------------------
 
   LayRaMotTuSach(idChu) {
     for (var i = 0; i < duLieu.getElementsByTagName("tu_sach").length; i++) {
       if (idChu == duLieu.getElementsByTagName("tu_sach")[i].getAttribute("id_chu")) {
         return this.ConvertToJson(duLieu.getElementsByTagName("tu_sach")[i]);
-      }
-    }
-    return "null";
-  }
-
-  LayRaToanBoSach() {
-
-    var x = duLieu.getElementsByTagName("sach");
-    for (var i = 0; i < x.length; i++) {
-      var sach = Node_goc.createElementNS(xmlns_v,"sach");
-      sach.setAttributeNS(xmlns_v, "id_sach", x[i].getAttribute("id_sach"));
-      sach.setAttributeNS(xmlns_v, "ten_sach", x[i].getAttribute("ten_sach"));
-      sach.setAttributeNS(xmlns_v, "tac_gia", x[i].getAttribute("tac_gia"));
-      sach.setAttributeNS(xmlns_v, "ma_ISBN", x[i].getAttribute("ma_ISBN"));
-      sach.setAttributeNS(xmlns_v, "NXB", x[i].getAttribute("NXB"));
-      sach.setAttributeNS(xmlns_v, "tinh_trang", x[i].getAttribute("tinh_trang"));
-      sach.setAttributeNS(xmlns_v, "so_luong", x[i].getAttribute("so_luong"));
-
-        Node_goc.appendChild(sach);
-    }
-    var temp = new XMLSerializer().serializeToString(Node_goc);
-    console.log(temp);
-  }
-
-  LayRaMotCuonSach(idSach) {
-    var x = duLieu.getElementsByTagName("sach");
-    for (var i = 0; i < x.length; i++) {
-      if (idSach == x[i].getAttribute("id_sach")) {
-        return this.ConvertToJson(x[i]);
       }
     }
     return "null";
