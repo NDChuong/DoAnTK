@@ -2,21 +2,33 @@
         <div class="container">
             <div class="row">
                 <div class="header-section text-center">
-                    <h2>{{{_sections.view-title}}}</h2>
+                    <h2>Được xem nhiều nhất</h2>
                     <hr class="botton-line">
                 </div>
             </div>
             <div class="row">
-                {{{body}}}
+                {{#each viewbook}}
+                <div class="col-md-3">
+                    <img class="img-responsive" src="{{bookimage}}"></img>
+                    <h5 class="header-section text-center">{{ten_user}}</h5>
+                    <b>Rating: </b><span>*********</span>
+                </div>
+                {{/each}}
             </div>
             <div class="row">
                 <div class="header-section text-center">
-                    <h2>{{{_sections.rating-title}}}</h2>
+                    <h2>Tủ sách có rating cao</h2>
                     <hr class="botton-line">
                 </div>
             </div>
             <div class="row">
-                {{{body}}}
+                {{#each viewbook}}
+                <div class="col-md-3">
+                    <img class="img-responsive" src="{{bookimage}}"></img>
+                    <h5 class="header-section text-center">{{ten_user}}</h5>
+                    <b>Rating: </b><span>*********</span>
+                </div>
+                {{/each}}
             </div>
         </div>
     </section>

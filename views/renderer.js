@@ -1,9 +1,9 @@
-var bussiness = require('../controller/business');
+var business = require('../controller/business');
 
 function RenderIndexPage(resObject) {
-    var rows = bussiness.GetTopBookshelves(5,1);
+    var rows = business.GetAllBookshelves();
     var vm = {
-        book:rows
+        viewbook: rows
     }
     resObject.render('home/index', vm);
     
