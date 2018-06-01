@@ -6,9 +6,11 @@
             </div>
         </div>        
         <div class="col-md-4">
-            <img src="{{{bookimage}}}" class="avatar-resize" alt="">
+            <img src="{{bookimage}}" class="avatar-resize" alt="">
             {{#if BookStatus.isAvailable}}
             <p class="label available-status">Available</p>
+            {{else}}
+            <p class="label none-available-status">None Available</p>
             {{/if}}
         </div>
         {{#each book}}
@@ -28,7 +30,7 @@
             <div class="row">
                 <div class="col-md-3">Thuộc tủ sách: </div>
                 <div class="col-md-9">
-                    <a href="{{profile}}"><b>{{ten_user}}</b></a>
+                    <a href="/bookshelf/bookshelf?id_user={{id_user}}"><b>{{ten_user}}</b></a>
                 </div>
             </div>            
         </div>

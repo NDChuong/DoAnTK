@@ -5,26 +5,28 @@
                 <h3 class="page-header"><i class="fa fa-user-md"></i> Thông tin cá nhân</h3>
             </div>
         </div>
+           
         <div class="row frame">
             <div class="col-md-4">
                 <img src="{{avatarimage}}" class="avatar-resize" alt="">
-                <h5 class="text-center">{{ten_user}}</h5>
+                <h5 class="text-center">{{user.ten_user}}</h5>
             </div>
             <div class="col-md-8">
                 <div class="row info-row">
                     <div class="col-md-3">Họ và tên:</div>
-                    <div class="col-md-9">{{ten_user}}</div>
+                    <div class="col-md-9">{{user.ten_user}}</div>
                 </div>
                 <div class="row info-row">
                     <div class="col-md-3">Ngày sinh:</div>
-                    <div class="col-md-9">{{ngay_sinh}}</div>
+                    <div class="col-md-9">{{user.ngay_sinh}}</div>
                 </div>
                 <div class="row info-row">
                     <div class="col-md-3">Email:</div>
-                    <div class="col-md-9">{{email}}</div>
+                    <div class="col-md-9">{{user.email}}</div>
                 </div>
             </div>
         </div>
+        
         <div class="wrapper">
             <div class="row">
                 <div class="col-md-12">
@@ -32,11 +34,11 @@
                 </div>
             </div>
         </div>
-        <div class="row frame">
+        {{#each bookshelf}}
+        <div class="row frame">            
         	<div class="col-md-4">
-        		<img src="{{bookimage}}" class="avatar-resize">
-        	</div>
-        	{{#each book}}
+        		<a href="/bookshelf/bookinfo?id_sach={{id_sach}}"><img src="{{bookimage}}" class="avatar-resize"></a>
+        	</div>        	
         	<div class="col-md-8">
         		<div class="row info-row">
         			<div class="col-md-3">Tên sách:</div>
@@ -51,8 +53,8 @@
                     <div class="col-md-9">{{ma_ISBN}}</div>
         		</div>        		
         	</div>
-        	{{/each}}
         </div>
+        {{/each}}
 
     </div>
 </div>
