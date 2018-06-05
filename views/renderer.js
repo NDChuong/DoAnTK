@@ -50,14 +50,22 @@ function RenderBookshelfPage(reqObject, resObject) {
     resObject.render('bookshelf/bookshelf', vm);
     //resObject.send('OK');
 }
-function RenderHistoryPage(resObject) {
-    resObject.send('OK');
+function RenderHistoryPage(reqobject, resObject) {
+    
+    resObject.render('history/history');
 }
-function RenderProfilePage(resObject) {
-    resObject.send('OK');
+function RenderProfilePage(reqObject, resObject) {
+    resObject.render('account/profile');
 }
-function RenderSearchResultPage(resObject) {
-    resObject.send('OK');
+function RenderSearchResultPage(reqObject, resObject) {
+    var search_str = reqObject.param('search');
+    var result_book = business.SearchForBook(search_str);
+    var result_user = business.SearchForUser(search_str);
+    var vm = {
+        search_book: result_book,
+        search_user: result_user
+    }
+    resObject.render('search/search-result', vm);
 }
 
 var exportObj = {
