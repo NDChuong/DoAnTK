@@ -36,8 +36,8 @@ function userIsExisting(username) {
 
 // User registers a new account
 // return 1 for success, 0 for failure
-function RegisterAccount(username, pass, email, phone, name, birthday, sex) {
-    user.ThemUser(username, name, birthday, sex, phone, email, pass);
+function RegisterAccount(username, pass, email, phone, name, birthday, sex, avatarLink) {
+    user.ThemUser(username, name, birthday, sex, phone, email, pass, avatarLink);
     return userIsExisting(username);
 }
 
@@ -98,6 +98,7 @@ function ChangePhone(username, newPhoneNum) {
     }
     return false;
 }
+
 
 // Get all account in the system
 function GetAllAccount() {
@@ -243,7 +244,15 @@ function SearchForBook(keyword) {
     return result;
 }
 
-
+function AddBook(username, bookID, name, author, ISBN, publisher, status, quantity, link) {
+    try {
+        bookshelf.ThemSachVaoTu(username, bookID, name, author, ISBN, publisher, status, quantity, link);
+        return true;
+    }
+    catch (ee) {
+        return false;
+    }
+}
 
 
 // ========================== Request and History
@@ -349,6 +358,7 @@ var exportObj = {
     GetAllBookshelves: GetAllBookshelves,
     GetTopBookshelves: GetTopBookshelves,
     SearchForBookshelf: SearchForBookshelf,
+    AddBook: AddBook,
     GetBookInfo: GetBookInfo,
     GetAllBook: GetAllBook,
     GetTopBooks: GetTopBooks,
