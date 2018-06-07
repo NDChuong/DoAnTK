@@ -4,7 +4,14 @@ var router = express.Router();
 /* GET users listing. */
 var renderer = require('../views/renderer.js');
 router.get('/', function(req, res, next) {
-  renderer.RenderProfilePage(req, res);
+  var loginStatus = false;
+  // Check login status
+  if (req.session.userid != undefined) {
+    // User already logged in
+    loginStatus = true;
+  }
+
+  renderer.RenderProfilePage(req, res,loginStatus);
 });
 
 module.exports = router;

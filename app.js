@@ -4,6 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 var logger = require('morgan');
+var session = require('express-session');
 
 // ================ ROUTER DECLARATION ================
 var indexRouter = require('./routes/index');
@@ -19,6 +20,11 @@ var searchRouter = require('./routes/search');
 var app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+// Session setup
+app.use(session({
+  secret: 'Do an 10 diem nhe'
+}))
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -42,8 +48,8 @@ app.use('/search.html', searchRouter);
 // =============== ROUTING ===================
 
 // ================== DEBUGGING business.js ===================
-const businessRouter = require('./controller/business');
-app.use('/business', businessRouter);
+// const businessRouter = require('./controller/business');
+// app.use('/business', businessRouter);
 // ================== DEBUGGING business.js ===================
 
 // catch 404 and forward to error handler

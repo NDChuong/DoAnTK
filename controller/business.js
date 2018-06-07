@@ -81,7 +81,13 @@ function ChangeBirthday(username, newBirthDay) {
 // Get full information of a account
 // return a User object
 function GetAccountInfo(username) {
-    return lib.UserJSON2Obj(user.LayRaMotUser(username));
+    try {
+
+        return lib.UserJSON2Obj(user.LayRaMotUser(username));
+    } catch (e)
+    {
+        return null;
+    }
 }
 
 // User change phone number
@@ -375,6 +381,6 @@ var exportObj = {
 
 
 // ================== DEBUGGING business.js ===================
-module.exports = router;
+// module.exports = router;
 // ================== DEBUGGING business.js ===================
-// module.exports = exportObj;
+module.exports = exportObj;
