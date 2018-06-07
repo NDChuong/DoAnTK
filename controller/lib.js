@@ -16,37 +16,44 @@ var obj = {
             books[i] = books[i].attributes;
         }
 
-        var loaningRequests = JSON.parse(jsonText).elements[0].elements[1].elements;
-        for (i = 0; i < loaningRequests.length; i++) {
-            loaningRequests[i] = loaningRequests[i].attributes;
+        var lentingRequests = JSON.parse(jsonText).elements[0].elements[1].elements;
+        if (lentingRequests != undefined) {
+            for (i = 0; i < lentingRequests.length; i++) {
+                lentingRequests[i] = lentingRequests[i].attributes;
+            }
         }
 
         var borrowingRequests = JSON.parse(jsonText).elements[0].elements[2].elements;
-        for (i = 0; i < borrowingRequests.length; i++) {
-            borrowingRequests[i] = borrowingRequests[i].attributes;
+        if (borrowingRequests != undefined) {
+            for (i = 0; i < borrowingRequests.length; i++) {
+                borrowingRequests[i] = borrowingRequests[i].attributes;
+            }
         }
 
         var borrowingHistory = JSON.parse(jsonText).elements[0].elements[3].elements;
-        for (i = 0; i < borrowingHistory.length; i++) {
-            var obj1 = borrowingHistory[i].attributes;
-            var obj2 = borrowingHistory[i].elements[0].attributes;
-            for (var att in obj2) {
-                obj1[att] = obj2[att];
-            }
+        if (borrowingHistory != undefined) {
+            for (i = 0; i < borrowingHistory.length; i++) {
+                var obj1 = borrowingHistory[i].attributes;
+                var obj2 = borrowingHistory[i].elements[0].attributes;
+                for (var att in obj2) {
+                    obj1[att] = obj2[att];
+                }
 
-            borrowingHistory[i] = obj1;
+                borrowingHistory[i] = obj1;
+            }
         }
 
-        var loaningHistory = JSON.parse(jsonText).elements[0].elements[4].elements;
-        for (i = 0; i < loaningHistory.length; i++) {
-            var obj1 = loaningHistory[i].attributes;
-            var obj2 = loaningHistory[i].elements[0].attributes;
-            for (var att in obj2) {
-                obj1[att] = obj2[att];
-            }
+        var lentingHistory = JSON.parse(jsonText).elements[0].elements[4].elements;
+        if (lentingHistory != undefined)
+            for (i = 0; i < lentingHistory.length; i++) {
+                var obj1 = lentingHistory[i].attributes;
+                var obj2 = lentingHistory[i].elements[0].attributes;
+                for (var att in obj2) {
+                    obj1[att] = obj2[att];
+                }
 
-            loaningHistory[i] = obj1;
-        }
+                lentingHistory[i] = obj1;
+            }
 
         return {
             id: JSON.parse(jsonText).elements[0].attributes.id_chu,
@@ -54,8 +61,8 @@ var obj = {
             bookList: books,
             borrowingRequests: borrowingRequests,
             borrowingHistory: borrowingHistory,
-            loaningRequests: loaningRequests,
-            loaningHistory: loaningHistory
+            lentingRequests: lentingRequests,
+            lentingHistory: lentingHistory
         }
     },
 

@@ -10,21 +10,24 @@ const bookshelf = require('../model/TuSach');
 /* GET users listing. */
 
 // ================== DEBUGGING business.js ===================
+
 router.get('/', function (req, res, next) {
-    console.log(AcceptRequest('111'));
-    
+    console.log('connected');
+    // bookshelf.LayRaToanBoSach();
+
+    var a = GetBorrowingHistory("0000001");
+    console.log(a);
+
+    var a = GetLentingHistory("0000001");
+    console.log(a);
     res.send('OK');
 });
+
 // ================== DEBUGGING business.js ===================
 
 
-router.get('/', function (req, res, next) {
-    // bookshelf.LayRaToanBoSach();
-    bookshelf.ThemSachVaoLichSuMuon('1512043','1111111','22','1/1/1','2/2/2');
-    bookshelf.GhiDuLieu();
-    res.send('OK');
-});
 
+// ========================== Account
 
 // Check the existing of User <username>
 function userIsExisting(username) {
@@ -58,6 +61,7 @@ function Login(username, pass) {
 // function Logout(resObject) {
 //     return lib.RemoveCookie(resObject, 'id');
 // }
+
 
 // User change birthday
 // return 1 for success, 0 for failure
@@ -112,6 +116,9 @@ function GetAllAccount() {
     }
 }
 
+
+// ========================== Bookshelf
+
 // Get a bookshelf
 // return a bookshelf object
 function GetBookshelf(username) {
@@ -158,13 +165,29 @@ function GetTopBookshelves(n, criterion) {
     }
 }
 
+// Search for bookshelf
+// return array of bookshelves found
+function SearchForBookshelf(keyword) {
+    var bookshelfList = GetAllBookshelves();
+    var result = [];
+
+    for (x of bookshelfList) {
+        var str = x.id.toLowerCase();
+        if (str.indexOf(keyword.toLowerCase()) != -1) {
+            result.push(x);
+        }
+    }
+
+    return result;
+}
+
+
+// ========================== Book
+
 // Get information of a book
-// return JSON
+// return Book object
 function GetBookInfo(bookID) {
     var result = lib.BookJSON2Obj(bookshelf.LayRaMotCuonSach(bookID));
-
-
-
     return result;
 }
 
@@ -220,23 +243,13 @@ function SearchForBook(keyword) {
     return result;
 }
 
-// Search for bookshelf
-// return array of bookshelves found
-function SearchForBookshelf(keyword) {
-    var bookshelfList = GetAllBookshelves();
-    var result = [];
 
-    for (x of bookshelfList) {
-        var str = x.id.toLowerCase();
-        if (str.indexOf(keyword.toLowerCase()) != -1) {
-            result.push(x);
-        }
-    }
 
-    return result;
-}
+
+// ========================== Request and History
 
 // Borrow a book
+// username1 borrows book from username2
 // return bool
 function BorrowBook(username1, username2, bookID, borrowDate, returnDate) {
     // user1 muon sach tu user1:
@@ -256,11 +269,12 @@ function BorrowBook(username1, username2, bookID, borrowDate, returnDate) {
 }
 
 
+//User accept a borrowing request
 function AcceptRequest(requestID) {
     try {
         var bRequest = GetBorrowingRequest(requestID);
         var lRequest = GetLentingRequest(requestID);
-        
+
         // Them vao lich su
         bookshelf.ThemSachVaoLichSuMuon(lRequest.id_user_muon, bRequest.id_user_cho_muon, bRequest.id_sach, bRequest.ngay_muon, bRequest.ngay_tra);
         bookshelf.ThemSachVaoLichSuChoMuon(bRequest.id_user_cho_muon, lRequest.id_user_muon, bRequest.id_sach, bRequest.ngay_muon, bRequest.ngay_tra);
@@ -274,6 +288,7 @@ function AcceptRequest(requestID) {
     }
 }
 
+// User reject a request
 function RejectRequest(requestID) {
     try {
         // Xoa yeu cau
@@ -285,6 +300,7 @@ function RejectRequest(requestID) {
     }
 }
 
+// return borrowing request obj
 function GetBorrowingRequest(id) {
     try {
         return JSON.parse(bookshelf.LayRaMotYeuCauMuonSach(id)).elements[0].attributes;
@@ -293,6 +309,7 @@ function GetBorrowingRequest(id) {
     }
 }
 
+// return lenting request obj
 function GetLentingRequest(id) {
     try {
         return JSON.parse(bookshelf.LayRaMotYeuCauChoMuonSach(id)).elements[0].attributes;
@@ -300,6 +317,26 @@ function GetLentingRequest(id) {
         return null;
     }
 }
+
+// Get history array
+function GetBorrowingHistory(username) {
+    try {
+        return GetBookshelf(username).borrowingHistory;
+    }
+    catch (ee) {
+        return null;
+    }
+}
+
+function GetLentingHistory(username) {
+    try {
+        return GetBookshelf(username).lentingHistory;
+    }
+    catch (ee) {
+        return null;
+    }
+}
+
 
 var exportObj = {
     userIsExisting: userIsExisting,
@@ -311,13 +348,19 @@ var exportObj = {
     GetBookshelf: GetBookshelf,
     GetAllBookshelves: GetAllBookshelves,
     GetTopBookshelves: GetTopBookshelves,
+    SearchForBookshelf: SearchForBookshelf,
     GetBookInfo: GetBookInfo,
     GetAllBook: GetAllBook,
     GetTopBooks: GetTopBooks,
     GetNBookInfo: GetNBookInfo,
     SearchForBook: SearchForBook,
-    SearchForBookshelf: SearchForBookshelf,
-    BorrowBook: BorrowBook
+    BorrowBook: BorrowBook,
+    AcceptRequest: AcceptRequest,
+    RejectRequest: RejectRequest,
+    GetBorrowingRequest: GetBorrowingRequest,
+    GetLentingRequest: GetLentingRequest,
+    GetBorrowingHistory: GetBorrowingHistory,
+    GetLentingHistory: GetLentingHistory
 }
 
 

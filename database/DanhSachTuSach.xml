@@ -1,63 +1,3 @@
-<<<<<<< HEAD
-<danh_sach_tu_sach xmlns="urn:v">
-    <tu_sach id_chu="1512043" diem_danh_gia="3">
-        <danh_sach_sach>
-            <sach id_chu="1512043" id_sach="MMT" ten_sach="Mạng máy tính" tac_gia="Nguyễn Văn A" ma_ISBN="4654646" NXB="ĐH KHTH" tinh_trang="true" so_luong="2" link="fb.com"/>
-            <sach id_chu="1512043" id_sach="LGKK" ten_sach="Làm giàu không khó" tac_gia="Nguyễn Văn B" ma_ISBN="554646" NXB="ĐH KHTH" tinh_trang="true" so_luong="1" link="fb.com"/>
-        </danh_sach_sach>
-        <yeu_cau_cho_muon_sach>
-            <yeu_cau_cho_muon id_yeu_cau="111" id_user_muon="1512095" id_sach="NMLT" ngay_muon="15/05/2017" ngay_tra="01/01/2018"/>
-             <yeu_cau_cho_muon id_yeu_cau="222" id_user_muon="151212x" id_sach="NMLT" ngay_muon="15/05/2017" ngay_tra="01/01/2018"/>
-        </yeu_cau_cho_muon_sach>
-        <yeu_cau_muon_sach>
-            <yeu_cau_muon id_yeu_cau="111" id_user_cho_muon="1512043" id_sach="NMLT" ngay_muon="15/05/2017" ngay_tra="01/01/2018"/>
-        </yeu_cau_muon_sach>    
-        <lich_su_cho_muon_sach>
-            <sach_cho_muon id_sach="NMLT">
-                <user_muon id_user_muon="15123xx" ngay_muon="20/10/2017" ngay_tra="01/01/2018"/>
-                <user_muon id_user_muon="15124xx" ngay_muon="20/10/2017" ngay_tra="01/01/2018"/>
-            </sach_cho_muon>
-            <sach_cho_muon id_sach="0202">
-                <user_muon id_user_muon="15120101" ngay_muon="10/10/2010" ngay_tra="2/2/2"/>
-            <user_muon id_user_muon="15120101" ngay_muon="10/10/2010" ngay_tra="2/2/2"/></sach_cho_muon>
-        </lich_su_cho_muon_sach>
-        <lich_su_muon_sach>
-            <sach_muon id_sach="KTLT">
-                <user_cho_muon id_user_cho_muon="15121xx" ngay_muon="20/01/2018" ngay_tra="01/01/2018"/>
-                <user_cho_muon id_user_cho_muon="151211xx" ngay_muon="20/01/2018" ngay_tra="01/01/2018"/>
-            </sach_muon>
-        </lich_su_muon_sach>
-    </tu_sach>
-       <tu_sach id_chu="1512095" diem_danh_gia="3">
-        <danh_sach_sach>
-            <sach id_sach="MMT" ten_sach="Mạng máy tính" tac_gia="Nguyễn Văn A" ma_ISBN="4654646" NXB="ĐH KHTH" tinh_trang="true" so_luong="2"/>
-            <sach id_sach="LGKK" ten_sach="Làm giàu không khó" tac_gia="Nguyễn Văn B" ma_ISBN="554646" NXB="ĐH KHTH" tinh_trang="true" so_luong="1"/>
-        </danh_sach_sach>
-        <yeu_cau_cho_muon_sach>
-            <yeu_cau_cho_muon id_yeu_cau="111" id_user_muon="151211x" id_sach="NMLT" ngay_muon="15/05/2017" ngay_tra="01/01/2018"/>
-             <yeu_cau_cho_muon id_yeu_cau="222" id_user_muon="151212x" id_sach="NMLT" ngay_muon="15/05/2017" ngay_tra="01/01/2018"/>
-        </yeu_cau_cho_muon_sach>
-        <yeu_cau_muon_sach>
-            <yeu_cau_muon id_yeu_cau="111" id_user_cho_muon="151211x" id_sach="NMLT" ngay_muon="15/05/2017" ngay_tra="01/01/2018"/>
-        </yeu_cau_muon_sach>    
-        <lich_su_cho_muon_sach>
-            <sach_cho_muon id_sach="NMLT">
-                <user_muon id_user_muon="15123xx" ngay_muon="20/10/2017" ngay_tra="01/01/2018"/>
-                <user_muon id_user_muon="15124xx" ngay_muon="20/10/2017" ngay_tra="01/01/2018"/>
-            </sach_cho_muon>
-            <sach_cho_muon id_sach="0202">
-                <user_muon id_user_muon="15120101" ngay_muon="10/10/2010" ngay_tra="2/2/2"/>
-            <user_muon id_user_muon="15120101" ngay_muon="10/10/2010" ngay_tra="2/2/2"/></sach_cho_muon>
-        </lich_su_cho_muon_sach>
-        <lich_su_muon_sach>
-            <sach_muon id_sach="KTLT">
-                <user_cho_muon id_user_cho_muon="15121xx" ngay_muon="20/01/2018" ngay_tra="01/01/2018"/>
-                <user_cho_muon id_user_cho_muon="151211xx" ngay_muon="20/01/2018" ngay_tra="01/01/2018"/>
-            </sach_muon>
-        </lich_su_muon_sach>
-    </tu_sach>
-=======
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <danh_sach_tu_sach>
     <tu_sach diem_danh_gia="0" id_chu="0000000">
         <danh_sach_sach>
@@ -84,12 +24,33 @@
             <sach NXB="Nhà Xuất Bản Trẻ" id_chu="0000000" id_sach="0000020" link="/database/photos/0000020.jpg" ma_ISBN="tamthoichuaco" so_luong="5" tac_gia="13 x 20 cm" ten_sach="Ngày Xưa Có Một Con Bò..." tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Phụ Nữ" id_chu="0000000" id_sach="0000021" link="/database/photos/0000021.jpg" ma_ISBN="tamthoichuaco" so_luong="7" tac_gia="Nguyễn Văn Hiệp (Chủ biên)" ten_sach="Vừa Lười Vừa Bận Vẫn Giỏi Tiếng Anh" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Văn Hoá Sài Gòn" id_chu="0000000" id_sach="0000022" link="/database/photos/0000022.jpg" ma_ISBN="tamthoichuaco" so_luong="8" tac_gia="Bìa mềm" ten_sach="Happy Reader - Sherlock Holmes Và Những Vụ Phá Án Kỳ Thú - Kèm 1CD" tinh_trang="true"/>
-</danh_sach_sach>
-        <yeu_cau_cho_muon_sach/>
-        <yeu_cau_muon_sach/>
+        </danh_sach_sach>
+        <yeu_cau_cho_muon_sach>
+            <yeu_cau_cho_muon xmlns="urn:v" id_yeu_cau="01" id_user_muon="0000001" id_sach="0000006" ngay_muon="12/10/2018" ngay_tra="13/11/2018"/>
+            <yeu_cau_cho_muon id_yeu_cau="0" id_user_muon="0000001" id_sach="0000005" ngay_muon="12/10/2018" ngay_tra="13/11/2018"/>
+
+        </yeu_cau_cho_muon_sach>
+        <yeu_cau_muon_sach>
+            <yeu_cau_muon id_yeu_cau="0" id_user_cho_muon="0000001" id_sach="0000006" ngay_muon="12/10/2018" ngay_tra="13/11/2018"/>
+            <yeu_cau_muon id_yeu_cau="01" id_user_cho_muon="0000001" id_sach="0000005" ngay_muon="12/10/2018" ngay_tra="13/11/2018"/>
+
+        </yeu_cau_muon_sach>
         <lich_su_cho_muon_sach/>
-        <lich_su_muon_sach/>
-</tu_sach>
+        <lich_su_muon_sach>
+            <sach_muon id_sach="0000000">
+                <user_cho_muon id_user_cho_muon="0000001" ngay_muon="" ngay_tra=""/>
+            </sach_muon>
+            <sach_muon id_sach="0000001">
+                <user_cho_muon id_user_cho_muon="0000001" ngay_muon="" ngay_tra=""/>
+            </sach_muon>
+            <sach_muon id_sach="0000002">
+                <user_cho_muon id_user_cho_muon="0000001" ngay_muon="" ngay_tra=""/>
+            </sach_muon>
+            <sach_muon id_sach="0000003">
+                <user_cho_muon id_user_cho_muon="0000001" ngay_muon="" ngay_tra=""/>
+            </sach_muon>
+        </lich_su_muon_sach>
+    </tu_sach>
     <tu_sach diem_danh_gia="0" id_chu="0000001">
         <danh_sach_sach>
             <sach NXB="Nhà Xuất Bản Đại Học Sư Phạm" id_chu="0000001" id_sach="0000023" link="/database/photos/0000023.jpg" ma_ISBN="tamthoichuaco" so_luong="1" tac_gia="Nhóm tác giả" ten_sach="Vở Bài Tập Cơ Bản Và Nâng Cao Tiếng Việt Lớp 1 (Tập 1)" tinh_trang="true"/>
@@ -115,12 +76,40 @@
             <sach NXB="Nhà Xuất Bản Dân Trí" id_chu="0000001" id_sach="0000043" link="/database/photos/0000043.jpg" ma_ISBN="tamthoichuaco" so_luong="3" tac_gia="Bìa mềm" ten_sach="Vô Cùng Tàn Nhẫn Vô Cùng Yêu Thương (Tái Bản 2017)" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Văn Học" id_chu="0000001" id_sach="0000044" link="/database/photos/0000044.jpg" ma_ISBN="tamthoichuaco" so_luong="5" tac_gia="Shinkai Makoto" ten_sach="5 Centimet Trên Giây" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Thế Giới" id_chu="0000001" id_sach="0000045" link="/database/photos/0000045.jpg" ma_ISBN="tamthoichuaco" so_luong="6" tac_gia="Trần Minh" ten_sach="Tự Truyện Lê Công Vinh - Phút 89" tinh_trang="true"/>
-</danh_sach_sach>
+        </danh_sach_sach>
         <yeu_cau_cho_muon_sach/>
         <yeu_cau_muon_sach/>
-        <lich_su_cho_muon_sach/>
-        <lich_su_muon_sach/>
-</tu_sach>
+        <lich_su_cho_muon_sach>
+            <sach_cho_muon id_sach="0000002">
+                <user_muon id_user_muon="0000001" ngay_muon="12/10/2018" ngay_tra="13/11/2018"/>
+                <user_muon id_user_muon="0000000" ngay_muon="" ngay_tra=""/>
+            </sach_cho_muon>
+            <sach_cho_muon id_sach="0000003">
+                <user_muon id_user_muon="0000001" ngay_muon="12/10/2018" ngay_tra="13/11/2018"/>
+                <user_muon id_user_muon="0000000" ngay_muon="" ngay_tra=""/>
+            </sach_cho_muon>
+            <sach_cho_muon id_sach="0000004">
+                <user_muon id_user_muon="0000001" ngay_muon="12/10/2018" ngay_tra="13/11/2018"/>
+            </sach_cho_muon>
+            <sach_cho_muon id_sach="0000000">
+                <user_muon id_user_muon="0000000" ngay_muon="" ngay_tra=""/>
+            </sach_cho_muon>
+            <sach_cho_muon id_sach="0000001">
+                <user_muon id_user_muon="0000000" ngay_muon="" ngay_tra=""/>
+            </sach_cho_muon>
+        </lich_su_cho_muon_sach>
+        <lich_su_muon_sach>
+            <sach_muon id_sach="0000002">
+                <user_cho_muon id_user_cho_muon="0000001" ngay_muon="12/10/2018" ngay_tra="13/11/2018"/>
+            </sach_muon>
+            <sach_muon id_sach="0000003">
+                <user_cho_muon id_user_cho_muon="0000001" ngay_muon="12/10/2018" ngay_tra="13/11/2018"/>
+            </sach_muon>
+            <sach_muon id_sach="0000004">
+                <user_cho_muon id_user_cho_muon="0000001" ngay_muon="12/10/2018" ngay_tra="13/11/2018"/>
+            </sach_muon>
+        </lich_su_muon_sach>
+    </tu_sach>
     <tu_sach diem_danh_gia="0" id_chu="0000002">
         <danh_sach_sach>
             <sach NXB="Nhà Xuất Bản Trẻ" id_chu="0000002" id_sach="0000046" link="/database/photos/0000046.jpg" ma_ISBN="tamthoichuaco" so_luong="0" tac_gia="15.5 x 23 cm" ten_sach="Thế Giới Phẳng" tinh_trang="true"/>
@@ -146,12 +135,12 @@
             <sach NXB="Nhà Xuất Bản Hội Nhà Văn" id_chu="0000002" id_sach="0000066" link="/database/photos/0000066.jpg" ma_ISBN="tamthoichuaco" so_luong="0" tac_gia="Phạm Lữ Ân" ten_sach="Nếu Biết Trăm Năm Là Hữu Hạn (Tái Bản 2018)" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Phụ Nữ" id_chu="0000002" id_sach="0000067" link="/database/photos/0000067.jpg" ma_ISBN="tamthoichuaco" so_luong="7" tac_gia="Minh Nhật" ten_sach="Chắc Gì Ta Đã Yêu Nhau" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Đại Học Quốc Gia Hà Nội" id_chu="0000002" id_sach="0000068" link="/database/photos/0000068.jpg" ma_ISBN="tamthoichuaco" so_luong="3" tac_gia="Dương Ký Châu (Chủ biên)" ten_sach="Giáo Trình Hán Ngữ Tập 1 - Quyển Thượng (Phiên Bản Mới - App)" tinh_trang="true"/>
-</danh_sach_sach>
+        </danh_sach_sach>
         <yeu_cau_cho_muon_sach/>
         <yeu_cau_muon_sach/>
         <lich_su_cho_muon_sach/>
         <lich_su_muon_sach/>
-</tu_sach>
+    </tu_sach>
     <tu_sach diem_danh_gia="0" id_chu="0000003">
         <danh_sach_sach>
             <sach NXB="Nhà Xuất Bản Hội Nhà Văn" id_chu="0000003" id_sach="0000069" link="/database/photos/0000069.jpg" ma_ISBN="tamthoichuaco" so_luong="2" tac_gia="Higashino Keigo" ten_sach="Điều Kỳ Diệu Của Tiệm Tạp Hóa" tinh_trang="true"/>
@@ -177,12 +166,12 @@
             <sach NXB="Nhà Xuất Bản Trẻ" id_chu="0000003" id_sach="0000089" link="/database/photos/0000089.jpg" ma_ISBN="tamthoichuaco" so_luong="4" tac_gia="14 x 20 cm" ten_sach="Lược Sử Thời Gian" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Trẻ" id_chu="0000003" id_sach="0000090" link="/database/photos/0000090.jpg" ma_ISBN="tamthoichuaco" so_luong="9" tac_gia="Trần Thị Ngân Tuyến" ten_sach="Đừng Bao Giờ Đi Ăn Một Mình (Tái Bản)" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Văn Học" id_chu="0000003" id_sach="0000091" link="/database/photos/0000091.jpg" ma_ISBN="tamthoichuaco" so_luong="9" tac_gia="Mẹ Xu-Sim" ten_sach="Con Nghĩ Đi, Mẹ Không Biết!" tinh_trang="true"/>
-</danh_sach_sach>
+        </danh_sach_sach>
         <yeu_cau_cho_muon_sach/>
         <yeu_cau_muon_sach/>
         <lich_su_cho_muon_sach/>
         <lich_su_muon_sach/>
-</tu_sach>
+    </tu_sach>
     <tu_sach diem_danh_gia="0" id_chu="0000004">
         <danh_sach_sach>
             <sach NXB="Nhà Xuất Bản Văn Học" id_chu="0000004" id_sach="0000092" link="/database/photos/0000092.jpg" ma_ISBN="tamthoichuaco" so_luong="5" tac_gia="Mẹ Xu-Sim" ten_sach="Con Nghĩ Đi, Mẹ Không Biết!" tinh_trang="true"/>
@@ -208,12 +197,12 @@
             <sach NXB="Nhà Xuất Bản Văn Học" id_chu="0000004" id_sach="0000112" link="/database/photos/0000112.jpg" ma_ISBN="tamthoichuaco" so_luong="2" tac_gia="Mark Manson" ten_sach="Nghệ Thuật Tinh Tế Của Việc &quot;Đếch&quot; Quan Tâm" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Tổng hợp TP.HCM" id_chu="0000004" id_sach="0000113" link="/database/photos/0000113.jpg" ma_ISBN="tamthoichuaco" so_luong="1" tac_gia="" ten_sach="Lagom - Vừa Đủ - Đẳng Cấp Sống Của Người Thụy Điển" tinh_trang="true"/>
             <sach NXB="Tiki Tổng Hợp" id_chu="0000004" id_sach="0000114" link="/database/photos/0000114.jpg" ma_ISBN="tamthoichuaco" so_luong="4" tac_gia="Bìa mềm" ten_sach="Combo Trọn Bộ Ngữ Pháp Tiếng Hàn Thông Dụng Sơ - Trung Cấp (Tặng Sách Tự Học Tiếng Hàn Cho Người Mới Bắt Đầu)" tinh_trang="true"/>
-</danh_sach_sach>
+        </danh_sach_sach>
         <yeu_cau_cho_muon_sach/>
         <yeu_cau_muon_sach/>
         <lich_su_cho_muon_sach/>
         <lich_su_muon_sach/>
-</tu_sach>
+    </tu_sach>
     <tu_sach diem_danh_gia="0" id_chu="0000005">
         <danh_sach_sach>
             <sach NXB="Nhà Xuất Bản Dân Trí" id_chu="0000005" id_sach="0000115" link="/database/photos/0000115.jpg" ma_ISBN="tamthoichuaco" so_luong="2" tac_gia="Mạnh Chương" ten_sach="Đắc Nhân Tâm - Bìa Mềm" tinh_trang="true"/>
@@ -239,12 +228,12 @@
             <sach NXB="Nhà Xuất Bản Tổng hợp TP.HCM" id_chu="0000005" id_sach="0000135" link="/database/photos/0000135.jpg" ma_ISBN="tamthoichuaco" so_luong="3" tac_gia="14.5 x 20.5 cm" ten_sach="Khác Biệt Hay Là Chết (Tái Bản 2016)" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Phụ Nữ" id_chu="0000005" id_sach="0000136" link="/database/photos/0000136.jpg" ma_ISBN="tamthoichuaco" so_luong="2" tac_gia="Khaled Hosseini" ten_sach="Người Đua Diều (Tái Bản 2017)" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Văn Học" id_chu="0000005" id_sach="0000137" link="/database/photos/0000137.jpg" ma_ISBN="tamthoichuaco" so_luong="8" tac_gia="Diệp Lạc Vô Tâm" ten_sach="Mãi Mãi Là Bao Xa (Bổ sung ngoại truyện)" tinh_trang="true"/>
-</danh_sach_sach>
+        </danh_sach_sach>
         <yeu_cau_cho_muon_sach/>
         <yeu_cau_muon_sach/>
         <lich_su_cho_muon_sach/>
         <lich_su_muon_sach/>
-</tu_sach>
+    </tu_sach>
     <tu_sach diem_danh_gia="0" id_chu="0000006">
         <danh_sach_sach>
             <sach NXB="Nhà Xuất Bản Tri Thức" id_chu="0000006" id_sach="0000138" link="/database/photos/0000138.jpg" ma_ISBN="tamthoichuaco" so_luong="3" tac_gia="Bìa mềm" ten_sach="Năng Đoạn Kim Cương (Tái Bản 2018)" tinh_trang="true"/>
@@ -270,12 +259,12 @@
             <sach NXB="Nhà Xuất Bản Văn Học" id_chu="0000006" id_sach="0000158" link="/database/photos/0000158.jpg" ma_ISBN="tamthoichuaco" so_luong="3" tac_gia="Diệp Lạc Vô Tâm" ten_sach="Động Phòng Hoa Chúc Cách Vách (Tái Bản)" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Tổng hợp TP.HCM" id_chu="0000006" id_sach="0000159" link="/database/photos/0000159.jpg" ma_ISBN="tamthoichuaco" so_luong="5" tac_gia="Lê Huy Lâm" ten_sach="Cuốn Sách Hoàn Hảo Về Ngôn Ngữ Cơ Thể - Body Language (Tái Bản 2014)" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Hồng Đức" id_chu="0000006" id_sach="0000160" link="/database/photos/0000160.jpg" ma_ISBN="tamthoichuaco" so_luong="8" tac_gia="Vũ Thị Mai Phương" ten_sach="Bứt Phá Điểm Thi THPT Quốc Gia Môn Tiếng Anh 2" tinh_trang="true"/>
-</danh_sach_sach>
+        </danh_sach_sach>
         <yeu_cau_cho_muon_sach/>
         <yeu_cau_muon_sach/>
         <lich_su_cho_muon_sach/>
         <lich_su_muon_sach/>
-</tu_sach>
+    </tu_sach>
     <tu_sach diem_danh_gia="0" id_chu="0000007">
         <danh_sach_sach>
             <sach NXB="Nhà Xuất Bản Văn Học" id_chu="0000007" id_sach="0000161" link="/database/photos/0000161.jpg" ma_ISBN="tamthoichuaco" so_luong="2" tac_gia="Hikaru" ten_sach="Mai Sau Ai Sẽ Nắm Tay Mình (Tặng Kèm Bookmark)" tinh_trang="true"/>
@@ -301,12 +290,12 @@
             <sach NXB="Nhà Xuất Bản Hồng Đức" id_chu="0000007" id_sach="0000181" link="/database/photos/0000181.jpg" ma_ISBN="tamthoichuaco" so_luong="6" tac_gia="Phạm Quốc Toàn, Lê Thị Nga, Nguyễn Thị Hải Yến, Nguyễn Bảo Yến" ten_sach="Bứt Phá Điểm Thi THPT Quốc Gia Môn Vật Lí (Cuốn 1)" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Thể Dục Thể Thao" id_chu="0000007" id_sach="0000182" link="/database/photos/0000182.jpg" ma_ISBN="tamthoichuaco" so_luong="10" tac_gia="" ten_sach="Bão Lửa U23 – Thường Châu Tuyết Trắng" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Đại Học Quốc Gia Hà Nội" id_chu="0000007" id_sach="0000183" link="/database/photos/0000183.jpg" ma_ISBN="tamthoichuaco" so_luong="8" tac_gia="Nhiều Tác Giả" ten_sach="Công Phá Đề Thi THPT Quốc Gia 2018 Môn Toán Học" tinh_trang="true"/>
-</danh_sach_sach>
+        </danh_sach_sach>
         <yeu_cau_cho_muon_sach/>
         <yeu_cau_muon_sach/>
         <lich_su_cho_muon_sach/>
         <lich_su_muon_sach/>
-</tu_sach>
+    </tu_sach>
     <tu_sach diem_danh_gia="0" id_chu="0000008">
         <danh_sach_sach>
             <sach NXB="Nhà Xuất Bản Lao Động" id_chu="0000008" id_sach="0000184" link="/database/photos/0000184.jpg" ma_ISBN="tamthoichuaco" so_luong="6" tac_gia="Thanh Minh" ten_sach="Chiến Thắng Con Quỷ Trong Bạn (Tái Bản)" tinh_trang="true"/>
@@ -317,12 +306,12 @@
             <sach NXB="Nhà Xuất Bản Kim Đồng" id_chu="0000008" id_sach="0000189" link="/database/photos/0000189.jpg" ma_ISBN="tamthoichuaco" so_luong="4" tac_gia="11.3 x 17.6 cm" ten_sach="Thám Tử Lừng Danh Conan Tập 67 (Tái Bản 2014)" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Trẻ" id_chu="0000008" id_sach="0000190" link="/database/photos/0000190.jpg" ma_ISBN="tamthoichuaco" so_luong="4" tac_gia="14 x 20 cm" ten_sach="Đời Thay Đổi Khi Chúng Ta Thay Đổi (Tập 1)" tinh_trang="true"/>
             <sach NXB="Oxford University Press" id_chu="0000008" id_sach="0000191" link="/database/photos/0000191.jpg" ma_ISBN="tamthoichuaco" so_luong="6" tac_gia="528" ten_sach="Oxford Learner's Pocket Dictionary: A Pocket-sized Reference to English Vocabulary (Fourth Edition)" tinh_trang="true"/><sach NXB="Nhà Xuất Bản Phụ Nữ" id_chu="0000008" id_sach="0000192" link="/database/photos/0000192.jpg" ma_ISBN="tamthoichuaco" so_luong="9" tac_gia="Accototo" ten_sach="Truyện Ehon Nhật Bản: Ai Ở Sau Lưng Bạn Thế? - Những Người Bạn Trên Cánh Đồng" tinh_trang="true"/><sach NXB="Nhà Xuất Bản Dân Trí" id_chu="0000008" id_sach="0000193" link="/database/photos/0000193.jpg" ma_ISBN="tamthoichuaco" so_luong="2" tac_gia="Châu Tiểu Lan, Dương Thị Thư, Nguyễn Ngọc Kim Vy" ten_sach="Tế Bào Gốc: Khám Phá Cùng Nhà Khoa Học" tinh_trang="true"/><sach NXB="Nhà Xuất Bản Kim Đồng" id_chu="0000008" id_sach="0000194" link="/database/photos/0000194.jpg" ma_ISBN="tamthoichuaco" so_luong="8" tac_gia="14.5 x 20.5 cm" ten_sach="Shin - Cậu Bé Bút Chì (Tập 34) - 2014" tinh_trang="true"/><sach NXB="Nhà Xuất Bản Văn Học" id_chu="0000008" id_sach="0000195" link="/database/photos/0000195.jpg" ma_ISBN="tamthoichuaco" so_luong="6" tac_gia="Bìa mềm" ten_sach="Ehon Nhật Bản - Cá Vàng Trốn Ở Đâu Rồi Nhỉ?" tinh_trang="true"/><sach NXB="Nhà Xuất Bản Trẻ" id_chu="0000008" id_sach="0000196" link="/database/photos/0000196.jpg" ma_ISBN="tamthoichuaco" so_luong="3" tac_gia="Bìa mềm" ten_sach="Có Hai Con Mèo Ngồi Bên Cửa Sổ" tinh_trang="true"/><sach NXB="Nhà Xuất Bản Kim Đồng" id_chu="0000008" id_sach="0000197" link="/database/photos/0000197.jpg" ma_ISBN="tamthoichuaco" so_luong="8" tac_gia="Nhiều dịch giả" ten_sach="Fujiko F Fujio Đại Tuyển Tập Doraemon – Truyện Ngắn (Tập 5)" tinh_trang="true"/><sach NXB="Nhà Xuất Bản Dân Trí" id_chu="0000008" id_sach="0000198" link="/database/photos/0000198.jpg" ma_ISBN="tamthoichuaco" so_luong="6" tac_gia="14 x 20.5 cm" ten_sach="Tôi Là Ai - Và Nếu Vậy Thì Bao Nhiêu? (Tái Bản)" tinh_trang="true"/><sach NXB="Nhà Xuất Bản Hội Nhà Văn" id_chu="0000008" id_sach="0000199" link="/database/photos/0000199.jpg" ma_ISBN="tamthoichuaco" so_luong="5" tac_gia="Mori Eto" ten_sach="Colorful" tinh_trang="true"/><sach NXB="Nhà Xuất Bản Văn Học" id_chu="0000008" id_sach="0000200" link="/database/photos/0000200.jpg" ma_ISBN="tamthoichuaco" so_luong="9" tac_gia="Bìa mềm" ten_sach="Lạc Quan Gặp Niềm Vui Ở Quán Nỗi Buồn Và Những Chuyện Chưa Kể" tinh_trang="true"/><sach NXB="Nhà Xuất Bản Thời Đại" id_chu="0000008" id_sach="0000201" link="/database/photos/0000201.jpg" ma_ISBN="tamthoichuaco" so_luong="7" tac_gia="Thư Nghi" ten_sach="Từng Có Một Người Yêu Tôi Như Sinh Mệnh (Tái Bản)" tinh_trang="true"/><sach NXB="Nhà Xuất Bản Kim Đồng" id_chu="0000008" id_sach="0000202" link="/database/photos/0000202.jpg" ma_ISBN="tamthoichuaco" so_luong="2" tac_gia="Hoài Nam, Nguyễn Hào" ten_sach="Vòng Quanh Thế Giới: Trung Quốc" tinh_trang="true"/><sach NXB="Hachette Book Group" id_chu="0000008" id_sach="0000203" link="/database/photos/0000203.jpg" ma_ISBN="tamthoichuaco" so_luong="10" tac_gia="05-2012" ten_sach="ROOM" tinh_trang="true"/><sach NXB="Nhà Xuất Bản Tổng hợp TP.HCM" id_chu="0000008" id_sach="0000204" link="/database/photos/0000204.jpg" ma_ISBN="tamthoichuaco" so_luong="9" tac_gia="13 x 20.5 cm" ten_sach="Hạt Giống Tâm Hồn - Tập 11 - Những Trải Nghiệm Cuộc Sống (Tái Bản 2016)" tinh_trang="true"/><sach NXB="Nhà Xuất Bản Trẻ" id_chu="0000008" id_sach="0000205" link="/database/photos/0000205.jpg" ma_ISBN="tamthoichuaco" so_luong="3" tac_gia="13 x 20 cm" ten_sach="Ngày Xưa Có Một Chuyện Tình (Bìa Mềm)" tinh_trang="true"/><sach NXB="" id_chu="0000008" id_sach="0000206" link="/database/photos/0000206.jpg" ma_ISBN="tamthoichuaco" so_luong="6" tac_gia="16 x 24 cm" ten_sach="Bộ Sách Giáo Khoa Lớp 9" tinh_trang="true"/>
-</danh_sach_sach>
+        </danh_sach_sach>
         <yeu_cau_cho_muon_sach/>
         <yeu_cau_muon_sach/>
         <lich_su_cho_muon_sach/>
         <lich_su_muon_sach/>
-</tu_sach>
+    </tu_sach>
     <tu_sach diem_danh_gia="0" id_chu="0000009">
         <danh_sach_sach>
             <sach NXB="Trung Quốc" id_chu="0000009" id_sach="0000207" link="/database/photos/0000207.jpg" ma_ISBN="tamthoichuaco" so_luong="9" tac_gia="Không xác định" ten_sach="Hộp 12 Cây Bút Gel Nhất Trường PC 2678 -Tím" tinh_trang="true"/>
@@ -348,12 +337,12 @@
             <sach NXB="Nhà Xuất Bản Phụ Nữ" id_chu="0000009" id_sach="0000227" link="/database/photos/0000227.jpg" ma_ISBN="tamthoichuaco" so_luong="6" tac_gia="Accototo" ten_sach="Truyện Ehon Nhật Bản: Ai Ở Sau Lưng Bạn Thế? - Những Người Bạn Dưới Đáy Biển" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Tổng hợp TP.HCM" id_chu="0000009" id_sach="0000228" link="/database/photos/0000228.jpg" ma_ISBN="tamthoichuaco" so_luong="7" tac_gia="Masanobu Fukuoka" ten_sach="Cuộc Cách Mạng Một - Cọng - Rơm" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Trẻ" id_chu="0000009" id_sach="0000229" link="/database/photos/0000229.jpg" ma_ISBN="tamthoichuaco" so_luong="7" tac_gia="Bìa mềm" ten_sach="Phút Dừng Lại Của Người Thông Minh (Tái Bản)" tinh_trang="true"/>
-</danh_sach_sach>
+        </danh_sach_sach>
         <yeu_cau_cho_muon_sach/>
         <yeu_cau_muon_sach/>
         <lich_su_cho_muon_sach/>
         <lich_su_muon_sach/>
-</tu_sach>
+    </tu_sach>
     <tu_sach diem_danh_gia="0" id_chu="0000010">
         <danh_sach_sach>
             <sach NXB="Nhà Xuất Bản Đại Học Quốc Gia Hà Nội" id_chu="0000010" id_sach="0000230" link="/database/photos/0000230.jpg" ma_ISBN="tamthoichuaco" so_luong="8" tac_gia="Bìa mềm" ten_sach="Tự Học Tiếng Trung Cho Người Mới Bắt Đầu (Dùng Kèm App MCBooks)" tinh_trang="true"/>
@@ -379,12 +368,12 @@
             <sach NXB="" id_chu="0000010" id_sach="0000250" link="/database/photos/0000250.jpg" ma_ISBN="tamthoichuaco" so_luong="4" tac_gia="16 x 24 cm" ten_sach="Bộ Sách Giáo Khoa Lớp 6" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Hồng Đức" id_chu="0000010" id_sach="0000251" link="/database/photos/0000251.jpg" ma_ISBN="tamthoichuaco" so_luong="6" tac_gia="ThS. Phạm Quốc Toản, ThS. Nguyễn Bảo Yến, ThS. Nguyễn Thị Hải Yến, ThS. Lê Thị Nga" ten_sach="Bứt Phá Điểm Thi THPT Quốc Gia Môn Vật Lí (Cuốn 2)" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Phụ Nữ" id_chu="0000010" id_sach="0000252" link="/database/photos/0000252.jpg" ma_ISBN="tamthoichuaco" so_luong="10" tac_gia="Bìa mềm" ten_sach="Hành Trình Thai Giáo 280 Ngày" tinh_trang="true"/>
-</danh_sach_sach>
+        </danh_sach_sach>
         <yeu_cau_cho_muon_sach/>
         <yeu_cau_muon_sach/>
         <lich_su_cho_muon_sach/>
         <lich_su_muon_sach/>
-</tu_sach>
+    </tu_sach>
     <tu_sach diem_danh_gia="0" id_chu="0000011">
         <danh_sach_sach>
             <sach NXB="Nhà Xuất Bản Kim Đồng" id_chu="0000011" id_sach="0000253" link="/database/photos/0000253.jpg" ma_ISBN="tamthoichuaco" so_luong="8" tac_gia="Bìa mềm" ten_sach="Combo Để Em Luôn Ngoan Ngoãn (Bộ 10 Quyển)" tinh_trang="true"/>
@@ -410,12 +399,12 @@
             <sach NXB="Nhà Xuất Bản Hội Nhà Văn" id_chu="0000011" id_sach="0000273" link="/database/photos/0000273.jpg" ma_ISBN="tamthoichuaco" so_luong="10" tac_gia="Đặng Hoàng Giang" ten_sach="Thiện, Ác Và Smartphone" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Văn Học" id_chu="0000011" id_sach="0000274" link="/database/photos/0000274.jpg" ma_ISBN="tamthoichuaco" so_luong="10" tac_gia="16 x 23 cm" ten_sach="Nói Thế Nào Để Được Chào Đón, Làm Thế Nào Để Được Ghi Nhận" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Phụ Nữ" id_chu="0000011" id_sach="0000275" link="/database/photos/0000275.jpg" ma_ISBN="tamthoichuaco" so_luong="10" tac_gia="Accototo" ten_sach="Truyện Ehon Nhật Bản: Ai Ở Sau Lưng Bạn Thế? - Những Người Bạn Bên Bờ Hồ" tinh_trang="true"/>
-</danh_sach_sach>
+        </danh_sach_sach>
         <yeu_cau_cho_muon_sach/>
         <yeu_cau_muon_sach/>
         <lich_su_cho_muon_sach/>
         <lich_su_muon_sach/>
-</tu_sach>
+    </tu_sach>
     <tu_sach diem_danh_gia="0" id_chu="0000012">
         <danh_sach_sach>
             <sach NXB="Nhà Xuất Bản Tổng hợp TP.HCM" id_chu="0000012" id_sach="0000276" link="/database/photos/0000276.jpg" ma_ISBN="tamthoichuaco" so_luong="8" tac_gia="14 x 20.5 cm" ten_sach="Chinh Phục Mục Tiêu (Tái Bản 2016)" tinh_trang="true"/>
@@ -454,12 +443,12 @@
             <sach NXB="Nhà Xuất Bản Kim Đồng" id_chu="0000014" id_sach="0000342" link="/database/photos/0000342.jpg" ma_ISBN="tamthoichuaco" so_luong="7" tac_gia="Nhiều Tác Giả" ten_sach="Cẩm Nang Sinh Hoạt Bằng Tranh Cho Bé (Tập 1) - Kĩ Năng Trong Sinh Hoạt Thường Ngày" tinh_trang="true"/>
             <sach NXB="Hideaki Sorachi" id_chu="0000014" id_sach="0000343" link="/database/photos/0000343.jpg" ma_ISBN="tamthoichuaco" so_luong="8" tac_gia="Không xác định" ten_sach="Gintama (Tập 4)" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Thông Tin Và Truyền Thông" id_chu="0000014" id_sach="0000344" link="/database/photos/0000344.jpg" ma_ISBN="tamthoichuaco" so_luong="4" tac_gia="Diệp Minh Tâm" ten_sach="Sự Trỗi Dậy Và Suy Tàn Của Đế Chế Thứ Ba - Lịch Sử Đức Quốc Xã" tinh_trang="true"/>
-</danh_sach_sach>
+        </danh_sach_sach>
         <yeu_cau_cho_muon_sach/>
         <yeu_cau_muon_sach/>
         <lich_su_cho_muon_sach/>
         <lich_su_muon_sach/>
-</tu_sach>
+    </tu_sach>
     <tu_sach diem_danh_gia="0" id_chu="0000015">
         <danh_sach_sach>
             <sach NXB="Nhà Xuất Bản Lao Động" id_chu="0000015" id_sach="0000345" link="/database/photos/0000345.jpg" ma_ISBN="tamthoichuaco" so_luong="3" tac_gia="Nguyễn Xuân Hồng" ten_sach="Ba Người Thầy Vĩ Đại (Tái Bản)" tinh_trang="true"/>
@@ -485,12 +474,12 @@
             <sach NXB="" id_chu="0000015" id_sach="0000365" link="/database/photos/0000365.jpg" ma_ISBN="tamthoichuaco" so_luong="9" tac_gia="2017" ten_sach="Nhà Giả Kim" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Trẻ" id_chu="0000015" id_sach="0000366" link="/database/photos/0000366.jpg" ma_ISBN="tamthoichuaco" so_luong="0" tac_gia="Alex Ferguson" ten_sach="Hồi Ký Alex Ferguson" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Lao Động Xã Hội" id_chu="0000015" id_sach="0000367" link="/database/photos/0000367.jpg" ma_ISBN="tamthoichuaco" so_luong="5" tac_gia="Thanh Tuyền" ten_sach="Những Người Thành Công Tin Tưởng Vào Điều Gì? (Tái Bản 2018)" tinh_trang="true"/>
-</danh_sach_sach>
+        </danh_sach_sach>
         <yeu_cau_cho_muon_sach/>
         <yeu_cau_muon_sach/>
         <lich_su_cho_muon_sach/>
         <lich_su_muon_sach/>
-</tu_sach>
+    </tu_sach>
     <tu_sach diem_danh_gia="0" id_chu="0000016">
         <danh_sach_sach>
             <sach NXB="Nhà Xuất Bản Kim Đồng" id_chu="0000016" id_sach="0000368" link="/database/photos/0000368.jpg" ma_ISBN="tamthoichuaco" so_luong="6" tac_gia="Mokey King, Barbie Ayumi" ten_sach="Boxset Tôi Là Sakamoto (Trọn Bộ 4 Tập)" tinh_trang="true"/>
@@ -516,12 +505,12 @@
             <sach NXB="Nhà Xuất Bản Thế Giới" id_chu="0000016" id_sach="0000388" link="/database/photos/0000388.jpg" ma_ISBN="tamthoichuaco" so_luong="8" tac_gia="Bìa mềm" ten_sach="Câu Hỏi Là Câu Trả Lời (Tái Bản 2016)" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Dân Trí" id_chu="0000016" id_sach="0000389" link="/database/photos/0000389.jpg" ma_ISBN="tamthoichuaco" so_luong="0" tac_gia="Philip Steele" ten_sach="Em Muốn Biết Vì Sao: Người Ai Cập Xây Kim Tự Tháp" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Thế Giới" id_chu="0000016" id_sach="0000390" link="/database/photos/0000390.jpg" ma_ISBN="tamthoichuaco" so_luong="5" tac_gia="Mẹ Ong Bông" ten_sach="Đếm Ngược Tới Ngày Gặp Con Yêu" tinh_trang="true"/>
-</danh_sach_sach>
+        </danh_sach_sach>
         <yeu_cau_cho_muon_sach/>
         <yeu_cau_muon_sach/>
         <lich_su_cho_muon_sach/>
         <lich_su_muon_sach/>
-</tu_sach>
+    </tu_sach>
     <tu_sach diem_danh_gia="0" id_chu="0000017">
         <danh_sach_sach>
             <sach NXB="Nhà Xuất Bản Kim Đồng" id_chu="0000017" id_sach="0000391" link="/database/photos/0000391.jpg" ma_ISBN="tamthoichuaco" so_luong="4" tac_gia="Kim Duẩn - Tuệ Linh" ten_sach="Vì Sao Tớ Không Nên Chơi Ăn Gian? (Tái Bản 2017)" tinh_trang="true"/>
@@ -547,12 +536,12 @@
             <sach NXB="Nhà Xuất Bản Hồng Đức" id_chu="0000017" id_sach="0000411" link="/database/photos/0000411.jpg" ma_ISBN="tamthoichuaco" so_luong="3" tac_gia="Vũ Mai Phương" ten_sach="Combo Bứt Phá THPTQG Môn Tiếng Anh Trọn Bộ 2 Quyển (Tặng Kèm Quyển 3000 Từ Vựng Tiếng Anh Thông Dụng Nhất)" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Tổng hợp TP.HCM" id_chu="0000017" id_sach="0000412" link="/database/photos/0000412.jpg" ma_ISBN="tamthoichuaco" so_luong="1" tac_gia="Vũ Tiến Quỳnh" ten_sach="Giải Tiếng Việt Lớp 4 (Tập 2) - Tái Bản 2015" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Lao Động" id_chu="0000017" id_sach="0000413" link="/database/photos/0000413.jpg" ma_ISBN="tamthoichuaco" so_luong="4" tac_gia="Phương Thúy" ten_sach="Chiến Lược Đại Dương Xanh (Tái Bản 2017)" tinh_trang="true"/>
-</danh_sach_sach>
+        </danh_sach_sach>
         <yeu_cau_cho_muon_sach/>
         <yeu_cau_muon_sach/>
         <lich_su_cho_muon_sach/>
         <lich_su_muon_sach/>
-</tu_sach>
+    </tu_sach>
     <tu_sach diem_danh_gia="0" id_chu="0000018">
         <danh_sach_sach>
             <sach NXB="Nhà Xuất Bản Lao Động" id_chu="0000018" id_sach="0000414" link="/database/photos/0000414.jpg" ma_ISBN="tamthoichuaco" so_luong="0" tac_gia="Nguyễn Hoài Anh, Nguyễn Văn Trà" ten_sach="Nếu... Thì" tinh_trang="true"/>
@@ -578,12 +567,12 @@
             <sach NXB="Nhà Xuất Bản Hồng Đức" id_chu="0000018" id_sach="0000434" link="/database/photos/0000434.jpg" ma_ISBN="tamthoichuaco" so_luong="0" tac_gia="Chí Bằng" ten_sach="Bứt Phá Điểm Thi THPT Quốc Gia Môn Ngữ Văn - Phần Đọc Hiểu Và Nghị Luận Xã Hội" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Tổng hợp TP.HCM" id_chu="0000018" id_sach="0000435" link="/database/photos/0000435.jpg" ma_ISBN="tamthoichuaco" so_luong="9" tac_gia="13 x 20.5 cm" ten_sach="Tại Sao Phải Hành Động? (Tái Bản 2016)" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Văn Học" id_chu="0000018" id_sach="0000436" link="/database/photos/0000436.jpg" ma_ISBN="tamthoichuaco" so_luong="3" tac_gia="Margaret Mitchell" ten_sach="Cuốn Theo Chiều Gió (Trí Việt)" tinh_trang="true"/>
-</danh_sach_sach>
+        </danh_sach_sach>
         <yeu_cau_cho_muon_sach/>
         <yeu_cau_muon_sach/>
         <lich_su_cho_muon_sach/>
         <lich_su_muon_sach/>
-</tu_sach>
+    </tu_sach>
     <tu_sach diem_danh_gia="0" id_chu="0000019">
         <danh_sach_sach>
             <sach NXB="Nhà Xuất Bản Hồng Đức" id_chu="0000019" id_sach="0000437" link="/database/photos/0000437.jpg" ma_ISBN="tamthoichuaco" so_luong="2" tac_gia="Nhiều Tác Giả" ten_sach="Dẫn Luận Về Tôn Giáo (Trọn Bộ 5 Cuốn)" tinh_trang="true"/>
@@ -609,12 +598,12 @@
             <sach NXB="Nhà Xuất Bản Kim Đồng" id_chu="0000019" id_sach="0000457" link="/database/photos/0000457.jpg" ma_ISBN="tamthoichuaco" so_luong="4" tac_gia="Nhiều Tác Giả" ten_sach="Những Người Sống Quanh Em - Chú Công An Đường Phố (Tái Bản 2016)" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Phụ Nữ" id_chu="0000019" id_sach="0000458" link="/database/photos/0000458.jpg" ma_ISBN="tamthoichuaco" so_luong="1" tac_gia="Nguyễn Quốc Vương" ten_sach="Môn Sử Không Chán Như Em Tưởng" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Đồng Nai" id_chu="0000019" id_sach="0000459" link="/database/photos/0000459.jpg" ma_ISBN="tamthoichuaco" so_luong="5" tac_gia="Phan Thị Ngọc Diệp - Võ Thị Hoài Tâm" ten_sach="Đề Luyện Tập Và Kiểm Tra Toán Lớp 3 (Tái Bản)" tinh_trang="true"/>
-</danh_sach_sach>
+        </danh_sach_sach>
         <yeu_cau_cho_muon_sach/>
         <yeu_cau_muon_sach/>
         <lich_su_cho_muon_sach/>
         <lich_su_muon_sach/>
-</tu_sach>
+    </tu_sach>
     <tu_sach diem_danh_gia="0" id_chu="0000020">
         <danh_sach_sach>
             <sach NXB="Nhà Xuất Bản Trẻ" id_chu="0000020" id_sach="0000460" link="/database/photos/0000460.jpg" ma_ISBN="tamthoichuaco" so_luong="3" tac_gia="Bìa mềm" ten_sach="Bác Sĩ Riêng Của Bé Yêu - Bước Đệm Vững Chắc Vào Đời (Bác Sĩ Huyên Thảo)" tinh_trang="true"/>
@@ -640,12 +629,12 @@
             <sach NXB="Nhà Xuất Bản Kim Đồng" id_chu="0000020" id_sach="0000480" link="/database/photos/0000480.jpg" ma_ISBN="tamthoichuaco" so_luong="2" tac_gia="11.3 x 17.6 cm" ten_sach="Thám Tử Lừng Danh Conan Tập 40 (Tái Bản 2014)" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Văn Học" id_chu="0000020" id_sach="0000481" link="/database/photos/0000481.jpg" ma_ISBN="tamthoichuaco" so_luong="0" tac_gia="280" ten_sach="Cả một trời yêu" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Trẻ" id_chu="0000020" id_sach="0000482" link="/database/photos/0000482.jpg" ma_ISBN="tamthoichuaco" so_luong="9" tac_gia="Tác giả J.K.Rowling" ten_sach="Harry Potter Và Hoàng Tử Lai - Tập 06 (Tái Bản 2017)" tinh_trang="true"/>
-</danh_sach_sach>
+        </danh_sach_sach>
         <yeu_cau_cho_muon_sach/>
         <yeu_cau_muon_sach/>
         <lich_su_cho_muon_sach/>
         <lich_su_muon_sach/>
-</tu_sach>
+    </tu_sach>
     <tu_sach diem_danh_gia="0" id_chu="0000021">
         <danh_sach_sach>
             <sach NXB="Nhà Xuất Bản Dân Trí" id_chu="0000021" id_sach="0000483" link="/database/photos/0000483.jpg" ma_ISBN="tamthoichuaco" so_luong="0" tac_gia="Belinda Weber" ten_sach="Em Muốn Biết Vì Sao: Sâu Bướm Ăn Nhiều" tinh_trang="true"/>
@@ -671,12 +660,12 @@
             <sach NXB="Nhà Xuất Bản Đại Học Quốc Gia Hà Nội" id_chu="0000021" id_sach="0000503" link="/database/photos/0000503.jpg" ma_ISBN="tamthoichuaco" so_luong="9" tac_gia="Nhiều Tác Giả" ten_sach="Công Phá Đề Thi THPT Quốc Gia 2018 Môn Vật Lý" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Văn Học" id_chu="0000021" id_sach="0000504" link="/database/photos/0000504.jpg" ma_ISBN="tamthoichuaco" so_luong="6" tac_gia="Emily Bronte" ten_sach="Đồi Gió Hú" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Thế Giới" id_chu="0000021" id_sach="0000505" link="/database/photos/0000505.jpg" ma_ISBN="tamthoichuaco" so_luong="4" tac_gia="Bìa cứng" ten_sach="Nhật Ký Học Làm Bánh (Tập 3) - Khi Bếp Vắng Lò" tinh_trang="true"/>
-</danh_sach_sach>
+        </danh_sach_sach>
         <yeu_cau_cho_muon_sach/>
         <yeu_cau_muon_sach/>
         <lich_su_cho_muon_sach/>
         <lich_su_muon_sach/>
-</tu_sach>
+    </tu_sach>
     <tu_sach diem_danh_gia="0" id_chu="0000022">
         <danh_sach_sach>
             <sach NXB="Nhà Xuất Bản Trẻ" id_chu="0000022" id_sach="0000506" link="/database/photos/0000506.jpg" ma_ISBN="tamthoichuaco" so_luong="0" tac_gia="Tác giả J.K.Rowling" ten_sach="Harry Potter Và Bảo Bối Tử Thần - Tập 07 (Tái Bản 2017)" tinh_trang="true"/>
@@ -702,12 +691,12 @@
             <sach NXB="Makoto Shinkai, Yukiko Seike" id_chu="0000022" id_sach="0000526" link="/database/photos/0000526.jpg" ma_ISBN="tamthoichuaco" so_luong="3" tac_gia="Bìa mềm" ten_sach="5 Centimet Trên Giây (Bản Manga) (Tập 2 )" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Văn Hóa - Văn Nghệ" id_chu="0000022" id_sach="0000527" link="/database/photos/0000527.jpg" ma_ISBN="tamthoichuaco" so_luong="10" tac_gia="Trương Gia Quyền, Trương Khiết Mi (sưu tầm và biên dịch)" ten_sach="Những Câu Chuyện Khuyến Khích Trẻ Sáng Tạo" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Kim Đồng" id_chu="0000022" id_sach="0000528" link="/database/photos/0000528.jpg" ma_ISBN="tamthoichuaco" so_luong="2" tac_gia="Zhenguoguo" ten_sach="Bí Kíp Đi Trẻ Vui Vẻ - Đi Trẻ Có Vui Không?" tinh_trang="true"/>
-</danh_sach_sach>
+        </danh_sach_sach>
         <yeu_cau_cho_muon_sach/>
         <yeu_cau_muon_sach/>
         <lich_su_cho_muon_sach/>
         <lich_su_muon_sach/>
-</tu_sach>
+    </tu_sach>
     <tu_sach diem_danh_gia="0" id_chu="0000023">
         <danh_sach_sach>
             <sach NXB="Nhà Xuất Bản Trẻ" id_chu="0000023" id_sach="0000529" link="/database/photos/0000529.jpg" ma_ISBN="tamthoichuaco" so_luong="2" tac_gia="Nguyễn Nhật Ánh" ten_sach="Thiên Thần Nhỏ Của Tôi (Tái Bản)" tinh_trang="true"/>
@@ -733,12 +722,12 @@
             <sach NXB="Nhà Xuất Bản Tổng hợp TP.HCM" id_chu="0000023" id_sach="0000549" link="/database/photos/0000549.jpg" ma_ISBN="tamthoichuaco" so_luong="5" tac_gia="Lê Huy Khoa" ten_sach="Không Bao Giờ Là Thất Bại! Tất Cả Là Thử Thách (Tái Bản)" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Tổng hợp TP.HCM" id_chu="0000023" id_sach="0000550" link="/database/photos/0000550.jpg" ma_ISBN="tamthoichuaco" so_luong="9" tac_gia="Phạm Minh Diệu" ten_sach="Học Tốt Ngữ Văn Lớp 6 Toàn Tập" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Thanh Hóa" id_chu="0000023" id_sach="0000551" link="/database/photos/0000551.jpg" ma_ISBN="tamthoichuaco" so_luong="0" tac_gia="Thiện Quang (Sưu tầm &amp; biên soạn)" ten_sach="Truyện Cổ Phật Giáo Chọn Lọc - Làm Ơn Mắc Oán" tinh_trang="true"/>
-</danh_sach_sach>
+        </danh_sach_sach>
         <yeu_cau_cho_muon_sach/>
         <yeu_cau_muon_sach/>
         <lich_su_cho_muon_sach/>
         <lich_su_muon_sach/>
-</tu_sach>
+    </tu_sach>
     <tu_sach diem_danh_gia="0" id_chu="0000024">
         <danh_sach_sach>
             <sach NXB="" id_chu="0000024" id_sach="0000552" link="/database/photos/0000552.jpg" ma_ISBN="tamthoichuaco" so_luong="7" tac_gia="Không xác định" ten_sach="Set 5 Bookmark Gỗ Nam Châm Chó Mặt Xệ" tinh_trang="true"/>
@@ -764,12 +753,12 @@
             <sach NXB="Nhà Xuất Bản Văn Hóa - Văn Nghệ" id_chu="0000024" id_sach="0000572" link="/database/photos/0000572.jpg" ma_ISBN="tamthoichuaco" so_luong="1" tac_gia="Du Phong" ten_sach="Thanh Xuân Không Hối Tiếc" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Trẻ" id_chu="0000024" id_sach="0000573" link="/database/photos/0000573.jpg" ma_ISBN="tamthoichuaco" so_luong="10" tac_gia="Nguyễn Tiến Dũng, Vũ Hồng Nam" ten_sach="Vũ Trụ Trong Vỏ Hạt Dẻ (Tái Bản 2018)" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Trẻ" id_chu="0000024" id_sach="0000574" link="/database/photos/0000574.jpg" ma_ISBN="tamthoichuaco" so_luong="2" tac_gia="11.3 x 17.6 cm" ten_sach="Dòng Sông Huyền Bí (Tập 15)" tinh_trang="true"/>
-</danh_sach_sach>
+        </danh_sach_sach>
         <yeu_cau_cho_muon_sach/>
         <yeu_cau_muon_sach/>
         <lich_su_cho_muon_sach/>
         <lich_su_muon_sach/>
-</tu_sach>
+    </tu_sach>
     <tu_sach diem_danh_gia="0" id_chu="0000025">
         <danh_sach_sach>
             <sach NXB="Nhà Xuất Bản Kim Đồng" id_chu="0000025" id_sach="0000575" link="/database/photos/0000575.jpg" ma_ISBN="tamthoichuaco" so_luong="0" tac_gia="Tô Hoài" ten_sach="Dế Mèn Phiêu Lưu Ký (Ấn Bản Kỉ Niệm 60 Năm NXB Kim Đồng)" tinh_trang="true"/>
@@ -795,12 +784,12 @@
             <sach NXB="Nhà Xuất Bản Đại Học Quốc Gia Hà Nội" id_chu="0000025" id_sach="0000595" link="/database/photos/0000595.jpg" ma_ISBN="tamthoichuaco" so_luong="10" tac_gia="Bìa cứng" ten_sach="Từ Điển Oxford Anh - Anh - Việt (Bìa Cứng Vàng)" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Tổng hợp TP.HCM" id_chu="0000025" id_sach="0000596" link="/database/photos/0000596.jpg" ma_ISBN="tamthoichuaco" so_luong="4" tac_gia="13 x 20.5 cm" ten_sach="Lẽ Được Mất: Cuốn Sách Hóa Giải Những Khổ Đau Của Bạn!" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Kim Đồng" id_chu="0000025" id_sach="0000597" link="/database/photos/0000597.jpg" ma_ISBN="tamthoichuaco" so_luong="6" tac_gia="Han Kiên" ten_sach="Danh Nhân Thế Giới - Nôben (2014)" tinh_trang="true"/>
-</danh_sach_sach>
+        </danh_sach_sach>
         <yeu_cau_cho_muon_sach/>
         <yeu_cau_muon_sach/>
         <lich_su_cho_muon_sach/>
         <lich_su_muon_sach/>
-</tu_sach>
+    </tu_sach>
     <tu_sach diem_danh_gia="0" id_chu="0000026">
         <danh_sach_sach>
             <sach NXB="" id_chu="0000026" id_sach="0000598" link="/database/photos/0000598.jpg" ma_ISBN="tamthoichuaco" so_luong="1" tac_gia="Không xác định" ten_sach="Bộ 36 Màu Cao Cấp Marco Raffine 7100-36CB (Hộp Giấy)" tinh_trang="true"/>
@@ -826,12 +815,12 @@
             <sach NXB="Nhà Xuất Bản Hồng Đức" id_chu="0000026" id_sach="0000618" link="/database/photos/0000618.jpg" ma_ISBN="tamthoichuaco" so_luong="6" tac_gia="14.5 x 20.5 cm" ten_sach="Đường Mây Qua Xứ Tuyết (Tái Bản)" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Văn Học" id_chu="0000026" id_sach="0000619" link="/database/photos/0000619.jpg" ma_ISBN="tamthoichuaco" so_luong="9" tac_gia="Đồng Hoa" ten_sach="Thời Niên Thiếu Không Thể Quay Lại Ấy (Trọn Bộ 2 Tập)" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Thế Giới" id_chu="0000026" id_sach="0000620" link="/database/photos/0000620.jpg" ma_ISBN="tamthoichuaco" so_luong="7" tac_gia="14.5 x 20 cm" ten_sach="Muốn Ít Đi, Hạnh Phúc Nhiều Hơn: Bắt Đầu Từ Chính Căn Nhà Của Bạn" tinh_trang="true"/>
-</danh_sach_sach>
+        </danh_sach_sach>
         <yeu_cau_cho_muon_sach/>
         <yeu_cau_muon_sach/>
         <lich_su_cho_muon_sach/>
         <lich_su_muon_sach/>
-</tu_sach>
+    </tu_sach>
     <tu_sach diem_danh_gia="0" id_chu="0000027">
         <danh_sach_sach>
             <sach NXB="Nhà Xuất Bản Thanh Niên" id_chu="0000027" id_sach="0000621" link="/database/photos/0000621.jpg" ma_ISBN="tamthoichuaco" so_luong="7" tac_gia="Bìa mềm" ten_sach="Combo Học Montessori Để Dạy Trẻ Theo Phương Pháp Montessori (Trọn Bộ 4 Cuốn)" tinh_trang="true"/>
@@ -857,12 +846,12 @@
             <sach NXB="Nhà Xuất Bản Văn Học" id_chu="0000027" id_sach="0000641" link="/database/photos/0000641.jpg" ma_ISBN="tamthoichuaco" so_luong="6" tac_gia="Bìa mềm" ten_sach="Ehon Nhật Bản - Asae Và Em Gái Bé Nhỏ" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Thanh Niên" id_chu="0000027" id_sach="0000642" link="/database/photos/0000642.jpg" ma_ISBN="tamthoichuaco" so_luong="0" tac_gia="Huy Hoàng" ten_sach="Đừng Để Tương Lai Ghét Bạn Hiện Tại" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Trẻ" id_chu="0000027" id_sach="0000643" link="/database/photos/0000643.jpg" ma_ISBN="tamthoichuaco" so_luong="7" tac_gia="Bìa mềm" ten_sach="420 Câu Đố Vui Thông Minh" tinh_trang="true"/>
-</danh_sach_sach>
+        </danh_sach_sach>
         <yeu_cau_cho_muon_sach/>
         <yeu_cau_muon_sach/>
         <lich_su_cho_muon_sach/>
         <lich_su_muon_sach/>
-</tu_sach>
+    </tu_sach>
     <tu_sach diem_danh_gia="0" id_chu="0000028">
         <danh_sach_sach>
             <sach NXB="Nhà Xuất Bản Thế Giới" id_chu="0000028" id_sach="0000644" link="/database/photos/0000644.jpg" ma_ISBN="tamthoichuaco" so_luong="6" tac_gia="Taketoshi Ozawa" ten_sach="Tôi Chọn Hôm Nay, Tôi Chọn Hạnh Phúc" tinh_trang="true"/>
@@ -888,12 +877,12 @@
             <sach NXB="Nhà Xuất Bản Hà Nội" id_chu="0000028" id_sach="0000664" link="/database/photos/0000664.jpg" ma_ISBN="tamthoichuaco" so_luong="3" tac_gia="Nguyễn Bảo Trung" ten_sach="Nắng" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Thế Giới" id_chu="0000028" id_sach="0000665" link="/database/photos/0000665.jpg" ma_ISBN="tamthoichuaco" so_luong="0" tac_gia="Baird T. Spalding" ten_sach="Hành Trình Về Phương Đông" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Văn Học" id_chu="0000028" id_sach="0000666" link="/database/photos/0000666.jpg" ma_ISBN="tamthoichuaco" so_luong="7" tac_gia="Yann Martel" ten_sach="Cuộc Đời Của Pi (Tái Bản 2017)" tinh_trang="true"/>
-</danh_sach_sach>
+        </danh_sach_sach>
         <yeu_cau_cho_muon_sach/>
         <yeu_cau_muon_sach/>
         <lich_su_cho_muon_sach/>
         <lich_su_muon_sach/>
-</tu_sach>
+    </tu_sach>
     <tu_sach diem_danh_gia="0" id_chu="0000029">
         <danh_sach_sach>
             <sach NXB="Nhà Xuất Bản Kim Đồng" id_chu="0000029" id_sach="0000667" link="/database/photos/0000667.jpg" ma_ISBN="tamthoichuaco" so_luong="7" tac_gia="Buke Buke" ten_sach="Thắc Mắc Về Vi Khuẩn: Ai Khiến Tớ Đau Bụng?" tinh_trang="true"/>
@@ -919,12 +908,12 @@
             <sach NXB="Nhà Xuất Bản Hội Nhà Văn" id_chu="0000029" id_sach="0000687" link="/database/photos/0000687.jpg" ma_ISBN="tamthoichuaco" so_luong="4" tac_gia="Bìa mềm" ten_sach="Chúng Ta Rồi Sẽ Ổn Thôi" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Văn Học" id_chu="0000029" id_sach="0000688" link="/database/photos/0000688.jpg" ma_ISBN="tamthoichuaco" so_luong="8" tac_gia="Riku Misora, Won" ten_sach="Hiệp Sĩ Lưu Ban (Tập 4) - Tặng Kèm Bookmark" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Kim Đồng" id_chu="0000029" id_sach="0000689" link="/database/photos/0000689.jpg" ma_ISBN="tamthoichuaco" so_luong="7" tac_gia="Bìa mềm" ten_sach="33 Bài Thực Hành Theo Phương Pháp Shichida" tinh_trang="true"/>
-</danh_sach_sach>
+        </danh_sach_sach>
         <yeu_cau_cho_muon_sach/>
         <yeu_cau_muon_sach/>
         <lich_su_cho_muon_sach/>
         <lich_su_muon_sach/>
-</tu_sach>
+    </tu_sach>
     <tu_sach diem_danh_gia="0" id_chu="0000030">
         <danh_sach_sach>
             <sach NXB="Nhà Xuất Bản Kim Đồng" id_chu="0000030" id_sach="0000690" link="/database/photos/0000690.jpg" ma_ISBN="tamthoichuaco" so_luong="6" tac_gia="Bìa mềm" ten_sach="Danh Nhân Thế Giới - Êđixơn (2014)" tinh_trang="true"/>
@@ -950,12 +939,12 @@
             <sach NXB="Nhà Xuất Bản Trẻ" id_chu="0000030" id_sach="0000710" link="/database/photos/0000710.jpg" ma_ISBN="tamthoichuaco" so_luong="4" tac_gia="14 x 20 cm" ten_sach="Đời Thay Đổi Khi Chúng Ta Thay Đổi (Tập 3) - Tái Bản" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Văn Học" id_chu="0000030" id_sach="0000711" link="/database/photos/0000711.jpg" ma_ISBN="tamthoichuaco" so_luong="7" tac_gia="Cố Mạn" ten_sach="Bữa Trưa Tình Yêu (Ấn Bản Kỷ Niệm) - Bổ Sung 5 Ngoại Truyện" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Văn Học" id_chu="0000030" id_sach="0000712" link="/database/photos/0000712.jpg" ma_ISBN="tamthoichuaco" so_luong="0" tac_gia="Yasushi Kitagawa" ten_sach="Cửa Tiệm Của Những Lá Thư" tinh_trang="true"/>
-</danh_sach_sach>
+        </danh_sach_sach>
         <yeu_cau_cho_muon_sach/>
         <yeu_cau_muon_sach/>
         <lich_su_cho_muon_sach/>
         <lich_su_muon_sach/>
-</tu_sach>
+    </tu_sach>
     <tu_sach diem_danh_gia="0" id_chu="0000031">
         <danh_sach_sach>
             <sach NXB="Nhà Xuất Bản Kim Đồng" id_chu="0000031" id_sach="0000713" link="/database/photos/0000713.jpg" ma_ISBN="tamthoichuaco" so_luong="1" tac_gia="Bìa mềm" ten_sach="Danh Tác Thế Giới: Phục Sinh (Tái Bản 2017)" tinh_trang="true"/>
@@ -981,12 +970,12 @@
             <sach NXB="Nhà Xuất Bản Thế Giới" id_chu="0000031" id_sach="0000733" link="/database/photos/0000733.jpg" ma_ISBN="tamthoichuaco" so_luong="7" tac_gia="Hạnh Nguyễn" ten_sach="Thước Đo Lạ Kỳ Của Trí Não" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Kim Đồng" id_chu="0000031" id_sach="0000734" link="/database/photos/0000734.jpg" ma_ISBN="tamthoichuaco" so_luong="1" tac_gia="11.3 x 17.6 cm" ten_sach="Kết Giới Sư - Tập 35" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Dân Trí" id_chu="0000031" id_sach="0000735" link="/database/photos/0000735.jpg" ma_ISBN="tamthoichuaco" so_luong="7" tac_gia="Không xác định" ten_sach="Combo Bồi Dưỡng FQ Cho Trẻ (10 Quyển)" tinh_trang="true"/>
-</danh_sach_sach>
+        </danh_sach_sach>
         <yeu_cau_cho_muon_sach/>
         <yeu_cau_muon_sach/>
         <lich_su_cho_muon_sach/>
         <lich_su_muon_sach/>
-</tu_sach>
+    </tu_sach>
     <tu_sach diem_danh_gia="0" id_chu="0000032">
         <danh_sach_sach>
             <sach NXB="Nhà Xuất Bản Thanh Niên" id_chu="0000032" id_sach="0000736" link="/database/photos/0000736.jpg" ma_ISBN="tamthoichuaco" so_luong="3" tac_gia="Đăng Á, Lý Phong Lăng" ten_sach="Hỏi Gì Cũng Biết - Khoa Học Thật Dễ Hiểu" tinh_trang="true"/>
@@ -1012,12 +1001,12 @@
             <sach NXB="Nhà Xuất Bản Văn Học" id_chu="0000032" id_sach="0000756" link="/database/photos/0000756.jpg" ma_ISBN="tamthoichuaco" so_luong="3" tac_gia="Vương Thúy An" ten_sach="Hạnh" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Hội Nhà Văn" id_chu="0000032" id_sach="0000757" link="/database/photos/0000757.jpg" ma_ISBN="tamthoichuaco" so_luong="4" tac_gia="John le Carré" ten_sach="Kẻ Bị Truy Nã (Tái Bản)" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Đại Học Sư Phạm" id_chu="0000032" id_sach="0000758" link="/database/photos/0000758.jpg" ma_ISBN="tamthoichuaco" so_luong="3" tac_gia="Bìa mềm" ten_sach="Cuộc Sống Quanh Em - Gia Đình" tinh_trang="true"/>
-</danh_sach_sach>
+        </danh_sach_sach>
         <yeu_cau_cho_muon_sach/>
         <yeu_cau_muon_sach/>
         <lich_su_cho_muon_sach/>
         <lich_su_muon_sach/>
-</tu_sach>
+    </tu_sach>
     <tu_sach diem_danh_gia="0" id_chu="0000033">
         <danh_sach_sach>
             <sach NXB="Nhà Xuất Bản Tổng hợp TP.HCM" id_chu="0000033" id_sach="0000759" link="/database/photos/0000759.jpg" ma_ISBN="tamthoichuaco" so_luong="5" tac_gia="Nhiều Tác Giả" ten_sach="200 Bài Và Đoạn Văn Hay Lớp 12" tinh_trang="true"/>
@@ -1043,12 +1032,12 @@
             <sach NXB="Nhà Xuất Bản Tổng hợp TP.HCM" id_chu="0000033" id_sach="0000779" link="/database/photos/0000779.jpg" ma_ISBN="tamthoichuaco" so_luong="3" tac_gia="Việt Khương" ten_sach="Think &amp; Grow Rich - Nghĩ Giàu Và Làm Giàu" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Hồng Đức" id_chu="0000033" id_sach="0000780" link="/database/photos/0000780.jpg" ma_ISBN="tamthoichuaco" so_luong="1" tac_gia="Nhiều Tác Giả" ten_sach="Combo Bứt Phá THPTQG Vật Lí (Trọn Bộ 2 Quyển)" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Văn Học" id_chu="0000033" id_sach="0000781" link="/database/photos/0000781.jpg" ma_ISBN="tamthoichuaco" so_luong="4" tac_gia="Hayashi Akiko" ten_sach="Ehon Nhật Bản - Tay Xinh Đâu Nhỉ (Tái Bản)" tinh_trang="true"/>
-</danh_sach_sach>
+        </danh_sach_sach>
         <yeu_cau_cho_muon_sach/>
         <yeu_cau_muon_sach/>
         <lich_su_cho_muon_sach/>
         <lich_su_muon_sach/>
-</tu_sach>
+    </tu_sach>
     <tu_sach diem_danh_gia="0" id_chu="0000034">
         <danh_sach_sach>
             <sach NXB="Nhà Xuất Bản Đà Nẵng" id_chu="0000034" id_sach="0000782" link="/database/photos/0000782.jpg" ma_ISBN="tamthoichuaco" so_luong="1" tac_gia="Mai Lan Hương, Nguyễn Thanh Loan" ten_sach="Ngữ Pháp Tiếng Anh (Ấn Bản 2017)" tinh_trang="true"/>
@@ -1071,12 +1060,12 @@
             <sach NXB="Bloomsbury" id_chu="0000034" id_sach="0000799" link="/database/photos/0000799.jpg" ma_ISBN="tamthoichuaco" so_luong="9" tac_gia="Paperback" ten_sach="Harry Potter 7 Volume Children'S Paperback Boxed Set" tinh_trang="true"/><sach NXB="Nhà Xuất Bản Dân Trí" id_chu="0000034" id_sach="0000800" link="/database/photos/0000800.jpg" ma_ISBN="tamthoichuaco" so_luong="1" tac_gia="Jakie Gaff" ten_sach="Em Muốn Biết Vì Sao: Sa Mạc Sahara Lạnh Về Đêm" tinh_trang="true"/><sach NXB="Nhà Xuất Bản Hội Nhà Văn" id_chu="0000034" id_sach="0000801" link="/database/photos/0000801.jpg" ma_ISBN="tamthoichuaco" so_luong="3" tac_gia="Thích Nhất Hạnh" ten_sach="Không Diệt Không Sinh Đừng Sợ Hãi" tinh_trang="true"/><sach NXB="" id_chu="0000034" id_sach="0000802" link="/database/photos/0000802.jpg" ma_ISBN="tamthoichuaco" so_luong="1" tac_gia="Không xác định" ten_sach="Kệ Rổ" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Hội Nhà Văn" id_chu="0000034" id_sach="0000803" link="/database/photos/0000803.jpg" ma_ISBN="tamthoichuaco" so_luong="8" tac_gia="Sumino Yoru" ten_sach="Tớ Muốn Ăn Tụy Của Cậu" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Lao Động Xã Hội" id_chu="0000034" id_sach="0000804" link="/database/photos/0000804.jpg" ma_ISBN="tamthoichuaco" so_luong="2" tac_gia="Hoàng Thị Minh Hiếu" ten_sach="Tỷ Phú Bán Giày (Tái Bản 2018)" tinh_trang="true"/>
-</danh_sach_sach>
+        </danh_sach_sach>
         <yeu_cau_cho_muon_sach/>
         <yeu_cau_muon_sach/>
         <lich_su_cho_muon_sach/>
         <lich_su_muon_sach/>
-</tu_sach>
+    </tu_sach>
     <tu_sach diem_danh_gia="0" id_chu="0000035">
         <danh_sach_sach>
             <sach NXB="Nhà Xuất Bản Thế Giới" id_chu="0000035" id_sach="0000805" link="/database/photos/0000805.jpg" ma_ISBN="tamthoichuaco" so_luong="3" tac_gia="" ten_sach="Đôi Tai Thấu Suốt Thế Gian" tinh_trang="true"/>
@@ -1102,12 +1091,12 @@
             <sach NXB="" id_chu="0000035" id_sach="0000825" link="/database/photos/0000825.jpg" ma_ISBN="tamthoichuaco" so_luong="10" tac_gia="Không xác định" ten_sach="Bút Lông Hai Đầu Marvy 1122 No.39 - Ash Grey" tinh_trang="true"/>
             <sach NXB="" id_chu="0000035" id_sach="0000826" link="/database/photos/0000826.jpg" ma_ISBN="tamthoichuaco" so_luong="10" tac_gia="Không xác định" ten_sach="Bộ Chì Tô 24 Màu Nước Cao Cấp Marco Raffine 7120-24TN (Hộp Thiếc)" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Văn Học" id_chu="0000035" id_sach="0000827" link="/database/photos/0000827.jpg" ma_ISBN="tamthoichuaco" so_luong="8" tac_gia="Bìa mềm" ten_sach="Ai Cũng Xứng Đáng Được Hạnh Phúc" tinh_trang="true"/>
-</danh_sach_sach>
+        </danh_sach_sach>
         <yeu_cau_cho_muon_sach/>
         <yeu_cau_muon_sach/>
         <lich_su_cho_muon_sach/>
         <lich_su_muon_sach/>
-</tu_sach>
+    </tu_sach>
     <tu_sach diem_danh_gia="0" id_chu="0000036">
         <danh_sach_sach>
             <sach NXB="Nhà Xuất Bản Tri Thức" id_chu="0000036" id_sach="0000828" link="/database/photos/0000828.jpg" ma_ISBN="tamthoichuaco" so_luong="2" tac_gia="Trần Thị Hương Lan" ten_sach="Nói Sao Cho Trẻ Chịu Nghe, Nghe Sao Cho Trẻ Chịu Nói (Tái Bản 2017)" tinh_trang="true"/>
@@ -1133,12 +1122,12 @@
             <sach NXB="Nhà Xuất Bản Văn Học" id_chu="0000036" id_sach="0000848" link="/database/photos/0000848.jpg" ma_ISBN="tamthoichuaco" so_luong="10" tac_gia="J.R.R. Tolkien" ten_sach="Chúa Tể Những Chiếc Nhẫn - Đoàn Hộ Nhẫn (Tái Bản 2015)" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Trẻ" id_chu="0000036" id_sach="0000849" link="/database/photos/0000849.jpg" ma_ISBN="tamthoichuaco" so_luong="5" tac_gia="Luật sư Nguyễn Ngọc Bích" ten_sach="Tư Duy Pháp Lý Của Luật Sư" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Trẻ" id_chu="0000036" id_sach="0000850" link="/database/photos/0000850.jpg" ma_ISBN="tamthoichuaco" so_luong="9" tac_gia="Christopher Paolini" ten_sach="Eragon - Cậu Bé Cưỡi Rồng Tập 2 - Bản Mới 2011" tinh_trang="true"/>
-</danh_sach_sach>
+        </danh_sach_sach>
         <yeu_cau_cho_muon_sach/>
         <yeu_cau_muon_sach/>
         <lich_su_cho_muon_sach/>
         <lich_su_muon_sach/>
-</tu_sach>
+    </tu_sach>
     <tu_sach diem_danh_gia="0" id_chu="0000037">
         <danh_sach_sach>
             <sach NXB="Việt Nam" id_chu="0000037" id_sach="0000851" link="/database/photos/0000851.jpg" ma_ISBN="tamthoichuaco" so_luong="6" tac_gia="Không xác định" ten_sach="Bút Chì Khúc Thiên Long PC-09 (20 cây)" tinh_trang="true"/>
@@ -1164,12 +1153,12 @@
             <sach NXB="Nhà Xuất Bản Tổng hợp TP.HCM" id_chu="0000037" id_sach="0000871" link="/database/photos/0000871.jpg" ma_ISBN="tamthoichuaco" so_luong="10" tac_gia="14.5 x 20.5 cm" ten_sach="Tuyển Tập Các Bài Luận Tiếng Anh Trong Kỳ Thi (Tái Bản)" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Văn Học" id_chu="0000037" id_sach="0000872" link="/database/photos/0000872.jpg" ma_ISBN="tamthoichuaco" so_luong="3" tac_gia="Hermann Hesse" ten_sach="Siddhartha (Tái Bản)" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Thế Giới" id_chu="0000037" id_sach="0000873" link="/database/photos/0000873.jpg" ma_ISBN="tamthoichuaco" so_luong="7" tac_gia="Bìa mềm" ten_sach="Giáo Dục Não Phải - Tương Lai Cho Con Bạn" tinh_trang="true"/>
-</danh_sach_sach>
+        </danh_sach_sach>
         <yeu_cau_cho_muon_sach/>
         <yeu_cau_muon_sach/>
         <lich_su_cho_muon_sach/>
         <lich_su_muon_sach/>
-</tu_sach>
+    </tu_sach>
     <tu_sach diem_danh_gia="0" id_chu="0000038">
         <danh_sach_sach>
             <sach NXB="Nhà Xuất Bản Thanh Niên" id_chu="0000038" id_sach="0000874" link="/database/photos/0000874.jpg" ma_ISBN="tamthoichuaco" so_luong="6" tac_gia="Trần Văn Sáu, Trần Tước Nguyên" ten_sach="Học Tốt Ngữ Văn Lớp 10 (Tập 1)" tinh_trang="true"/>
@@ -1195,12 +1184,12 @@
             <sach NXB="Nhà Xuất Bản Tri Thức" id_chu="0000038" id_sach="0000894" link="/database/photos/0000894.jpg" ma_ISBN="tamthoichuaco" so_luong="6" tac_gia="Phạm Nguyên Trường" ten_sach="Các Mô Hình Quản Lý Nhà Nước Hiện Đại (Tái Bản)" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Thế Giới" id_chu="0000038" id_sach="0000895" link="/database/photos/0000895.jpg" ma_ISBN="tamthoichuaco" so_luong="6" tac_gia="Voldy" ten_sach="Bạn Đỡ Ngu Ngơ Rồi Đấy" tinh_trang="true"/>
             <sach NXB="" id_chu="0000038" id_sach="0000896" link="/database/photos/0000896.jpg" ma_ISBN="tamthoichuaco" so_luong="0" tac_gia="Không xác định" ten_sach="Bộ Chì Tô 36 Màu Cao Cấp Marco Raffine 7100-36TN (Hộp Thiếc)" tinh_trang="true"/>
-</danh_sach_sach>
+        </danh_sach_sach>
         <yeu_cau_cho_muon_sach/>
         <yeu_cau_muon_sach/>
         <lich_su_cho_muon_sach/>
         <lich_su_muon_sach/>
-</tu_sach>
+    </tu_sach>
     <tu_sach diem_danh_gia="0" id_chu="0000039">
         <danh_sach_sach>
             <sach NXB="Nhà Xuất Bản Phụ Nữ" id_chu="0000039" id_sach="0000897" link="/database/photos/0000897.jpg" ma_ISBN="tamthoichuaco" so_luong="5" tac_gia="Katsumi Nishimura" ten_sach="Rèn Luyện Tư Duy Chiến Lược Trong 1 Phút" tinh_trang="true"/>
@@ -1226,12 +1215,12 @@
             <sach NXB="Nhà Xuất Bản Kim Đồng" id_chu="0000039" id_sach="0000917" link="/database/photos/0000917.jpg" ma_ISBN="tamthoichuaco" so_luong="10" tac_gia="14.5 x 20.5 cm" ten_sach="Shin - Cậu Bé Bút Chì - Tập 43 (2014)" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Trẻ" id_chu="0000039" id_sach="0000918" link="/database/photos/0000918.jpg" ma_ISBN="tamthoichuaco" so_luong="8" tac_gia="Nguyễn Nhật Ánh" ten_sach="Thằng Quỷ Nhỏ - Truyện Dài" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Thế Giới" id_chu="0000039" id_sach="0000919" link="/database/photos/0000919.jpg" ma_ISBN="tamthoichuaco" so_luong="0" tac_gia="Bìa mềm" ten_sach="Chiếp Chiếp Đi Công Viên Giải Trí - Ehon Kỹ Năng Sống" tinh_trang="true"/>
-</danh_sach_sach>
+        </danh_sach_sach>
         <yeu_cau_cho_muon_sach/>
         <yeu_cau_muon_sach/>
         <lich_su_cho_muon_sach/>
         <lich_su_muon_sach/>
-</tu_sach>
+    </tu_sach>
     <tu_sach diem_danh_gia="0" id_chu="0000040">
         <danh_sach_sach>
             <sach NXB="Nhà Xuất Bản Kim Đồng" id_chu="0000040" id_sach="0000920" link="/database/photos/0000920.jpg" ma_ISBN="tamthoichuaco" so_luong="3" tac_gia="Janet Keegans - Harriet Matsaert" ten_sach="Trăng Châu Phi - Vì Sao Ngựa Vằn Có Sọc? (Song Ngữ Việt Anh)" tinh_trang="true"/>
@@ -1257,12 +1246,12 @@
             <sach NXB="Nhà Xuất Bản Kim Đồng" id_chu="0000040" id_sach="0000940" link="/database/photos/0000940.jpg" ma_ISBN="tamthoichuaco" so_luong="7" tac_gia="Melina Gerosa Bellows" ten_sach="Cuốn Sách Về Tình Yêu Thương - Tình Mẫu Tử: Những Câu Chuyện Xúc Động Có Thật Từ Thế Giới Động Vật [Tái Bản 2017]" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Kim Đồng" id_chu="0000040" id_sach="0000941" link="/database/photos/0000941.jpg" ma_ISBN="tamthoichuaco" so_luong="4" tac_gia="Janet Keegans - Harriet Matsaert" ten_sach="Trăng Châu Phi - Truyền Thuyết Về Hai Loài Tê Giác (Song Ngữ Việt Anh)" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Đại Học Quốc Gia Hà Nội" id_chu="0000040" id_sach="0000942" link="/database/photos/0000942.jpg" ma_ISBN="tamthoichuaco" so_luong="6" tac_gia="Dương Hương" ten_sach="Tự Học Đột Phá - Kĩ Năng Viết Lại Câu Tiếng Anh" tinh_trang="true"/>
-</danh_sach_sach>
+        </danh_sach_sach>
         <yeu_cau_cho_muon_sach/>
         <yeu_cau_muon_sach/>
         <lich_su_cho_muon_sach/>
         <lich_su_muon_sach/>
-</tu_sach>
+    </tu_sach>
     <tu_sach diem_danh_gia="0" id_chu="0000041">
         <danh_sach_sach>
             <sach NXB="Nhà Xuất Bản Thế Giới" id_chu="0000041" id_sach="0000943" link="/database/photos/0000943.jpg" ma_ISBN="tamthoichuaco" so_luong="8" tac_gia="Bìa mềm" ten_sach="Nuôi Con Bằng Yêu Thương - Dạy Con Bằng Lý Trí" tinh_trang="true"/>
@@ -1288,12 +1277,12 @@
             <sach NXB="Nhà Xuất Bản Văn Hoá Thông Tin" id_chu="0000041" id_sach="0000963" link="/database/photos/0000963.jpg" ma_ISBN="tamthoichuaco" so_luong="6" tac_gia="16 x 24 cm" ten_sach="Văn Khấn Cổ Truyền Việt Nam (Tái Bản)" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Trẻ" id_chu="0000041" id_sach="0000964" link="/database/photos/0000964.jpg" ma_ISBN="tamthoichuaco" so_luong="4" tac_gia="Nhóm tác giả" ten_sach="Thỏ Quậy Và Thỏ Nhí (Tập 9) - Thầy Bói Coi Chỉ Chân" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Thanh Niên" id_chu="0000041" id_sach="0000965" link="/database/photos/0000965.jpg" ma_ISBN="tamthoichuaco" so_luong="3" tac_gia="Hoàng Dân" ten_sach="Tiếng Việt Cho Mọi Nhà" tinh_trang="true"/>
-</danh_sach_sach>
+        </danh_sach_sach>
         <yeu_cau_cho_muon_sach/>
         <yeu_cau_muon_sach/>
         <lich_su_cho_muon_sach/>
         <lich_su_muon_sach/>
-</tu_sach>
+    </tu_sach>
     <tu_sach diem_danh_gia="0" id_chu="0000042">
         <danh_sach_sach>
             <sach NXB="Nhà Xuất Bản Hồng Đức" id_chu="0000042" id_sach="0000966" link="/database/photos/0000966.jpg" ma_ISBN="tamthoichuaco" so_luong="3" tac_gia="Jules Verne" ten_sach="Hai Vạn Dặm Dưới Đáy Biển" tinh_trang="true"/>
@@ -1319,12 +1308,12 @@
             <sach NXB="Nhà Xuất Bản Hội Nhà Văn" id_chu="0000042" id_sach="0000986" link="/database/photos/0000986.jpg" ma_ISBN="tamthoichuaco" so_luong="0" tac_gia="Ma Văn Kháng" ten_sach="100 Truyện Ngắn Ma Văn Kháng - Tập 1" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Văn Học" id_chu="0000042" id_sach="0000987" link="/database/photos/0000987.jpg" ma_ISBN="tamthoichuaco" so_luong="4" tac_gia="Margaret Mitchell" ten_sach="Cuốn Theo Chiều Gió" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Kim Đồng" id_chu="0000042" id_sach="0000988" link="/database/photos/0000988.jpg" ma_ISBN="tamthoichuaco" so_luong="3" tac_gia="14.5 x 20.5 cm" ten_sach="Shin - Cậu Bé Bút Chì (Tập 38 - Tái Bản)" tinh_trang="true"/>
-</danh_sach_sach>
+        </danh_sach_sach>
         <yeu_cau_cho_muon_sach/>
         <yeu_cau_muon_sach/>
         <lich_su_cho_muon_sach/>
         <lich_su_muon_sach/>
-</tu_sach>
+    </tu_sach>
     <tu_sach diem_danh_gia="0" id_chu="0000043">
         <danh_sach_sach>
             <sach NXB="Nhà Xuất Bản Kim Đồng" id_chu="0000043" id_sach="0000989" link="/database/photos/0000989.jpg" ma_ISBN="tamthoichuaco" so_luong="8" tac_gia="Yukari" ten_sach="Quái Vật Bàn Bên (Tập 13)" tinh_trang="true"/>
@@ -1350,12 +1339,12 @@
             <sach NXB="Nhà Xuất Bản Thế Giới" id_chu="0000043" id_sach="0001009" link="/database/photos/0001009.jpg" ma_ISBN="tamthoichuaco" so_luong="1" tac_gia="13 x 19 cm" ten_sach="Quy Tắc Của Sự Thanh Lịch" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Kim Đồng" id_chu="0000043" id_sach="0001010" link="/database/photos/0001010.jpg" ma_ISBN="tamthoichuaco" so_luong="2" tac_gia="Howarth" ten_sach="Vì Sao Tớ Yêu Ông" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Dân Trí" id_chu="0000043" id_sach="0001011" link="/database/photos/0001011.jpg" ma_ISBN="tamthoichuaco" so_luong="6" tac_gia="Minhthangbooks" ten_sach="Quẳng Gánh Lo Đi Và Vui Sống - Những Bí Quyết Để Sống Vui Vẻ Và Hạnh Phúc" tinh_trang="true"/>
-</danh_sach_sach>
+        </danh_sach_sach>
         <yeu_cau_cho_muon_sach/>
         <yeu_cau_muon_sach/>
         <lich_su_cho_muon_sach/>
         <lich_su_muon_sach/>
-</tu_sach>
+    </tu_sach>
     <tu_sach diem_danh_gia="0" id_chu="0000044">
         <danh_sach_sach>
             <sach NXB="Nhà Xuất Bản Trẻ" id_chu="0000044" id_sach="0001012" link="/database/photos/0001012.jpg" ma_ISBN="tamthoichuaco" so_luong="7" tac_gia="13 x 20.5 cm" ten_sach="Tư Duy Đột Phá (Tái Bản) - Trí Việt" tinh_trang="true"/>
@@ -1381,12 +1370,12 @@
             <sach NXB="Bìa mềm" id_chu="0000044" id_sach="0001032" link="/database/photos/0001032.jpg" ma_ISBN="tamthoichuaco" so_luong="2" tac_gia="Không xác định" ten_sach="Đợt Tuyệt Chủng Thứ 6" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Lao Động Xã Hội" id_chu="0000044" id_sach="0001033" link="/database/photos/0001033.jpg" ma_ISBN="tamthoichuaco" so_luong="5" tac_gia="Vũ Nghệ Linh, Trần Vân Anh" ten_sach="Sức Mạnh Của Tập Trung (Tái Bản 2018)" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Đại Học Quốc Gia Hà Nội" id_chu="0000044" id_sach="0001034" link="/database/photos/0001034.jpg" ma_ISBN="tamthoichuaco" so_luong="10" tac_gia="Nhiều Tác Giả" ten_sach="Những Bài Văn Hay Lớp 7 (Tái Bản 2016)" tinh_trang="true"/>
-</danh_sach_sach>
+        </danh_sach_sach>
         <yeu_cau_cho_muon_sach/>
         <yeu_cau_muon_sach/>
         <lich_su_cho_muon_sach/>
         <lich_su_muon_sach/>
-</tu_sach>
+    </tu_sach>
     <tu_sach diem_danh_gia="0" id_chu="0000045">
         <danh_sach_sach>
             <sach NXB="Nhà Xuất Bản Thời Đại" id_chu="0000045" id_sach="0001035" link="/database/photos/0001035.jpg" ma_ISBN="tamthoichuaco" so_luong="10" tac_gia="Cửu Bả Đao" ten_sach="Mẹ, Thơm Một Cái" tinh_trang="true"/>
@@ -1412,12 +1401,12 @@
             <sach NXB="Nhà Xuất Bản Hà Nội" id_chu="0000045" id_sach="0001055" link="/database/photos/0001055.jpg" ma_ISBN="tamthoichuaco" so_luong="4" tac_gia="12 x 19 cm" ten_sach="Yêu Sao Để Không Đau" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Hồng Đức" id_chu="0000045" id_sach="0001056" link="/database/photos/0001056.jpg" ma_ISBN="tamthoichuaco" so_luong="1" tac_gia="Bìa mềm" ten_sach="Mẹ - Biểu Hiện Của Tình Thương" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Dân Trí" id_chu="0000045" id_sach="0001057" link="/database/photos/0001057.jpg" ma_ISBN="tamthoichuaco" so_luong="6" tac_gia="NXB Triết Giang" ten_sach="Bộ Sách Mẹ Kể Con Nghe - Rèn Luyện Thói Quen Tốt" tinh_trang="true"/>
-</danh_sach_sach>
+        </danh_sach_sach>
         <yeu_cau_cho_muon_sach/>
         <yeu_cau_muon_sach/>
         <lich_su_cho_muon_sach/>
         <lich_su_muon_sach/>
-</tu_sach>
+    </tu_sach>
     <tu_sach diem_danh_gia="0" id_chu="0000046">
         <danh_sach_sach>
             <sach NXB="Nhà Xuất Bản Phụ Nữ" id_chu="0000046" id_sach="0001058" link="/database/photos/0001058.jpg" ma_ISBN="tamthoichuaco" so_luong="10" tac_gia="14.8 x 17.8 cm" ten_sach="Ehon Nhật Bản - Bé Mèo Nontan – 5 – Nontan Bừa Bộn" tinh_trang="true"/>
@@ -1444,12 +1433,12 @@
             <sach NXB="Nhà Xuất Bản Trẻ" id_chu="0000047" id_sach="0001101" link="/database/photos/0001101.jpg" ma_ISBN="tamthoichuaco" so_luong="10" tac_gia="Zig Zig Lar" ten_sach="Vươn Đến Sự Hoàn Thiện (Tái Bản 2017)" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Tổng hợp TP.HCM" id_chu="0000047" id_sach="0001102" link="/database/photos/0001102.jpg" ma_ISBN="tamthoichuaco" so_luong="10" tac_gia="Huỳnh Hồng Anh" ten_sach="Thực Đơn Trong Tuần" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Thanh Niên" id_chu="0000047" id_sach="0001103" link="/database/photos/0001103.jpg" ma_ISBN="tamthoichuaco" so_luong="1" tac_gia="Windy" ten_sach="&quot;Thả Thính&quot; Là Phải Dính! - 54 Cách Giúp Bạn Tán Đổ &quot;Crush&quot;" tinh_trang="true"/>
-</danh_sach_sach>
+        </danh_sach_sach>
         <yeu_cau_cho_muon_sach/>
         <yeu_cau_muon_sach/>
         <lich_su_cho_muon_sach/>
         <lich_su_muon_sach/>
-</tu_sach>
+    </tu_sach>
     <tu_sach diem_danh_gia="0" id_chu="0000048">
         <danh_sach_sach>
             <sach NXB="Nhà Xuất Bản Trẻ" id_chu="0000048" id_sach="0001104" link="/database/photos/0001104.jpg" ma_ISBN="tamthoichuaco" so_luong="3" tac_gia="15.5 x 23 cm" ten_sach="Các Cuộc Chiến Tranh Tiền Tệ" tinh_trang="true"/>
@@ -1475,12 +1464,12 @@
             <sach NXB="Nhà Xuất Bản Lao Động" id_chu="0000048" id_sach="0001124" link="/database/photos/0001124.jpg" ma_ISBN="tamthoichuaco" so_luong="7" tac_gia="Rain8x" ten_sach="Ranh Giới (Tập 1)" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Văn Học" id_chu="0000048" id_sach="0001125" link="/database/photos/0001125.jpg" ma_ISBN="tamthoichuaco" so_luong="0" tac_gia="Jules Verne" ten_sach="80 Ngày Vòng Quanh Thế Giới (Tái Bản)" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Thế Giới" id_chu="0000048" id_sach="0001126" link="/database/photos/0001126.jpg" ma_ISBN="tamthoichuaco" so_luong="3" tac_gia="Esther Hicks" ten_sach="Luật Hấp Dẫn" tinh_trang="true"/>
-</danh_sach_sach>
+        </danh_sach_sach>
         <yeu_cau_cho_muon_sach/>
         <yeu_cau_muon_sach/>
         <lich_su_cho_muon_sach/>
         <lich_su_muon_sach/>
-</tu_sach>
+    </tu_sach>
     <tu_sach diem_danh_gia="0" id_chu="0000049">
         <danh_sach_sach>
             <sach NXB="Nhà Xuất Bản Lao Động" id_chu="0000049" id_sach="0001127" link="/database/photos/0001127.jpg" ma_ISBN="tamthoichuaco" so_luong="3" tac_gia="Ni sư Ayya Khema" ten_sach="Vô Ngã Vô Ưu (Tái Bản)" tinh_trang="true"/>
@@ -1506,12 +1495,12 @@
             <sach NXB="Nhà Xuất Bản Văn Học" id_chu="0000049" id_sach="0001147" link="/database/photos/0001147.jpg" ma_ISBN="tamthoichuaco" so_luong="2" tac_gia="Phùng Mộng Long" ten_sach="Combo Đông Chu Liệt Quốc (Trọn Bộ 2 Tập)" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Thanh Niên" id_chu="0000049" id_sach="0001148" link="/database/photos/0001148.jpg" ma_ISBN="tamthoichuaco" so_luong="7" tac_gia="Linh Chi, Quỳnh Rùa" ten_sach="Lift-The-Flap-Lật Mở Khám Phá - First 100 Trucks And Things That Go - 100 Từ Đầu Tiên Về Các Phương Tiện Giao Thông" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Kim Đồng" id_chu="0000049" id_sach="0001149" link="/database/photos/0001149.jpg" ma_ISBN="tamthoichuaco" so_luong="4" tac_gia="Nhiều dịch giả" ten_sach="Fujiko F Fujio Đại Tuyển Tập - Doraemon Truyện Ngắn (Tập 2)" tinh_trang="true"/>
-</danh_sach_sach>
+        </danh_sach_sach>
         <yeu_cau_cho_muon_sach/>
         <yeu_cau_muon_sach/>
         <lich_su_cho_muon_sach/>
         <lich_su_muon_sach/>
-</tu_sach>
+    </tu_sach>
     <tu_sach diem_danh_gia="0" id_chu="0000050">
         <danh_sach_sach>
             <sach NXB="Nhà Xuất Bản Đại Học Sư Phạm" id_chu="0000050" id_sach="0001150" link="/database/photos/0001150.jpg" ma_ISBN="tamthoichuaco" so_luong="10" tac_gia="Thái Quang Vinh" ten_sach="Học Tốt Tiếng Anh Lớp 10 (Tái Bản)" tinh_trang="true"/>
@@ -1537,11 +1526,10 @@
             <sach NXB="Oxford University Press" id_chu="0000050" id_sach="0001170" link="/database/photos/0001170.jpg" ma_ISBN="tamthoichuaco" so_luong="4" tac_gia="963" ten_sach="Oxford Collocations Dictionary" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Giáo Dục Việt Nam" id_chu="0000050" id_sach="0001171" link="/database/photos/0001171.jpg" ma_ISBN="tamthoichuaco" so_luong="1" tac_gia="Chung Quý" ten_sach="Bộ Sách Kĩ Năng Giúp Trẻ Tư Duy Tích Cực - Không Sợ Bị Đau" tinh_trang="true"/>
             <sach NXB="Nhà Xuất Bản Tri Thức" id_chu="0000050" id_sach="0001172" link="/database/photos/0001172.jpg" ma_ISBN="tamthoichuaco" so_luong="8" tac_gia="Nhiều Tác Giả" ten_sach="Hào Khí Đông A - Phật Hoàng Trần Nhân Tông" tinh_trang="true"/>
-</danh_sach_sach>
+        </danh_sach_sach>
         <yeu_cau_cho_muon_sach/>
         <yeu_cau_muon_sach/>
         <lich_su_cho_muon_sach/>
         <lich_su_muon_sach/>
-</tu_sach>
->>>>>>> origin/stage2-model
+    </tu_sach>
 </danh_sach_tu_sach>
