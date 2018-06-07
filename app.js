@@ -48,8 +48,13 @@ app.use('/search.html', searchRouter);
 // =============== ROUTING ===================
 
 // ================== DEBUGGING business.js ===================
+<<<<<<< HEAD
 // const businessRouter = require('./controller/business');
 // app.use('/business', businessRouter);
+=======
+//const businessRouter = require('./controller/business');
+//app.use('/business', businessRouter);
+>>>>>>> stage2-ndchuong
 // ================== DEBUGGING business.js ===================
 
 // catch 404 and forward to error handler

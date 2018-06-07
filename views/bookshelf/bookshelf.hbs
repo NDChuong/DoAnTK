@@ -1,0 +1,60 @@
+<div class="container">
+    <div class="wrapper">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="page-header"><i class="fa fa-user-md"></i> Thông tin cá nhân</h3>
+            </div>
+        </div>
+           
+        <div class="row frame">
+            <div class="col-md-4">
+                <img src="{{avatarimage}}" class="avatar-resize" alt="">
+                <h5 class="text-center">{{user.ten_user}}</h5>
+            </div>
+            <div class="col-md-8">
+                <div class="row info-row">
+                    <div class="col-md-3">Họ và tên:</div>
+                    <div class="col-md-9">{{user.ten_user}}</div>
+                </div>
+                <div class="row info-row">
+                    <div class="col-md-3">Ngày sinh:</div>
+                    <div class="col-md-9">{{user.ngay_sinh}}</div>
+                </div>
+                <div class="row info-row">
+                    <div class="col-md-3">Email:</div>
+                    <div class="col-md-9">{{user.email}}</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="wrapper">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="page-header"><i class="fa fa-user-md"></i> Tủ sách của bạn</h3>
+                </div>
+            </div>
+        </div>
+        {{#each bookshelf}}
+        <div class="row frame">            
+        	<div class="col-md-4">
+        		<a href="/book-detail.html?id_user={{id_user}}&id_book={{id_sach}}"><img src="{{bookimage}}" class="avatar-resize"></a>
+        	</div>        	
+        	<div class="col-md-8">
+        		<div class="row info-row">
+        			<div class="col-md-3">Tên sách:</div>
+                    <div class="col-md-9">{{ten_sach}}</div>
+        		</div>
+        		<div class="row info-row">
+        			<div class="col-md-3">Tác giả:</div>
+                    <div class="col-md-9">{{tac_gia}}</div>
+        		</div>
+        		<div class="row info-row">
+        			<div class="col-md-3">ISBN:</div>
+                    <div class="col-md-9">{{ma_ISBN}}</div>
+        		</div>        		
+        	</div>
+        </div>
+        {{/each}}
+
+    </div>
+</div>

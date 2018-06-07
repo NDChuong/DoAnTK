@@ -1,10 +1,217 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>{{title}}</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title>BookExchange</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Clean responsive bootstrap website template">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/imagehover.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans|Candal|Alegreya+Sans">
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
+    <header>
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">Book<span>Exchange</span></a>
+                </div>
+                <form class="example" action="">
+                    <input type="text" placeholder="Thành viên, tựa sách" name="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="index.html">Trang chủ</a></li>
+                        <li><a href="#">Giới thiệu</a></li>
+                        <li><a href="#" data-target="#signup" data-toggle="modal">Đăng ký</a></li>
+                        <li><a href="#" data-target="#login" data-toggle="modal">Đăng nhập</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--Modal box-->
+        <div class="modal fade" id="login" role="dialog">
+            <div class="modal-dialog modal-sm">
+                <!-- Modal content no 1-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title text-center form-title">Đăng nhập</h4>
+                    </div>
+                    <div class="modal-body padtrbl">
+                        <div class="login-box-body">
+                            <p class="login-box-msg">Đăng nhập để cùng trao đổi sách</p>
+                            <div class="form-group">
+                                <form name="" id="loginForm">
+                                    <div class="form-group has-feedback">
+                                        <!----- username -------------->
+                                        <input class="form-control" placeholder="Username" id="loginid" type="text" autocomplete="off" />
+                                        <!---Alredy exists  ! -->
+                                    </div>
+                                    <div class="form-group has-feedback">
+                                        <!----- password -------------->
+                                        <input class="form-control" placeholder="Password" id="loginpsw" type="password" autocomplete="off" />
+                                        <!---Alredy exists  ! -->
+                                    </div>
+                                    <div class="row">
+                                        <!--
+                                        <div class="col-xs-12">
+                                            <div class="checkbox icheck">
+                                                <label>
+                                                    <input type="checkbox" id="loginrem"> Remember Me
+                                                </label>
+                                            </div>
+                                        </div>
+                                    -->
+                                        <div class="col-xs-12">
+                                            <button type="button" class="btn btn-green btn-block btn-flat" onclick="userlogin()">Đăng nhập</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Modal box-->
+        <div class="modal fade" id="signup" role="dialog">
+            <div class="modal-dialog modal-sm">
+                <!-- Modal content no 1-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title text-center form-title">Đăng ký</h4>
+                    </div>
+                    <div class="modal-body padtrbl">
+                        <div class="login-box-body">
+                            <p class="login-box-msg">Đăng ký để kết nối cộng đồng</p>
+                            <div class="form-group">
+                                <form name="" id="loginForm">
+                                    <div class="form-group has-feedback">
+                                        <!----- username -------------->
+                                        <input class="form-control" placeholder="Username" id="loginid" type="text" autocomplete="off" />
+                                        <!---Alredy exists  ! -->
+                                    </div>
+                                    <div class="form-group has-feedback">
+                                        <!----- password -------------->
+                                        <input class="form-control" placeholder="Password" id="loginpsw" type="password" autocomplete="off" />
+                                        <!---Alredy exists  ! -->
+                                    </div>
+                                    <div class="form-group has-feedback">
+                                        <!----- password -------------->
+                                        <input class="form-control" placeholder="Retype password" id="loginpsw" type="password" autocomplete="off" />
+                                        <!---Alredy exists  ! -->
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <button type="button" class="btn btn-green btn-block btn-flat" onclick="usersignup()">Đăng ký</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="banner"></div>
+    </header>
     {{{body}}}
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="widget">
+                        <!--Logo-->
+                        <div class="footerlogo">
+                            <h6>
+                                <a href="index.html">BookExchange</a>
+                            </h6>
+                        </div>
+                        <!--End logo-->
+                        <address>
+                            <strong>Lớp PTTKPM</strong>
+                            <br> Trường Đại học Khoa học Tự nhiên Tp HCM
+                            <br> 227 Nguyễn Văn Cừ
+                            <br>
+                            <abbr title="Phone">P:</abbr> (123) 456-7890
+                        </address>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="widget">
+                        <h5>Liên kết</h5>
+                        <ul class="list list-ok">
+                            <li>
+                                <a href="#">Trang chủ</a>
+                            </li>
+                            <li>
+                                <a href="#">Tủ sách nổi bật</a>
+                            </li>
+                            <li>
+                                <a href="#">Liên hệ</a>
+                            </li>
+                            <li>
+                                <a href="#">Thông tin</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="widget">
+                        <h5>Đăng kí nhận bản tin</h5>
+                        <p>
+                            Nhập email để nhận thông báo về những đầu sách mới nhất
+                        </p>
+                        <form class="footerform" action="#">
+                            <input type="text" placeholder="Email">
+                            <button type="submit">Đăng ký</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="subfooter">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>
+                            © Đạt - Chương - Chung
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="pull-right">
+                            <div class="credits">
+                                Thiết kế bởi
+                                <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.easing.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/contactform/contactform.js"></script>
   </body>
 </html>
