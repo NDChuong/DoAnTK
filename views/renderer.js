@@ -1,31 +1,13 @@
-<<<<<<< HEAD
+
+var business = require('../controller/business');
 
 // bool loginStatus: To determine the user has logged in or not
 function RenderIndexPage(reqObject, resObject, loginStatus) {
-    resObject.render('index', { title: 'Express' });
-}
-
-function RenderBookinfoPage(reqObject, resObject, loginStatus) {
-    resObject.send('OK');
-}
-function RenderBookshelfPage(reqObject, resObject, loginStatus) {
-    resObject.send('OK');
-}
-function RenderHistoryPage(reqObject, resObject, loginStatus) {
-    resObject.send('OK');
-}
-function RenderProfilePage(reqObject, resObject, loginStatus) {
-    resObject.send('OK');
-}
-function RenderSearchResultPage(reqObject, resObject, loginStatus) {
-=======
-var business = require('../controller/business');
-
-function RenderIndexPage(resObject) {
     var rows = business.GetAllBookshelves();
     for (var i = 0; i < rows.length; i++) {
         //
-        rows[i].ten_user = business.GetUsernameByIDBookshelf(rows[i].id);
+        // rows[i].ten_user = business.GetUsernameByIDBookshelf(rows[i].id);
+        rows[i].ten_user = business.GetAccountInfo(rows[i].id).ten_user;
     }
     var vm = {
         viewbook: rows
@@ -34,7 +16,7 @@ function RenderIndexPage(resObject) {
     //resObject.send('OK');
 }
 
-function RenderBookinfoPage(reqObject, resObject) {
+function RenderBookinfoPage(reqObject, resObject, loginStatus) {
     var userid = reqObject.param('id_user');
     var bookid = reqObject.param('id_book');
     var Obj = business.GetBookInfo(bookid);
@@ -57,7 +39,7 @@ function RenderBookinfoPage(reqObject, resObject) {
     resObject.render('bookshelf/bookinfo', vm);
     //resObject.send('OK');
 }
-function RenderBookshelfPage(reqObject, resObject) {
+function RenderBookshelfPage(reqObject, resObject, loginStatus) {
     var userid = reqObject.param('id_user');
     var Bookshelf = business.GetBookshelf(userid).bookList;
     var User = business.GetAccountInfo(userid);
@@ -71,14 +53,14 @@ function RenderBookshelfPage(reqObject, resObject) {
     resObject.render('bookshelf/bookshelf', vm);
     //resObject.send('OK');
 }
-function RenderHistoryPage(reqobject, resObject) {
+function RenderHistoryPage(reqObject, resObject, loginStatus) {
 
     resObject.render('history/history');
 }
-function RenderProfilePage(reqObject, resObject) {
+function RenderProfilePage(reqObject, resObject, loginStatus) {
     resObject.render('account/profile');
 }
-function RenderSearchResultPage(reqObject, resObject) {
+function RenderSearchResultPage(reqObject, resObject, loginStatus) {
     var search_str = reqObject.param('search');
     var result_book = business.SearchForBook(search_str);
     var result_user = business.SearchForUser(search_str);
@@ -89,8 +71,7 @@ function RenderSearchResultPage(reqObject, resObject) {
     resObject.render('search/search-result', vm);
 }
 
-function RenderAccountSettingsPage(reqObject, resObject) {
->>>>>>> stage2-ndchuong
+function RenderAccountSettingsPage(reqObject, resObject, loginStatus) {
     resObject.send('OK');
 }
 
