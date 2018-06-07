@@ -1,15 +1,15 @@
 var business = require('../controller/business');
 
 function RenderIndexPage(resObject) {
-    var rows = business.GetAllBookshelves();     
-    for(var i = 0 ;i<rows.length;i++){
+    var rows = business.GetAllBookshelves();
+    for (var i = 0; i < rows.length; i++) {
         //
-        rows[i].ten_user=business.GetUsernameByIDBookshelf(rows[i].id);
+        rows[i].ten_user = business.GetUsernameByIDBookshelf(rows[i].id);
     }
-    var vm={
-        viewbook: rows        
-    }   
-    resObject.render('home/index', vm);   
+    var vm = {
+        viewbook: rows
+    }
+    resObject.render('home/index', vm);
     //resObject.send('OK');
 }
 
@@ -19,14 +19,14 @@ function RenderBookinfoPage(reqObject, resObject) {
     var Obj = business.GetBookInfo(bookid);
     var User = business.GetAccountInfo(userid);
     var status;
-    if(Obj.tinh_trang === 'true')
-    status = true;
+    if (Obj.tinh_trang === 'true')
+        status = true;
     else
-    status = false;
+        status = false;
     console.log(Obj);
-    for(var i = 0 ;i<Obj.length;i++){
+    for (var i = 0; i < Obj.length; i++) {
         //ten_user.push(business.GetUsernameByIDBookshelf(rows[i].id));
-        Obj[i].ten_user=business.GetUsernameByIDBook(Obj[i].id);
+        Obj[i].ten_user = business.GetUsernameByIDBook(Obj[i].id);
     }
     var vm = {
         book: Obj,
@@ -39,11 +39,11 @@ function RenderBookinfoPage(reqObject, resObject) {
 function RenderBookshelfPage(reqObject, resObject) {
     var userid = reqObject.param('id_user');
     var Bookshelf = business.GetBookshelf(userid).bookList;
-    var User = business.GetAccountInfo(userid);  
-    for(var i=0;i<Bookshelf.length;i++){
-        Bookshelf[i].id_user=userid;
-    }  
-    var vm={        
+    var User = business.GetAccountInfo(userid);
+    for (var i = 0; i < Bookshelf.length; i++) {
+        Bookshelf[i].id_user = userid;
+    }
+    var vm = {
         bookshelf: Bookshelf,
         user: User
     }
@@ -51,7 +51,7 @@ function RenderBookshelfPage(reqObject, resObject) {
     //resObject.send('OK');
 }
 function RenderHistoryPage(reqobject, resObject) {
-    
+
     resObject.render('history/history');
 }
 function RenderProfilePage(reqObject, resObject) {
@@ -68,12 +68,17 @@ function RenderSearchResultPage(reqObject, resObject) {
     resObject.render('search/search-result', vm);
 }
 
+function RenderAccountSettingsPage(reqObject, resObject) {
+    resObject.send('OK');
+}
+
 var exportObj = {
     RenderIndexPage: RenderIndexPage,
     RenderBookinfoPage: RenderBookinfoPage,
     RenderBookshelfPage: RenderBookshelfPage,
     RenderHistoryPage: RenderHistoryPage,
     RenderProfilePage: RenderProfilePage,
-    RenderSearchResultPage: RenderSearchResultPage
+    RenderSearchResultPage: RenderSearchResultPage,
+    RenderAccountSettingsPage: RenderAccountSettingsPage
 }
 module.exports = exportObj;
