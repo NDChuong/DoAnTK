@@ -55,7 +55,7 @@ function RenderHistoryPage(reqobject, resObject) {
     resObject.render('history/history');
 }
 function RenderProfilePage(reqObject, resObject) {
-    resObject.render('account/profile');
+    
 }
 function RenderSearchResultPage(reqObject, resObject) {
     var search_str = reqObject.param('search');
@@ -69,7 +69,13 @@ function RenderSearchResultPage(reqObject, resObject) {
 }
 
 function RenderAccountSettingsPage(reqObject, resObject) {
-    resObject.send('OK');
+    var username = reqObject.param('username');
+    var account_info = business.GetAccountInfo(username);
+    console.log(account_info);
+    var vm={
+        user: account_info
+    }
+    resObject.render('account/profile',vm);
 }
 
 var exportObj = {
