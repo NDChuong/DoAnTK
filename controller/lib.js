@@ -30,7 +30,7 @@ var obj = {
             }
         }
 
-        var borrowingHistory = JSON.parse(jsonText).elements[0].elements[3].elements;
+        var borrowingHistory = JSON.parse(jsonText).elements[0].elements[4].elements;
         if (borrowingHistory != undefined) {
             for (i = 0; i < borrowingHistory.length; i++) {
                 var obj1 = borrowingHistory[i].attributes;
@@ -43,7 +43,7 @@ var obj = {
             }
         }
 
-        var lentingHistory = JSON.parse(jsonText).elements[0].elements[4].elements;
+        var lentingHistory = JSON.parse(jsonText).elements[0].elements[3].elements;
         if (lentingHistory != undefined)
             for (i = 0; i < lentingHistory.length; i++) {
                 var obj1 = lentingHistory[i].attributes;

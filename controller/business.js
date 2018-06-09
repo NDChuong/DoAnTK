@@ -15,11 +15,9 @@ router.get('/', function (req, res, next) {
     console.log('connected');
     // bookshelf.LayRaToanBoSach();
 
-    var a = GetBorrowingHistory("0000001");
+    var a = GetBorrowingHistory("0000000");
     console.log(a);
 
-    var a = GetLentingHistory("0000001");
-    console.log(a);
     res.send('OK');
 });
 
@@ -336,18 +334,56 @@ function GetLentingRequest(id) {
 // Get history array
 function GetBorrowingHistory(username) {
     try {
-        return GetBookshelf(username).borrowingHistory;
-    }
-    catch (ee) {
+        var r = GetBookshelf(username).borrowingHistory;
+        if (r === undefined) {
+            return null;
+        } else {
+            return r;
+        }
+        return "";
+    } catch(ee) {
         return null;
     }
 }
 
 function GetLentingHistory(username) {
     try {
-        return GetBookshelf(username).lentingHistory;
+        var r = GetBookshelf(username).lentingHistory;
+        if (r === undefined) {
+            return null;
+        } else {
+            return r;
+        }
+        return "";
+    } catch(ee) {
+        return null;
     }
-    catch (ee) {
+}
+
+function GetBorrowingRequest(username) {
+    try {
+        var r = GetBookshelf(username).borrowingRequests;
+        if (r === undefined) {
+            return null;
+        } else {
+            return r;
+        }
+        return "";
+    } catch(ee) {
+        return null;
+    }
+}
+
+function GetLentingRequest(username) {
+    try {
+        var r = GetBookshelf(username).lentingRequests;
+        if (r === undefined) {
+            return null;
+        } else {
+            return r;
+        }
+        return "";
+    } catch(ee) {
         return null;
     }
 }
@@ -376,7 +412,9 @@ var exportObj = {
     GetBorrowingRequest: GetBorrowingRequest,
     GetLentingRequest: GetLentingRequest,
     GetBorrowingHistory: GetBorrowingHistory,
-    GetLentingHistory: GetLentingHistory
+    GetLentingHistory: GetLentingHistory,
+    GetBorrowingRequest: GetBorrowingRequest,
+    GetLentingRequest: GetLentingRequest
 }
 
 
