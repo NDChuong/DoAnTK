@@ -10,7 +10,7 @@ router.post('/', function (req, res, next) {
   var user = business.GetAccountInfo(username);
 
 
-  if (user != null && (username == user.id_user && password == user.password)) {
+  if (user != null && ((username == user.id_user || username == user.email) && password == user.password)) {
 
     req.session.userid = username;
     console.log('Login successfully');
