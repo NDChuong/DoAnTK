@@ -31,16 +31,28 @@
                     </button>
                     <a class="navbar-brand" href="index.html">Book<span>Exchange</span></a>
                 </div>
-                <form class="example" action="">
+                <form class="example" action="seacrch.html" method="POST">
                     <input type="text" placeholder="Thành viên, tựa sách" name="search">
                     <button type="submit"><i class="fa fa-search"></i></button>
                 </form>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="index.html">Trang chủ</a></li>
-                        <li><a href="#">Giới thiệu</a></li>
+                        <li><a href="/">Trang chủ</a></li>
+                        {{#if layout.isLogged}}
+                        <li><a href="/history.html">Lịch sử</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{layout.username}}<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/account-settings.html">Thông tin</a></li>
+                                <li><a href="/bookshelf-detail.html">Tủ sách của tôi</a></li>
+                                <li><a href="#">Đăng xuất</a></li>
+                            </ul>
+                        </li>
+                        {{else}}
                         <li><a href="#" data-target="#signup" data-toggle="modal">Đăng ký</a></li>
                         <li><a href="#" data-target="#login" data-toggle="modal">Đăng nhập</a></li>
+                        {{/if}}                              
+                        
                     </ul>
                 </div>
             </div>
@@ -80,7 +92,7 @@
                                         </div>
                                     -->
                                         <div class="col-xs-12">
-                                            <button type="button" class="btn btn-green btn-block btn-flat" onclick="userlogin()">Đăng nhập</button>
+                                            <button type="submit" class="btn btn-green btn-block btn-flat">Đăng nhập</button>
                                             {{!-- <input type="submit" class="btn btn-green btn-block btn-flat" onclick="userlogin()">Đăng nhập</input> --}}
                                         </div>
                                     </div>
