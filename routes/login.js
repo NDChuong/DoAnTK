@@ -13,6 +13,7 @@ router.post('/', function (req, res, next) {
   if (user != null && (username == user.id_user && password == user.password)) {
 
     req.session.userid = username;
+    req.session.isLogged = true;
     console.log('Login successfully');
     res.redirect('/');
   }

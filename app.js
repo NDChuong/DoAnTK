@@ -15,6 +15,8 @@ var historyRouter = require('./routes/history');
 var loginRouter = require('./routes/login');
 var logoutRouter = require('./routes/logout');
 var searchRouter = require('./routes/search');
+
+var handleLayout=require('./views/handleLayout');
 // ================ ROUTER DECLARATION ================
 
 var app = express();
@@ -36,7 +38,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, '/')));
-
+app.use(handleLayout);
 // =============== ROUTING ===================
 app.use('/', indexRouter);
 app.use('/account-settings.html', accountSettingsRouter);
