@@ -60,7 +60,7 @@ function RenderHistoryPage(reqObject, resObject, loginStatus) {
 function RenderProfilePage(reqObject, resObject, loginStatus) {
     resObject.render('account/profile');
 }
-function RenderSearchResultPage(reqObject, resObject, loginStatus) {
+function RenderSearchResultPage(reqObject, resObject, loginStatus, keyword) {
     var search_str = reqObject.param('search');
     var result_book = business.SearchForBook(search_str);
     var result_user = business.SearchForUser(search_str);
