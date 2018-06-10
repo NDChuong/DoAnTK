@@ -3,15 +3,17 @@ var business = require('../controller/business');
 
 // bool loginStatus: To determine the user has logged in or not
 function RenderIndexPage(reqObject, resObject, loginStatus) {
-    var rows = business.GetAllBookshelves();
+    var rows = business.GetTopBookshelves(4,1);
     for (var i = 0; i < rows.length; i++) {
         //
         // rows[i].ten_user = business.GetUsernameByIDBookshelf(rows[i].id);
         rows[i].ten_user = business.GetAccountInfo(rows[i].id).ten_user;
+        rows[i].avatar_user = business.GetAccountInfo(rows[i].id).avatar;
     }
     var vm = {
         viewbook: rows
     }
+    console.log(rows);
     resObject.render('home/index', vm);
     //resObject.send('OK');
 }
@@ -57,8 +59,9 @@ function RenderHistoryPage(reqObject, resObject, loginStatus) {
 
     resObject.render('history/history');
 }
-function RenderProfilePage(reqObject, resObject, loginStatus) {
-    resObject.render('account/profile');
+
+function RenderProfilePage(reqObject, resObject) {
+    
 }
 function RenderSearchResultPage(reqObject, resObject, loginStatus) {
     var search_str = reqObject.param('search');
@@ -71,8 +74,17 @@ function RenderSearchResultPage(reqObject, resObject, loginStatus) {
     resObject.render('search/search-result', vm);
 }
 
+
 function RenderAccountSettingsPage(reqObject, resObject, loginStatus) {
-    resObject.send('OK');
+    if(loginStatus === true){
+        var username = reqObject.param('username');
+        var account_info = business.GetAccountInfo(username);
+     console.log(account_info);
+        var vm={
+         user: account_info
+        }
+        resObject.render('account/profile',vm);
+    }    
 }
 
 var exportObj = {
