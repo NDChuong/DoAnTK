@@ -1,5 +1,5 @@
-
 var business = require('../controller/business');
+const async = require('async');
 
 // bool loginStatus: To determine the user has logged in or not
 function RenderIndexPage(reqObject, resObject, loginStatus) {
@@ -95,33 +95,41 @@ function RenderHistoryPage(reqObject, resObject, loginStatus) {
     resObject.render('history/history', vm);
 }
 
-function RenderProfilePage(reqObject, resObject) {
-
-    var vm = {};
-    // Render view khi da login
-    if (loginStatus) {
-        vm.username = business.GetAccountInfo(reqObject.session.userid).ten_user;
-        vm.id_user = reqObject.session.userid;
-    }
-
-}
 function RenderSearchResultPage(reqObject, resObject, loginStatus) {
     var search_str = reqObject.param('search');
-    var result_book = business.SearchForBook(search_str);
-    var result_user = business.SearchForUser(search_str);
-    var vm = {
-        search_book: result_book,
-        search_user: result_user,
-        isLogged: loginStatus
-    }
+    var result_book;
+    var result_user;
+    async.series([
+        function (callback) {
+            result_book = business.SearchForBook(search_str, callback);
+        },
 
-    // Render view khi da login
-    if (loginStatus) {
-        vm.username = business.GetAccountInfo(reqObject.session.userid).ten_user;
-        vm.id_user = reqObject.session.userid;
-    }
+        function (callback) {
+            result_user = business.SearchForUser(search_str, callback);
+        },
 
-    resObject.render('search/search-result', vm);
+        function (callback) {
+            var vm = {
+                search_book: result_book,
+                search_user: result_user,
+                // search_user: result_user,
+                isLogged: loginStatus,
+                nBookResult: result_book != null ? result_book.length : 0,
+                nUserResult: result_user != null ? result_user.length : 0
+            }
+
+            // Render view khi da login
+            if (loginStatus) {
+                vm.username = business.GetAccountInfo(reqObject.session.userid).ten_user;
+                vm.id_user = reqObject.session.userid;
+            }
+
+            resObject.render('search/search-result', vm);
+            callback();
+        }
+    ]);
+    // var result_user = business.SearchForUser(search_str);
+
 }
 
 
@@ -153,7 +161,6 @@ var exportObj = {
     RenderBookinfoPage: RenderBookinfoPage,
     RenderBookshelfPage: RenderBookshelfPage,
     RenderHistoryPage: RenderHistoryPage,
-    RenderProfilePage: RenderProfilePage,
     RenderSearchResultPage: RenderSearchResultPage,
     RenderAccountSettingsPage: RenderAccountSettingsPage
 }

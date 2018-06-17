@@ -13,7 +13,7 @@ var duLieu;
 
 class User {
 
-  constructor(){
+  constructor() {
     this.DocDuLieu("DanhSachUser.xml");
   }
 
@@ -50,8 +50,8 @@ class User {
   }
 
   XoaUser(idUser) {
-    for(var i=0;i<duLieu.getElementsByTagName("user").length;i++){
-      if(duLieu.getElementsByTagName("user")[i].getAttribute("id_user")==idUser){
+    for (var i = 0; i < duLieu.getElementsByTagName("user").length; i++) {
+      if (duLieu.getElementsByTagName("user")[i].getAttribute("id_user") == idUser) {
         var y = duLieu.getElementsByTagName("user")[i];
         duLieu.removeChild(y);
       }
@@ -59,10 +59,10 @@ class User {
   }
 
   CapNhatThongTinUser(idUser, tenUser, ngaySinh, gioiTinh, soDienThoai, email, password, avatar) {
-    for(var i=0;i<duLieu.getElementsByTagName("user").length;i++){
-      if(duLieu.getElementsByTagName("user")[i].getAttribute("id_user")==idUser){
+    for (var i = 0; i < duLieu.getElementsByTagName("user").length; i++) {
+      if (duLieu.getElementsByTagName("user")[i].getAttribute("id_user") == idUser) {
         {
-          var nodeReplace=duLieu.getElementsByTagName("user")[i];
+          var nodeReplace = duLieu.getElementsByTagName("user")[i];
           nodeReplace.setAttribute("ten_user", tenUser);//replace content of attribute
           nodeReplace.setAttribute("ngay_sinh", ngaySinh);
           nodeReplace.setAttribute("gioi_tinh", gioiTinh);
@@ -76,21 +76,22 @@ class User {
   }
 
   LayHetDuLieuRa() {
+    this.DocDuLieu("DanhSachUser.xml");
     return this.ConvertToJson(duLieu);
   }
 
-  LayRaMotUser(idUser){
-    for(var i=0;i<duLieu.getElementsByTagName("user").length;i++){
-      if(idUser==duLieu.getElementsByTagName("user")[i].getAttribute("id_user")){
+  LayRaMotUser(idUser) {
+    for (var i = 0; i < duLieu.getElementsByTagName("user").length; i++) {
+      if (idUser == duLieu.getElementsByTagName("user")[i].getAttribute("id_user")) {
         return this.ConvertToJson(duLieu.getElementsByTagName("user")[i]);
       }
     }
     return "null";
   }
 
-  ConvertToJson(data){
-    var xml =new XMLSerializer().serializeToString(data);//chuyen xml dang object sang text
-    var temp = convert.xml2json(xml, {compact: false, spaces: 4});//xu ly xml text sang json text
+  ConvertToJson(data) {
+    var xml = new XMLSerializer().serializeToString(data);//chuyen xml dang object sang text
+    var temp = convert.xml2json(xml, { compact: false, spaces: 4 });//xu ly xml text sang json text
     // console.log(temp);
     // var result=JSON.parse(temp);
     // console.log(result.elements[0].type);

@@ -112,6 +112,7 @@ class TuSach {
   }
 
   LayRaMotCuonSach(idSach) {
+    this.DocDuLieu("DanhSachTuSach.xml");
     var x = duLieu.getElementsByTagName("sach");
     for (var i = 0; i < x.length; i++) {
       if (idSach == x[i].getAttribute("id_sach")) {
@@ -404,6 +405,7 @@ class TuSach {
 //------------------------------------END--------------------------------------
 
   LayRaMotTuSach(idChu) {
+    this.DocDuLieu("DanhSachTuSach.xml");
     for (var i = 0; i < duLieu.getElementsByTagName("tu_sach").length; i++) {
       if (idChu == duLieu.getElementsByTagName("tu_sach")[i].getAttribute("id_chu")) {
         return this.ConvertToJson(duLieu.getElementsByTagName("tu_sach")[i]);
@@ -413,6 +415,7 @@ class TuSach {
   }
 
   LayHetDuLieuRa() {
+    this.DocDuLieu("DanhSachTuSach.xml");
     return this.ConvertToJson(duLieu);
   }
 
