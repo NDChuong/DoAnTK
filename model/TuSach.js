@@ -101,7 +101,7 @@ class TuSach {
   }
 
   LayRaToanBoSach() {
-    this.DocDuLieu("DanhSachTuSach.xml");
+    this.DocDuLieu("DanhSachTuSach.xml");//new add
     var danhSachSach = duLieu.getElementsByTagName("sach");
     var soLuong = danhSachSach.length;
     var sach = Node_goc.createElementNS(xmlns_v,"sach");
