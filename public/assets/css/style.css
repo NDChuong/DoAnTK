@@ -354,6 +354,19 @@ Banner
     text-align: center;
     padding: 0px 20px 20px;
 }
+.custom{
+    border: 1px solid red;
+    transition: border-color .5s ease-out;
+}
+.custom:optional{
+    border-color: white;
+}
+/* .custom:valid{
+    border-color: palegreen;
+} */
+.custom:invalid{
+    border-color: red;
+}
 
 .modal-sm {
     width: 400px;
