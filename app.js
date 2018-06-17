@@ -38,6 +38,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // =============== ROUTING ===================
 app.use('/', indexRouter);
+app.use('/index.html', indexRouter);
 app.use('/account-settings.html', accountSettingsRouter);
 app.use('/book-detail.html', bookDetailRouter);
 app.use('/bookshelf-detail.html', bookshelfDetailRouter);
