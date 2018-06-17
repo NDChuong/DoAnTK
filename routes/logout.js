@@ -8,7 +8,7 @@ router.get('/', function (req, res, next) {
     console.log('Logout successfully');
   })
 
-  res.redirect('/');
+  res.redirect(req.get('referer'));
 });
 
 router.post('/', function(req, res, next){

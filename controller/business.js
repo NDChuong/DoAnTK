@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var lib = require('./lib');
-
+const async = require('async');
 const user = require('../model/User');
 const report = require('../model/BaoCao');
 const bookshelf = require('../model/TuSach');
@@ -82,8 +82,7 @@ function GetAccountInfo(username) {
     try {
 
         return lib.UserJSON2Obj(user.LayRaMotUser(username));
-    } catch (e)
-    {
+    } catch (e) {
         return null;
     }
 }
@@ -105,7 +104,7 @@ function ChangePhone(username, newPhoneNum) {
 
 
 // Get all account in the system
-function GetAllAccount() {
+function GetAllAccount(cb) {
     try {
         var result = [];
         var users = JSON.parse(user.LayHetDuLieuRa()).elements[0].elements;
@@ -114,13 +113,52 @@ function GetAllAccount() {
             result.push(x.attributes);
         }
 
+        cb();
+
         return result;
     } catch (ee) {
         console.log(ee);
+        cb();
         return null;
     }
 }
 
+function SearchForUser(keyword, callback) {
+    try {
+        var result = [];
+        var userList;
+        async.series([
+            function (cb) {
+                userList = GetAllAccount(cb);
+            },
+
+            function (cb) {
+                if (userList.length > 0) {
+                    for (var x of userList) {
+                        var str = x.ten_user.toLowerCase();
+                        if (str.indexOf(keyword.toLowerCase()) != -1) {
+                            result.push(x);
+                        }
+                    }
+                }
+                cb();
+            }
+        ]);
+
+    } catch (ee) {
+        console.log(ee);
+        return null;
+    }
+
+    if (result.length > 0) {
+        callback();
+        return result;
+    }
+    else {
+        callback();
+        return null;
+    }
+}
 
 // ========================== Bookshelf
 
@@ -172,7 +210,7 @@ function GetTopBookshelves(n, criterion) {
 
 // Search for bookshelf
 // return array of bookshelves found
-function SearchForBookshelf(keyword) {
+function SearchForBookshelf(keyword, callback) {
     var bookshelfList = GetAllBookshelves();
     var result = [];
 
@@ -198,16 +236,15 @@ function GetBookInfo(bookID) {
 
 // Get all books
 // return array of Book object
-function GetAllBook() {
+function GetAllBook(callback) {
     try {
-
         var books = JSON.parse(bookshelf.LayRaToanBoSach()).elements[0].elements;
 
         var result = [];
         for (var x of books) {
             result.push(x.attributes);
         }
-
+        callback();
         return result;
     } catch (ee) {
         console.log(ee);
@@ -234,18 +271,42 @@ function GetNBookInfo(bookshelfID, startIndex, endIndex) {
 
 // Search for an item
 // return JSON
-function SearchForBook(keyword) {
-    var bookList = GetAllBook();
-    var result = [];
+function SearchForBook(keyword, callback) {
+    try {
+        var result = [];
+        var bookList;
+        async.series([
+            function (cb) {
+                bookList = GetAllBook(cb);
+            },
 
-    for (x of bookList) {
-        var str = x.id.toLowerCase();
-        if (str.indexOf(keyword.toLowerCase()) != -1) {
-            result.push(x);
-        }
+            function (cb) {
+                if (bookList.length > 0) {
+                    for (var x of bookList) {
+                        var str = x.ten_sach.toLowerCase();
+                        if (str.indexOf(keyword.toLowerCase()) != -1) {
+                            x.ten_user = GetAccountInfo(x.id_chu).ten_user;
+                            result.push(x);
+                        }
+                    }
+                }
+                cb();
+            }
+        ]);
+
+    } catch (ee) {
+        console.log(ee);
+        return null;
     }
 
-    return result;
+    if (result.length > 0) {
+        callback();
+        return result;
+    }
+    else {
+        callback();
+        return null;
+    }
 }
 
 function AddBook(username, bookID, name, author, ISBN, publisher, status, quantity, link) {
@@ -341,7 +402,7 @@ function GetBorrowingHistory(username) {
             return r;
         }
         return "";
-    } catch(ee) {
+    } catch (ee) {
         return null;
     }
 }
@@ -355,7 +416,7 @@ function GetLentingHistory(username) {
             return r;
         }
         return "";
-    } catch(ee) {
+    } catch (ee) {
         return null;
     }
 }
@@ -369,7 +430,7 @@ function GetBorrowingRequest(username) {
             return r;
         }
         return "";
-    } catch(ee) {
+    } catch (ee) {
         return null;
     }
 }
@@ -383,7 +444,7 @@ function GetLentingRequest(username) {
             return r;
         }
         return "";
-    } catch(ee) {
+    } catch (ee) {
         return null;
     }
 }
@@ -396,6 +457,7 @@ var exportObj = {
     ChangeBirthday: ChangeBirthday,
     GetAccountInfo: GetAccountInfo,
     ChangePhone: ChangePhone,
+    SearchForUser: SearchForUser,
     GetBookshelf: GetBookshelf,
     GetAllBookshelves: GetAllBookshelves,
     GetTopBookshelves: GetTopBookshelves,
