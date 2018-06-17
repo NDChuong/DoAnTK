@@ -3,17 +3,26 @@ var business = require('../controller/business');
 
 // bool loginStatus: To determine the user has logged in or not
 function RenderIndexPage(reqObject, resObject, loginStatus) {
-    var rows = business.GetTopBookshelves(4,1);
+    var rows = business.GetTopBookshelves(4, 1);
     for (var i = 0; i < rows.length; i++) {
         //
         // rows[i].ten_user = business.GetUsernameByIDBookshelf(rows[i].id);
         rows[i].ten_user = business.GetAccountInfo(rows[i].id).ten_user;
         rows[i].avatar_user = business.GetAccountInfo(rows[i].id).avatar;
     }
+
+
     var vm = {
         viewbook: rows,
-        isLogged: loginStatus
+        isLogged: loginStatus,
     }
+
+    // Render view khi da login
+    if (loginStatus) {
+        vm.username = business.GetAccountInfo(reqObject.session.userid).ten_user;
+        vm.id_user = reqObject.session.userid;
+    }
+
     console.log(rows);
     resObject.render('home/index', vm);
     //resObject.send('OK');
@@ -37,8 +46,16 @@ function RenderBookinfoPage(reqObject, resObject, loginStatus) {
     var vm = {
         book: Obj,
         user: User,
-        isAvailable: status
+        isAvailable: status,
+        isLogged: loginStatus
     }
+
+    // Render view khi da login
+    if (loginStatus) {
+        vm.username = business.GetAccountInfo(reqObject.session.userid).ten_user;
+        vm.id_user = reqObject.session.userid;
+    }
+
     resObject.render('bookshelf/bookinfo', vm);
     //resObject.send('OK');
 }
@@ -51,18 +68,42 @@ function RenderBookshelfPage(reqObject, resObject, loginStatus) {
     }
     var vm = {
         bookshelf: Bookshelf,
-        user: User
+        user: User,
+        isLogged: loginStatus
     }
+
+    // Render view khi da login
+    if (loginStatus) {
+        vm.username = business.GetAccountInfo(reqObject.session.userid).ten_user;
+        vm.id_user = reqObject.session.userid;
+    }
+
     resObject.render('bookshelf/bookshelf', vm);
     //resObject.send('OK');
 }
 function RenderHistoryPage(reqObject, resObject, loginStatus) {
 
-    resObject.render('history/history');
+
+    var vm = {};
+    // Render view khi da login
+    if (loginStatus) {
+        vm.username = business.GetAccountInfo(reqObject.session.userid).ten_user;
+        vm.id_user = reqObject.session.userid;
+        vm.isLogged = loginStatus;
+    }
+
+    resObject.render('history/history', vm);
 }
 
 function RenderProfilePage(reqObject, resObject) {
-    
+
+    var vm = {};
+    // Render view khi da login
+    if (loginStatus) {
+        vm.username = business.GetAccountInfo(reqObject.session.userid).ten_user;
+        vm.id_user = reqObject.session.userid;
+    }
+
 }
 function RenderSearchResultPage(reqObject, resObject, loginStatus) {
     var search_str = reqObject.param('search');
@@ -70,22 +111,38 @@ function RenderSearchResultPage(reqObject, resObject, loginStatus) {
     var result_user = business.SearchForUser(search_str);
     var vm = {
         search_book: result_book,
-        search_user: result_user
+        search_user: result_user,
+        isLogged: loginStatus
     }
+
+    // Render view khi da login
+    if (loginStatus) {
+        vm.username = business.GetAccountInfo(reqObject.session.userid).ten_user;
+        vm.id_user = reqObject.session.userid;
+    }
+
     resObject.render('search/search-result', vm);
 }
 
 
 function RenderAccountSettingsPage(reqObject, resObject, loginStatus) {
-    if(loginStatus === true){
+    if (loginStatus === true) {
         var username = reqObject.param('username');
         var account_info = business.GetAccountInfo(username);
-     console.log(account_info);
-        var vm={
-         user: account_info
+        console.log(account_info);
+        var vm = {
+            user: account_info,
+            isLogged: loginStatus
         }
-        resObject.render('account/profile',vm);
-    }    else {
+
+        // Render view khi da login
+        if (loginStatus) {
+            vm.username = business.GetAccountInfo(reqObject.session.userid).ten_user;
+            vm.id_user = reqObject.session.userid;
+        }
+
+        resObject.render('account/profile', vm);
+    } else {
         resObject.redirect('/');
         console.log('Chua login');
     }
