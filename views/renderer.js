@@ -11,7 +11,8 @@ function RenderIndexPage(reqObject, resObject, loginStatus) {
         rows[i].avatar_user = business.GetAccountInfo(rows[i].id).avatar;
     }
     var vm = {
-        viewbook: rows
+        viewbook: rows,
+        isLogged: loginStatus
     }
     console.log(rows);
     resObject.render('home/index', vm);
