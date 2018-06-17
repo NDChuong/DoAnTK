@@ -16,7 +16,7 @@ var loginRouter = require('./routes/login');
 var logoutRouter = require('./routes/logout');
 var searchRouter = require('./routes/search');
 
-var handleLayout=require('./views/handleLayout');
+var handleLayout = require('./views/handleLayout');
 // ================ ROUTER DECLARATION ================
 
 var app = express();
@@ -38,9 +38,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, '/')));
-app.use(handleLayout);
+// app.use(handleLayout);
 // =============== ROUTING ===================
 app.use('/', indexRouter);
+app.use('/index.html', indexRouter);
 app.use('/account-settings.html', accountSettingsRouter);
 app.use('/book-detail.html', bookDetailRouter);
 app.use('/bookshelf-detail.html', bookshelfDetailRouter);
@@ -56,12 +57,12 @@ app.use('/search.html', searchRouter);
 // ================== DEBUGGING business.js ===================
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   next(createError(404));
 });
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};

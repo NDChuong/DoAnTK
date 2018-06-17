@@ -10,7 +10,7 @@ router.get('/', function (req, res, next) {
     loginStatus = true;
   }
 
-  renderer.RenderAccountSettingsPage(req, res);
+  renderer.RenderAccountSettingsPage(req, res, loginStatus);
 });
 
 module.exports = router;

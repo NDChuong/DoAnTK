@@ -84,7 +84,10 @@ function RenderAccountSettingsPage(reqObject, resObject, loginStatus) {
          user: account_info
         }
         resObject.render('account/profile',vm);
-    }    
+    }    else {
+        resObject.redirect('/');
+        console.log('Chua login');
+    }
 }
 
 var exportObj = {
