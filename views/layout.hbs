@@ -31,8 +31,8 @@
                     </button>
                     <a class="navbar-brand" href="index.html">Book<span>Exchange</span></a>
                 </div>
-                <form class="example" action="">
-                    <input type="text" placeholder="Thành viên, tựa sách" name="search">
+                <form class="example" action="/search.html" method="POST">
+                    <input type="text" placeholder="Thành viên, tựa sách" name="keyword">
                     <button type="submit"><i class="fa fa-search"></i></button>
                 </form>
                 <div class="collapse navbar-collapse" id="myNavbar">
@@ -58,15 +58,15 @@
                         <div class="login-box-body">
                             <p class="login-box-msg">Đăng nhập để cùng trao đổi sách</p>
                             <div class="form-group">
-                                <form name="" id="loginForm">
+                                <form name="" id="loginForm" action="/login.html" method="POST">
                                     <div class="form-group has-feedback">
                                         <!----- username -------------->
-                                        <input class="form-control" placeholder="Username" id="loginid" type="text" autocomplete="off" />
+                                        <input class="form-control" placeholder="Username" id="loginid" type="text" autocomplete="off" name="username" />
                                         <!---Alredy exists  ! -->
                                     </div>
                                     <div class="form-group has-feedback">
                                         <!----- password -------------->
-                                        <input class="form-control" placeholder="Password" id="loginpsw" type="password" autocomplete="off" />
+                                        <input class="form-control" placeholder="Password" id="loginpsw" type="password" autocomplete="off" name="password" />
                                         <!---Alredy exists  ! -->
                                     </div>
                                     <div class="row">
@@ -80,7 +80,8 @@
                                         </div>
                                     -->
                                         <div class="col-xs-12">
-                                            <button type="button" class="btn btn-green btn-block btn-flat" onclick="userlogin()">Đăng nhập</button>
+                                            <!--<button type="button" class="btn btn-green btn-block btn-flat" onclick="userlogin()">Đăng nhập</button>-->
+                                            <input type="submit" class="btn btn-green btn-block btn-flat" onclick="userlogin()">Đăng nhập</input>
                                         </div>
                                     </div>
                                 </form>

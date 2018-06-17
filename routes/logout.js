@@ -4,7 +4,10 @@ var lib = require('../controller/lib');
 
 
 router.get('/', function (req, res, next) {
-  lib.RemoveCookie(res,'id');
+  req.session.destroy(function(err) {
+    console.log('Logout successfully');
+  })
+
   res.redirect('/');
 });
 

@@ -1,6 +1,54 @@
-<danh_sach_user xmlns="urn:v"> 
-    <user id_user="admin_1512095" ten_user="Võ Phương Sa 2" ngay_sinh="20/10/2030" gioi_tinh="Nam" so_dien_thoai="0123" email="abc" password="123"/>
-    <user id_user="1512043" ten_user="Võ Phương Sa" ngay_sinh="20/10/2030" gioi_tinh="Nam" so_dien_thoai="0123" email="abc" password="123"/>
-    <user id_user="1512044" ten_user="Võ Phương Sa 1" ngay_sinh="20/10/2030" gioi_tinh="Nam" so_dien_thoai="0123" email="abc" password="123"/>
-    <user id_user="1512045" ten_user="Võ Phương Sa 2" ngay_sinh="20/10/2030" gioi_tinh="Nam" so_dien_thoai="0123" email="abc" password="123"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+    <danh_sach_user>
+        <user avatar="/database/avatar/0000000.jpg" email="user0@gmail.com" gioi_tinh="Nam" id_user="0000000" ngay_sinh="0/11/7" password="user0@gmail.com" so_dien_thoai="739455289" ten_user="Lê Hồng Chung"/>
+        <user avatar="/database/avatar/0000001.jpg" email="user1@gmail.com" gioi_tinh="Nam" id_user="0000001" ngay_sinh="28/4/20" password="user1@gmail.com" so_dien_thoai="217144734" ten_user="Từ Thành Triều"/>
+        <user avatar="/database/avatar/0000002.jpg" email="user2@gmail.com" gioi_tinh="Nam" id_user="0000002" ngay_sinh="28/6/25" password="user2@gmail.com" so_dien_thoai="40965626" ten_user="Đỗ Thích Tư"/>
+        <user avatar="/database/avatar/0000003.jpg" email="user3@gmail.com" gioi_tinh="Nam" id_user="0000003" ngay_sinh="23/7/24" password="user3@gmail.com" so_dien_thoai="165097997" ten_user="Lý Bá Danh"/>
+        <user avatar="/database/avatar/0000004.jpg" email="user4@gmail.com" gioi_tinh="Nam" id_user="0000004" ngay_sinh="23/0/6" password="user4@gmail.com" so_dien_thoai="205968665" ten_user="Lâm Đình Triều"/>
+        <user avatar="/database/avatar/0000005.jpg" email="user5@gmail.com" gioi_tinh="Nam" id_user="0000005" ngay_sinh="10/2/25" password="user5@gmail.com" so_dien_thoai="775257437" ten_user="Phan Phương Chương"/>
+        <user avatar="/database/avatar/0000006.jpg" email="user6@gmail.com" gioi_tinh="Nam" id_user="0000006" ngay_sinh="19/11/2" password="user6@gmail.com" so_dien_thoai="327917242" ten_user="Nguyễn Bá Triều"/>
+        <user avatar="/database/avatar/0000007.jpg" email="user7@gmail.com" gioi_tinh="Nam" id_user="0000007" ngay_sinh="29/1/4" password="user7@gmail.com" so_dien_thoai="735302187" ten_user="Trương Mạnh Long"/>
+        <user avatar="/database/avatar/0000008.jpg" email="user8@gmail.com" gioi_tinh="Nam" id_user="0000008" ngay_sinh="16/4/7" password="user8@gmail.com" so_dien_thoai="419608030" ten_user="Cao Mạnh Cẩm"/>
+        <user avatar="/database/avatar/0000009.jpg" email="user9@gmail.com" gioi_tinh="Nam" id_user="0000009" ngay_sinh="21/9/17" password="user9@gmail.com" so_dien_thoai="135270974" ten_user="Võ Thích Sang"/>
+        <user avatar="/database/avatar/0000010.jpg" email="user10@gmail.com" gioi_tinh="Nam" id_user="0000010" ngay_sinh="2/9/24" password="user10@gmail.com" so_dien_thoai="328676365" ten_user="Trương Thành Danh"/>
+        <user avatar="/database/avatar/0000011.jpg" email="user11@gmail.com" gioi_tinh="Nam" id_user="0000011" ngay_sinh="21/10/16" password="user11@gmail.com" so_dien_thoai="70426090" ten_user="Từ Thành Cẩm"/>
+        <user avatar="/database/avatar/0000012.jpg" email="user12@gmail.com" gioi_tinh="Nam" id_user="0000012" ngay_sinh="4/1/10" password="user12@gmail.com" so_dien_thoai="563554826" ten_user="Trương Võ Cẩm"/>
+        <user avatar="/database/avatar/0000013.jpg" email="user13@gmail.com" gioi_tinh="Nam" id_user="0000013" ngay_sinh="14/4/0" password="user13@gmail.com" so_dien_thoai="371885308" ten_user="Từ Đình Nhung"/>
+        <user avatar="/database/avatar/0000014.jpg" email="user14@gmail.com" gioi_tinh="Nam" id_user="0000014" ngay_sinh="20/7/21" password="user14@gmail.com" so_dien_thoai="847651703" ten_user="Dương Đình Vấn"/>
+        <user avatar="/database/avatar/0000015.jpg" email="user15@gmail.com" gioi_tinh="Nam" id_user="0000015" ngay_sinh="1/4/15" password="user15@gmail.com" so_dien_thoai="791051764" ten_user="Trương Văn Đạt"/>
+        <user avatar="/database/avatar/0000016.jpg" email="user16@gmail.com" gioi_tinh="Nam" id_user="0000016" ngay_sinh="17/2/2" password="user16@gmail.com" so_dien_thoai="131124019" ten_user="Cao Mạnh Tư"/>
+        <user avatar="/database/avatar/0000017.jpg" email="user17@gmail.com" gioi_tinh="Nam" id_user="0000017" ngay_sinh="5/7/22" password="user17@gmail.com" so_dien_thoai="98209435" ten_user="Trương Mạnh Cẩm"/>
+        <user avatar="/database/avatar/0000018.jpg" email="user18@gmail.com" gioi_tinh="Nam" id_user="0000018" ngay_sinh="3/9/0" password="user18@gmail.com" so_dien_thoai="656631996" ten_user="Đỗ Võ Cẩm"/>
+        <user avatar="/database/avatar/0000019.jpg" email="user19@gmail.com" gioi_tinh="Nam" id_user="0000019" ngay_sinh="11/2/23" password="user19@gmail.com" so_dien_thoai="369690068" ten_user="Nguyễn Bá Vấn"/>
+        <user avatar="/database/avatar/0000020.jpg" email="user20@gmail.com" gioi_tinh="Nam" id_user="0000020" ngay_sinh="16/9/12" password="user20@gmail.com" so_dien_thoai="141329883" ten_user="Đỗ Võ Tư"/>
+        <user avatar="/database/avatar/0000021.jpg" email="user21@gmail.com" gioi_tinh="Nam" id_user="0000021" ngay_sinh="7/0/25" password="user21@gmail.com" so_dien_thoai="732409283" ten_user="Đỗ Đình Đạt"/>
+        <user avatar="/database/avatar/0000022.jpg" email="user22@gmail.com" gioi_tinh="Nam" id_user="0000022" ngay_sinh="27/7/8" password="user22@gmail.com" so_dien_thoai="677354108" ten_user="Trương Thành Triều"/>
+        <user avatar="/database/avatar/0000023.jpg" email="user23@gmail.com" gioi_tinh="Nam" id_user="0000023" ngay_sinh="4/3/11" password="user23@gmail.com" so_dien_thoai="790999031" ten_user="Nguyễn Quốc Danh"/>
+        <user avatar="/database/avatar/0000024.jpg" email="user24@gmail.com" gioi_tinh="Nam" id_user="0000024" ngay_sinh="28/3/18" password="user24@gmail.com" so_dien_thoai="607530093" ten_user="Trần Hồng Cẩm"/>
+        <user avatar="/database/avatar/0000025.jpg" email="user25@gmail.com" gioi_tinh="Nam" id_user="0000025" ngay_sinh="14/11/7" password="user25@gmail.com" so_dien_thoai="62049321" ten_user="Trương Bá Triều"/>
+        <user avatar="/database/avatar/0000026.jpg" email="user26@gmail.com" gioi_tinh="Nam" id_user="0000026" ngay_sinh="3/7/1" password="user26@gmail.com" so_dien_thoai="425141625" ten_user="Đỗ Phương Nhung"/>
+        <user avatar="/database/avatar/0000027.jpg" email="user27@gmail.com" gioi_tinh="Nam" id_user="0000027" ngay_sinh="4/3/10" password="user27@gmail.com" so_dien_thoai="373772027" ten_user="Phan Thành Sang"/>
+        <user avatar="/database/avatar/0000028.jpg" email="user28@gmail.com" gioi_tinh="Nam" id_user="0000028" ngay_sinh="8/3/6" password="user28@gmail.com" so_dien_thoai="652848697" ten_user="Trương Thành Sa"/>
+        <user avatar="/database/avatar/0000029.jpg" email="user29@gmail.com" gioi_tinh="Nam" id_user="0000029" ngay_sinh="24/3/23" password="user29@gmail.com" so_dien_thoai="241176847" ten_user="Lê Mạnh Nhung"/>
+        <user avatar="/database/avatar/0000030.jpg" email="user30@gmail.com" gioi_tinh="Nam" id_user="0000030" ngay_sinh="14/3/18" password="user30@gmail.com" so_dien_thoai="589695796" ten_user="Phan Phương Danh"/>
+        <user avatar="/database/avatar/0000031.jpg" email="user31@gmail.com" gioi_tinh="Nam" id_user="0000031" ngay_sinh="24/1/2" password="user31@gmail.com" so_dien_thoai="66881161" ten_user="Lâm Văn Vấn"/>
+        <user avatar="/database/avatar/0000032.jpg" email="user32@gmail.com" gioi_tinh="Nam" id_user="0000032" ngay_sinh="16/6/14" password="user32@gmail.com" so_dien_thoai="11451553" ten_user="Võ Hồng Tư"/>
+        <user avatar="/database/avatar/0000033.jpg" email="user33@gmail.com" gioi_tinh="Nam" id_user="0000033" ngay_sinh="20/3/15" password="user33@gmail.com" so_dien_thoai="409612991" ten_user="Từ Đình Triều"/>
+        <user avatar="/database/avatar/0000034.jpg" email="user34@gmail.com" gioi_tinh="Nam" id_user="0000034" ngay_sinh="5/11/19" password="user34@gmail.com" so_dien_thoai="618251884" ten_user="Lê Mạnh Chương"/>
+        <user avatar="/database/avatar/0000035.jpg" email="user35@gmail.com" gioi_tinh="Nam" id_user="0000035" ngay_sinh="26/0/0" password="user35@gmail.com" so_dien_thoai="732325457" ten_user="Lâm Bá Tư"/>
+        <user avatar="/database/avatar/0000036.jpg" email="user36@gmail.com" gioi_tinh="Nam" id_user="0000036" ngay_sinh="3/5/24" password="user36@gmail.com" so_dien_thoai="878684929" ten_user="Nguyễn Thích Triều"/>
+        <user avatar="/database/avatar/0000037.jpg" email="user37@gmail.com" gioi_tinh="Nam" id_user="0000037" ngay_sinh="14/3/9" password="user37@gmail.com" so_dien_thoai="830900672" ten_user="Võ Thành Cẩm"/>
+        <user avatar="/database/avatar/0000038.jpg" email="user38@gmail.com" gioi_tinh="Nam" id_user="0000038" ngay_sinh="16/0/25" password="user38@gmail.com" so_dien_thoai="697504014" ten_user="Nguyễn Phương Đạt"/>
+        <user avatar="/database/avatar/0000039.jpg" email="user39@gmail.com" gioi_tinh="Nam" id_user="0000039" ngay_sinh="22/2/19" password="user39@gmail.com" so_dien_thoai="325359510" ten_user="Nguyễn Văn Cẩm"/>
+        <user avatar="/database/avatar/0000040.jpg" email="user40@gmail.com" gioi_tinh="Nam" id_user="0000040" ngay_sinh="13/2/19" password="user40@gmail.com" so_dien_thoai="659563772" ten_user="Lý Thích Danh"/>
+        <user avatar="/database/avatar/0000041.jpg" email="user41@gmail.com" gioi_tinh="Nam" id_user="0000041" ngay_sinh="27/3/9" password="user41@gmail.com" so_dien_thoai="704425507" ten_user="Nguyễn Quốc Đạt"/>
+        <user avatar="/database/avatar/0000042.jpg" email="user42@gmail.com" gioi_tinh="Nam" id_user="0000042" ngay_sinh="14/3/16" password="user42@gmail.com" so_dien_thoai="33371727" ten_user="Lê Thanh Vấn"/>
+        <user avatar="/database/avatar/0000043.jpg" email="user43@gmail.com" gioi_tinh="Nam" id_user="0000043" ngay_sinh="17/0/0" password="user43@gmail.com" so_dien_thoai="61736407" ten_user="Lê Thích Đạt"/>
+        <user avatar="/database/avatar/0000044.jpg" email="user44@gmail.com" gioi_tinh="Nam" id_user="0000044" ngay_sinh="14/6/23" password="user44@gmail.com" so_dien_thoai="478873198" ten_user="Phan Thành Nhung"/>
+        <user avatar="/database/avatar/0000045.jpg" email="user45@gmail.com" gioi_tinh="Nam" id_user="0000045" ngay_sinh="19/9/6" password="user45@gmail.com" so_dien_thoai="619998868" ten_user="Lý Văn Sang"/>
+        <user avatar="/database/avatar/0000046.jpg" email="user46@gmail.com" gioi_tinh="Nam" id_user="0000046" ngay_sinh="28/2/14" password="user46@gmail.com" so_dien_thoai="396410944" ten_user="Lý Phương Cẩm"/>
+        <user avatar="/database/avatar/0000047.jpg" email="user47@gmail.com" gioi_tinh="Nam" id_user="0000047" ngay_sinh="12/2/2" password="user47@gmail.com" so_dien_thoai="3614063" ten_user="Cao Thanh Vấn"/>
+        <user avatar="/database/avatar/0000048.jpg" email="user48@gmail.com" gioi_tinh="Nam" id_user="0000048" ngay_sinh="15/9/25" password="user48@gmail.com" so_dien_thoai="584993947" ten_user="Cao Mạnh Cẩm"/>
+        <user avatar="/database/avatar/0000049.jpg" email="user49@gmail.com" gioi_tinh="Nam" id_user="0000049" ngay_sinh="14/0/16" password="user49@gmail.com" so_dien_thoai="745080772" ten_user="Từ Thành Chương"/>
+        <user avatar="/database/avatar/0000050.jpg" email="user50@gmail.com" gioi_tinh="Nam" id_user="0000050" ngay_sinh="9/0/2" password="user50@gmail.com" so_dien_thoai="387330824" ten_user="Đỗ Võ Đạt"/>
 </danh_sach_user>
