@@ -1,3 +1,9 @@
+{{!-- {{#section 'js'}}
+<script type="text/javascript">
+    alert('#BorrowDate.val()');
+</script>
+{{/section}} --}}
+
 <div class="container">
     <div class="wrapper">
         <div class="row">
@@ -34,6 +40,44 @@
                 </div>
             </div>            
         </div>
+        <div class="">
+            <button type="button" class="btn light-form-button" data-toggle="modal" data-target="#lendbook">Mượn sách</button>
+        </div>
+        <div class="modal fade" id="lendbook" role="dialog">
+                <div class="modal-dialog modal-md">
+                    <!-- Modal content no 1-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title text-center form-title">Gửi lời mời mượn sách</h4>
+                        </div>
+                        <div class="modal-body padtrbl">
+                            <div class="login-box-body">
+                                <div class="form-group">
+                                    <form method="POST" role="form" onsubmit="return valiDate();">
+                                        <div class="row">
+                                            <div class="col-xs-6">Chọn ngày mượn: </div>
+                                            <div class="col-xs-6">
+                                                <input type="date" class="form-control resize-form" id="BorrowDate" name="borrowDate">
+                                            </div>
+                                        </div><br>
+                                        <div class="row">
+                                            <div class="col-xs-6">Chọn ngày trả: </div>
+                                            <div class="col-xs-6">
+                                                <input type="date" class="form-control resize-form" id="ReturnDate" name="returnDate">
+                                            </div>
+                                        </div><br>
+                                        <div class="col-xs-12">
+                                            <button type="submit" class="btn btn-green btn-block btn-lend">Mượn</button>
+                                        </div>
+                                        </form>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         
     </div>
 </div>

@@ -39,7 +39,7 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="/">Trang chủ</a></li>
                         {{#if isLogged}}
-                        <li><a href="/history.html">Lịch sử</a></li>
+                        <li><a href="/history.html?id_user={{id_user}}">Lịch sử</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{username}}<b class="caret"></b></a>
                             <ul class="dropdown-menu">
@@ -117,7 +117,7 @@
                         <div class="login-box-body">
                             <p class="login-box-msg">Đăng ký để kết nối cộng đồng</p>
                             <div class="form-group">
-                                <form id="signupForm" method="POST" role="form" onsubmit="return validate();">
+                                <form id="signupForm" action="/register.html" method="POST" role="form" onsubmit="return validate();">
                                     <div class="form-group has-feedback">
                                         <!----- username -------------->
                                         <input class="form-control custom" placeholder="Username" id="txtUsername" type="text" autocomplete="off" name="username" />
@@ -249,5 +249,6 @@
             return true;
         }
     </script>
+    {{_sections.js}}
   </body>
 </html>

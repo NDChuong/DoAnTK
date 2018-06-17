@@ -15,7 +15,12 @@ router.post('/', function (req, res, next) {
   }
 
   // Code here
-  res.send('OK')
+  var user = {
+    username: req.body.username,
+    password: req.body.rawPWD
+  }
+  business.RegisterAccount(user);
+  
 
 });
 
