@@ -8,6 +8,7 @@ function RenderIndexPage(reqObject, resObject, loginStatus) {
         //
         // rows[i].ten_user = business.GetUsernameByIDBookshelf(rows[i].id);
         rows[i].ten_user = business.GetAccountInfo(rows[i].id).ten_user;
+        console.log(i)
     }
     var vm = {
         viewbook: rows
@@ -57,13 +58,8 @@ function RenderHistoryPage(reqObject, resObject, loginStatus) {
 
     resObject.render('history/history');
 }
-<<<<<<< HEAD
-function RenderProfilePage(reqObject, resObject) {
-    
-=======
 function RenderProfilePage(reqObject, resObject, loginStatus) {
     resObject.render('account/profile');
->>>>>>> stage2-controller
 }
 function RenderSearchResultPage(reqObject, resObject, loginStatus, keyword) {
     var search_str = reqObject.param('search');
@@ -76,19 +72,14 @@ function RenderSearchResultPage(reqObject, resObject, loginStatus, keyword) {
     resObject.render('search/search-result', vm);
 }
 
-<<<<<<< HEAD
 function RenderAccountSettingsPage(reqObject, resObject) {
     var username = reqObject.param('username');
     var account_info = business.GetAccountInfo(username);
     console.log(account_info);
-    var vm={
+    var vm = {
         user: account_info
     }
-    resObject.render('account/profile',vm);
-=======
-function RenderAccountSettingsPage(reqObject, resObject, loginStatus) {
-    resObject.send('OK');
->>>>>>> stage2-controller
+    resObject.render('account/profile', vm);
 }
 
 var exportObj = {
