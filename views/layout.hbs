@@ -43,9 +43,12 @@
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{username}}<b class="caret"></b></a>
                             <ul class="dropdown-menu">
-                                <li><a href="/account-settings.html">Thông tin</a></li>
+                                <form id="formLogout" action="/logout.html" method="POST"></form>
+                                <li><a href="/account-settings.html?id_user={{id_user}}">Thông tin</a></li>
                                 <li><a href="/bookshelf-detail.html?id_user={{id_user}}">Tủ sách của tôi</a></li>
-                                <li><a href="#">Đăng xuất</a></li>
+                                <li>                                    
+                                    <a id="Logout" href="/logout.html">Đăng xuất</a>                                    
+                                </li>                                
                             </ul>
                         </li>
                         {{else}}
@@ -226,5 +229,10 @@
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/custom.js"></script>
     <script src="assets/contactform/contactform.js"></script>
+    <script type="text/javascript">
+        $('#Logout').on('click', function(){
+            $('#formLogout').submit();
+        });
+    </script>
   </body>
 </html>

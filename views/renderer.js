@@ -23,7 +23,7 @@ function RenderIndexPage(reqObject, resObject, loginStatus) {
         vm.id_user = reqObject.session.userid;
     }
 
-    console.log(rows);
+    
     resObject.render('home/index', vm);
     //resObject.send('OK');
 }
@@ -127,12 +127,18 @@ function RenderSearchResultPage(reqObject, resObject, loginStatus) {
 
 function RenderAccountSettingsPage(reqObject, resObject, loginStatus) {
     if (loginStatus === true) {
-        var username = reqObject.param('username');
+        var username = reqObject.param('id_user');
         var account_info = business.GetAccountInfo(username);
-        console.log(account_info);
+        if(account_info.gioi_tinh === "Nam"){
+            var gender = true;
+        }
+        else{
+            var gender = false;
+        }
         var vm = {
             user: account_info,
-            isLogged: loginStatus
+            isLogged: loginStatus,
+            _gioi_tinh: gender
         }
 
         // Render view khi da login
@@ -140,7 +146,7 @@ function RenderAccountSettingsPage(reqObject, resObject, loginStatus) {
             vm.username = business.GetAccountInfo(reqObject.session.userid).ten_user;
             vm.id_user = reqObject.session.userid;
         }
-
+        console.log(vm);
         resObject.render('account/profile', vm);
     } else {
         resObject.redirect('/');
