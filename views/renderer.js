@@ -82,9 +82,35 @@ function RenderBookshelfPage(reqObject, resObject, loginStatus) {
     //resObject.send('OK');
 }
 function RenderHistoryPage(reqObject, resObject, loginStatus) {
+    var userid = reqObject.param('id_user');
+    console.log(userid);
+    var _borrow_request = business.GetBorrowingRequest(userid);
+    var _lend_request = business.GetLentingRequest(userid);
+    var _history_borrow_request = business.GetBorrowingHistory(userid);
+    var _history_lend_request = business.GetLentingHistory(userid);
 
+    console.log(_borrow_request,"=================", _lend_request,"=========================", _history_borrow_request,"=================", _history_lend_request);
 
-    var vm = {};
+    for(var i=0;i<_borrow_request.length;i++){
+        _borrow_request[i].ten_user=business.GetAccountInfo(_borrow_request[i].id_user_cho_muon).ten_user;
+        _borrow_request[i].ten_sach=business.GetBookInfo(_borrow_request[i].id_sach).ten_sach;
+    }
+    for(var i = 0;i<_lend_request.length;i++){
+        _lend_request[i].ten_sach = business.GetBookInfo(_lend_request[i].id_sach).ten_sach;
+        _lend_request[i].ten_user = business.GetAccountInfo(_lend_request[i].id_user_muon).ten_user;
+    }
+    for(var i=0;i<_history_borrow_request.length;i++){
+        _history_borrow_request[i].ten_sach = business.GetBookInfo(_history_borrow_request[i].id_sach).ten_sach;
+        _history_borrow_request[i].ten_user = business.GetAccountInfo(_history_borrow_request[i].id_user_cho_muon).ten_user;
+    }
+    
+    var vm = {
+        borrow_request:_borrow_request,
+        list_borrow_request: _history_borrow_request,
+        lend_request: _lend_request,
+        list_lend_request: _history_lend_request
+        
+    };
     // Render view khi da login
     if (loginStatus) {
         vm.username = business.GetAccountInfo(reqObject.session.userid).ten_user;
@@ -154,7 +180,6 @@ function RenderAccountSettingsPage(reqObject, resObject, loginStatus) {
             vm.username = business.GetAccountInfo(reqObject.session.userid).ten_user;
             vm.id_user = reqObject.session.userid;
         }
-        console.log(vm);
         resObject.render('account/profile', vm);
     } else {
         resObject.redirect('/');

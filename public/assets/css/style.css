@@ -244,9 +244,9 @@ Banner
     margin-top: 30px;
 }
 
-.quote .btn {
-    background-color:
-}
+/* .quote .btn {
+    background-color:;
+} */
 
 .modal-dialog {
     width: 600px;
@@ -654,7 +654,7 @@ label {
     background-color: #ff2d55;
 }
 
-#tab2-content table.table .btn{
+#tab1-content table.table .btn{
     padding: 5px;
     float: none;
 }

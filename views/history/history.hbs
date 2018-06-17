@@ -11,17 +11,22 @@
                             <th>Chủ sách</th>
                             <th>Ngày mượn</th>
                             <th>Ngày trả</th>
+                            <th>&nbsp;</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {{#each borrow-request}}
+                        {{#each borrow_request}}
                             <tr>
-                                <td><a href="{{bookinfo}}">{{ten_sach}}</a></td>
-                                <td><a href="{{bookshelf}}">{{ten_user}}</a></td>
+                                <td><a href="/book-detail.html?id_user={{id_user_cho_muon}}&id_book={{id_sach}}">{{ten_sach}}</a></td>
+                                <td><a href="/bookshelf-detail.html?id_user={{id_user_cho_muon}}">{{ten_user}}</a></td>
                                 <td>{{ngay_muon}}</td>
                                 <td>{{ngay_tra}}</td>
+                                <td>
+                                    <a class="btn btn-success" href="#">Hủy</a>
+                                </td>
                             </tr>
                         {{/each}}
+                        
                     </tbody>
                 </table>
             </div>
@@ -37,19 +42,16 @@
                             <th>Chủ sách</th>
                             <th>Ngày mượn</th>
                             <th>Ngày trả</th>
-                            <th>&nbsp;</th>
+                            
                         </tr>
                     </thead>
                     <tbody>
-                        {{#each list-borrow-request}}
+                        {{#each list_borrow_request}}
                             <tr>
-                                <td><a href="{{bookinfo}}">{{ten_sach}}</a></td>
-                                <td><a href="{{bookshelf}}">{{ten_user}}</a></td>
+                                <td><a href="/book-detail.html?id_user={{id_user}}&id_book={{id_sach}}">{{ten_sach}}</a></td>
+                                <td><a href="/bookshelf-detail.html?id_user={{id_user}}">{{ten_user}}</a></td>
                                 <td>{{ngay_muon}}</td>
                                 <td>{{ngay_tra}}</td>
-                                <td>
-                                    <a class="btn btn-success" href="#">Trả sách</a>
-                                </td>
                             </tr>
                         {{/each}}
                     </tbody>
@@ -71,10 +73,10 @@
                         </tr>
                     </thead>
                     <tbody>
-                        {{#each lend-request}}
+                        {{#each lend_request}}
                             <tr>
-                                <td><a href="{{bookinfo}}">{{ten_sach}}</a></td>
-                                <td><a href="{{bookshelf}}">{{ten_user}}</a></td>
+                                <td><a href="/book-detail.html?id_user={{id_user_muon}}&id_book={{id_sach}}">{{ten_sach}}</a></td>
+                                <td><a href="/bookshelf-detail.html?id_user={{id_user_muon}}">{{ten_user}}</a></td>
                                 <td>{{ngay_muon}}</td>
                                 <td>{{ngay_tra}}</td>
                                 <td>
@@ -103,10 +105,10 @@
                         </tr>
                     </thead>
                     <tbody>
-                        {{#each list-lend-request}}
+                        {{#each list_lend_request}}
                             <tr>
-                                <td><a href="{{bookinfo}}">{{ten_sach}}</a></td>
-                                <td><a href="{{bookshelf}}">{{ten_user}}</a></td>
+                                <td><a href="/book-detail.html?id_user={{id_user}}&id_book={{id_sach}}">{{ten_sach}}</a></td>
+                                <td><a href="/bookshelf-detail.html?id_user={{id_user}}">{{ten_user}}</a></td>
                                 <td>{{ngay_muon}}</td>
                                 <td>{{ngay_tra}}</td>
                             </tr>
@@ -115,5 +117,6 @@
                 </table>
             </div>
         </div>
+        <div class="blank"></div>
     </div>
 </div>
