@@ -15,6 +15,7 @@ var historyRouter = require('./routes/history');
 var loginRouter = require('./routes/login');
 var logoutRouter = require('./routes/logout');
 var searchRouter = require('./routes/search');
+var registerRouter = require('./routes/register');
 
 var handleLayout = require('./views/handleLayout');
 // ================ ROUTER DECLARATION ================
@@ -49,6 +50,7 @@ app.use('/history.html', historyRouter);
 app.use('/login.html', loginRouter);
 app.use('/logout.html', logoutRouter);
 app.use('/search.html', searchRouter);
+app.use('/register.html', registerRouter);
 // =============== ROUTING ===================
 
 // ================== DEBUGGING business.js ===================
