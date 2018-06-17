@@ -9,9 +9,9 @@
             <div class="row">
                 {{#each viewbook}}
                 <div class="col-md-3">
-                    <img class="img-responsive" src="{{avatar_user}}"></img>
-                    <h5 class="header-section text-center">{{ten_user}}</h5>
-                    <b>Rating: </b><span>{{ratings}}</span>
+                    <a href="/bookshelf-detail.html?id_user={{id}}"><img class="img-responsive" src="{{avatar_user}}"></img></a>
+                    <h5 class="header-section text-center"><a style="font-weight:bold;" href="/bookshelf-detail.html?id_user={{id}}">{{ten_user}}</h5></a>
+                    <!--<b>Rating: </b><span>{{ratings}}</span>-->
                 </div>
                 {{/each}}
             </div>
@@ -24,9 +24,9 @@
             <div class="row">
                 {{#each viewbook}}
                 <div class="col-md-3">
-                    <img class="img-responsive" src="{{avatar_user}}"></img>
-                    <h5 class="header-section text-center">{{ten_user}}</h5>
-                    <b>Rating: </b><span>{{ratings}}</span>
+                    <a href="/bookshelf-detail.html?id_user={{id}}"><img class="img-responsive" src="{{avatar_user}}"></img></a>
+                    <a style="font-weight:bold;" href="/bookshelf-detail.html?id_user={{id}}"><h5 class="header-section text-center">{{ten_user}}</h5></a>
+                    <!--<b>Rating: </b><span>{{ratings}}</span>-->
                 </div>
                 {{/each}}
             </div>
